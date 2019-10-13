@@ -18,6 +18,6 @@ protocol ListPresenterProtocol {
     
 }
 
-protocol ListViewProtocol {
+protocol ListViewProtocol: class {
     
 }

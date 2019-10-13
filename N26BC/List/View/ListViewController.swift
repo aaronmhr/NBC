@@ -9,5 +9,7 @@
 import UIKit
 
 final class ListViewController: UIViewController {
-    
+    var presenter: ListPresenterProtocol!
 }
+
+extension ListViewController: ListViewProtocol { }

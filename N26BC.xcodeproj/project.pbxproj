@@ -16,6 +16,8 @@
 		1874EACB23532F5900052101 /* ListProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1874EACA23532F5900052101 /* ListProtocols.swift */; };
 		1874EACF235330D200052101 /* ListRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1874EACC235330B200052101 /* ListRouterTests.swift */; };
 		1874EAD12353311700052101 /* ListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1874EAD02353311700052101 /* ListRouter.swift */; };
+		1874EAD32353345700052101 /* ListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1874EAD22353345700052101 /* ListPresenter.swift */; };
+		1874EAD52353386E00052101 /* ListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1874EAD42353386E00052101 /* ListInteractor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +44,8 @@
 		1874EACA23532F5900052101 /* ListProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListProtocols.swift; sourceTree = "<group>"; };
 		1874EACC235330B200052101 /* ListRouterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListRouterTests.swift; sourceTree = "<group>"; };
 		1874EAD02353311700052101 /* ListRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListRouter.swift; sourceTree = "<group>"; };
+		1874EAD22353345700052101 /* ListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPresenter.swift; sourceTree = "<group>"; };
+		1874EAD42353386E00052101 /* ListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListInteractor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +130,7 @@
 		1841068B235324E3000AE46C /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				1874EAD22353345700052101 /* ListPresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -133,6 +138,7 @@
 		1841068C235324E9000AE46C /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
+				1874EAD42353386E00052101 /* ListInteractor.swift */,
 			);
 			path = Interactor;
 			sourceTree = "<group>";
@@ -264,7 +270,9 @@
 				1841068423531E95000AE46C /* main.swift in Sources */,
 				1841066223531A6A000AE46C /* AppDelegate.swift in Sources */,
 				184106AA23532D37000AE46C /* ListViewController.swift in Sources */,
+				1874EAD52353386E00052101 /* ListInteractor.swift in Sources */,
 				1874EAD12353311700052101 /* ListRouter.swift in Sources */,
+				1874EAD32353345700052101 /* ListPresenter.swift in Sources */,
 				1874EACB23532F5900052101 /* ListProtocols.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

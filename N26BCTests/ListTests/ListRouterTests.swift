@@ -18,6 +18,30 @@ class ListRouterTests: XCTestCase {
         let viewController = ListRouter.assembleModule()
         XCTAssertTrue(viewController is ListViewController)
     }
+    
+    func testAssembleModule_producessFullyFunctionalViperModule() {
+        // MARK: VIPER assumptions
+        let assembledView = ListRouter.assembleModule()
+        
+        let view =  assembledView as? ListViewController
+        let conformingProtocolView = assembledView as? ListViewProtocol
+        XCTAssertNotNil(view, "assembledView is not nil and is ListViewController")
+        XCTAssertNotNil(conformingProtocolView, "assembledView conforms to ListViewProtocol by design")
+        
+        let presenter = view?.presenter as? ListPresenter
+        let conformingProtocolPresenter = view?.presenter as? ListPresenterProtocol
+        XCTAssertNotNil(presenter, "view contains non-nil ListPresenter")
+        XCTAssertNotNil(conformingProtocolPresenter, "presenter conforms to ListPresenterProtocol by design")
+        
+        XCTAssertNotNil(presenter?.view, "presenter contains non-strong referenced View that conforms to ListViewProtocol by design")
+        
+        let interactor = presenter?.interactor
+        XCTAssertNotNil(interactor, "presenter contains Interator that conforms to ListInteractorProtocol")
+        
+        let router = presenter?.router as? ListRouter
+        XCTAssertNotNil(router, "presenter contains Router that conforms to ListRouterProtocol")
+        XCTAssertNotNil(router?.view, "router contains view that conforms to ListViewProtocol")
+    }
 }
 
 

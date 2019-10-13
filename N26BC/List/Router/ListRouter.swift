@@ -9,7 +9,20 @@
 import UIKit
 
 final class ListRouter {
+    weak var view: ListViewController!
+    
+    init(_ view: ListViewController) {
+        self.view = view
+    }
+    
     static func assembleModule() -> UIViewController {
-        return ListViewController()
+        let viewController = ListViewController()
+        let interactor = ListInteractor()
+        let router = ListRouter(viewController)
+        let presenter = ListPresenter(view: viewController, interactor: interactor, router: router)
+        viewController.presenter = presenter
+        return viewController
     }
 }
+
+extension ListRouter: ListRouterProtocol { }
