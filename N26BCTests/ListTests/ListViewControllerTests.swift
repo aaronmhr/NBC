@@ -41,6 +41,16 @@ class ListViewControllerTests: XCTestCase {
         XCTAssertTrue(sut.tableView.visibleCells.isEmpty)
     }
     
+    func testPricesModel_whenUpdated_TriggersTableViewUpdate() {
+        let (sut,_) = makeSUT()
+        
+        givenViewDidLoadOn(sut)
+        
+        let cellModelsToBeDisplayed = ["1", "2"]
+        sut.pricesModel = cellModelsToBeDisplayed
+        
+        XCTAssertEqual(cellModelsToBeDisplayed.count, sut.tableView.numberOfRows(inSection: 0))
+    }
     
     
     // MARK: - Helpers
