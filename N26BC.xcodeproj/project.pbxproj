@@ -36,6 +36,8 @@
 		1841067A23531A6C000AE46C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1841068323531E95000AE46C /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		1841068523532075000AE46C /* TestingAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestingAppDelegate.swift; sourceTree = "<group>"; };
+		184106A3235326A2000AE46C /* ListRouterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRouterTests.swift; sourceTree = "<group>"; };
+		184106A723532B69000AE46C /* ListRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListRouter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 			children = (
 				1841068323531E95000AE46C /* main.swift */,
 				1841066123531A6A000AE46C /* AppDelegate.swift */,
+				1841068723532484000AE46C /* List */,
 				1841066A23531A6C000AE46C /* Assets.xcassets */,
 				1841066C23531A6C000AE46C /* LaunchScreen.storyboard */,
 				1841066F23531A6C000AE46C /* Info.plist */,
@@ -91,9 +94,66 @@
 			children = (
 				1841068523532075000AE46C /* TestingAppDelegate.swift */,
 				1841067823531A6C000AE46C /* N26BCTests.swift */,
+				1841069523532637000AE46C /* ListTests */,
 				1841067A23531A6C000AE46C /* Info.plist */,
 			);
 			path = N26BCTests;
+			sourceTree = "<group>";
+		};
+		1841068723532484000AE46C /* List */ = {
+			isa = PBXGroup;
+			children = (
+				1841068E235324FD000AE46C /* Protocols */,
+				1841068D235324F2000AE46C /* Router */,
+				1841068C235324E9000AE46C /* Interactor */,
+				1841068B235324E3000AE46C /* Presenter */,
+				184106882353248F000AE46C /* View */,
+			);
+			path = List;
+			sourceTree = "<group>";
+		};
+		184106882353248F000AE46C /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1841068B235324E3000AE46C /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		1841068C235324E9000AE46C /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		1841068D235324F2000AE46C /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				184106A723532B69000AE46C /* ListRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		1841068E235324FD000AE46C /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		1841069523532637000AE46C /* ListTests */ = {
+			isa = PBXGroup;
+			children = (
+				184106A3235326A2000AE46C /* ListRouterTests.swift */,
+			);
+			path = ListTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -196,6 +256,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				184106A823532B6A000AE46C /* ListRouter.swift in Sources */,
 				1841068423531E95000AE46C /* main.swift in Sources */,
 				1841066223531A6A000AE46C /* AppDelegate.swift in Sources */,
 			);
@@ -205,6 +266,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				184106A4235326A2000AE46C /* ListRouterTests.swift in Sources */,
 				1841067923531A6C000AE46C /* N26BCTests.swift in Sources */,
 				1841068623532075000AE46C /* TestingAppDelegate.swift in Sources */,
 			);
