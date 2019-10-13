@@ -20,7 +20,13 @@ class ListViewControllerTests: XCTestCase {
     
     func testViewDidLoad_setsUpTableViewDelegateAndDataSource() {
         let (sut,_) = makeSUT()
-        sut.loadViewIfNeeded()
+        let delegatePriorToViewDidLoad = sut.tableView?.delegate
+        let dataSourcePriorToViewDidLoad = sut.tableView?.dataSource
+        XCTAssertNil(delegatePriorToViewDidLoad)
+        XCTAssertNil(dataSourcePriorToViewDidLoad)
+        
+        givenViewDidLoadOn(sut)
+        
         let delegate = sut.tableView?.delegate
         let dataSource = sut.tableView?.dataSource
         XCTAssertTrue(sut === dataSource, "ViewController is tableview data source")
@@ -30,6 +36,10 @@ class ListViewControllerTests: XCTestCase {
     
     
     // MARK: - Helpers
+    private func givenViewDidLoadOn(_ sut: ListViewController) {
+        sut.loadViewIfNeeded()
+    }
+    
     func makeSUT() -> (viewController: ListViewController, presenter: ListPresenterSpy) {
         let viewController = ListRouter.defaultViewController(for: ListViewController.self)
         let presenterSpy = ListPresenterSpy()
