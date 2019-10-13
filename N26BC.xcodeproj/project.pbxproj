@@ -18,6 +18,7 @@
 		1874EAD12353311700052101 /* ListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1874EAD02353311700052101 /* ListRouter.swift */; };
 		1874EAD32353345700052101 /* ListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1874EAD22353345700052101 /* ListPresenter.swift */; };
 		1874EAD52353386E00052101 /* ListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1874EAD42353386E00052101 /* ListInteractor.swift */; };
+		1874EAD72353444D00052101 /* List.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1874EAD62353444D00052101 /* List.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,7 @@
 		1874EAD02353311700052101 /* ListRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListRouter.swift; sourceTree = "<group>"; };
 		1874EAD22353345700052101 /* ListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPresenter.swift; sourceTree = "<group>"; };
 		1874EAD42353386E00052101 /* ListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListInteractor.swift; sourceTree = "<group>"; };
+		1874EAD62353444D00052101 /* List.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = List.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +125,7 @@
 			isa = PBXGroup;
 			children = (
 				184106A923532D37000AE46C /* ListViewController.swift */,
+				1874EAD62353444D00052101 /* List.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -249,6 +252,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1841066E23531A6C000AE46C /* LaunchScreen.storyboard in Resources */,
+				1874EAD72353444D00052101 /* List.storyboard in Resources */,
 				1841066B23531A6C000AE46C /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
