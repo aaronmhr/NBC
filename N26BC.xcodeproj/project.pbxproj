@@ -10,9 +10,10 @@
 		1841066223531A6A000AE46C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1841066123531A6A000AE46C /* AppDelegate.swift */; };
 		1841066B23531A6C000AE46C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1841066A23531A6C000AE46C /* Assets.xcassets */; };
 		1841066E23531A6C000AE46C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1841066C23531A6C000AE46C /* LaunchScreen.storyboard */; };
-		1841067923531A6C000AE46C /* N26BCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1841067823531A6C000AE46C /* N26BCTests.swift */; };
 		1841068423531E95000AE46C /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1841068323531E95000AE46C /* main.swift */; };
 		1841068623532075000AE46C /* TestingAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1841068523532075000AE46C /* TestingAppDelegate.swift */; };
+		184106AA23532D37000AE46C /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184106A923532D37000AE46C /* ListViewController.swift */; };
+		1874EACB23532F5900052101 /* ListProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1874EACA23532F5900052101 /* ListProtocols.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,12 +33,13 @@
 		1841066D23531A6C000AE46C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1841066F23531A6C000AE46C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1841067423531A6C000AE46C /* N26BCTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = N26BCTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		1841067823531A6C000AE46C /* N26BCTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = N26BCTests.swift; sourceTree = "<group>"; };
 		1841067A23531A6C000AE46C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1841068323531E95000AE46C /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		1841068523532075000AE46C /* TestingAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestingAppDelegate.swift; sourceTree = "<group>"; };
 		184106A3235326A2000AE46C /* ListRouterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRouterTests.swift; sourceTree = "<group>"; };
 		184106A723532B69000AE46C /* ListRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListRouter.swift; sourceTree = "<group>"; };
+		184106A923532D37000AE46C /* ListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
+		1874EACA23532F5900052101 /* ListProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListProtocols.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,7 +95,6 @@
 			isa = PBXGroup;
 			children = (
 				1841068523532075000AE46C /* TestingAppDelegate.swift */,
-				1841067823531A6C000AE46C /* N26BCTests.swift */,
 				1841069523532637000AE46C /* ListTests */,
 				1841067A23531A6C000AE46C /* Info.plist */,
 			);
@@ -115,6 +116,7 @@
 		184106882353248F000AE46C /* View */ = {
 			isa = PBXGroup;
 			children = (
+				184106A923532D37000AE46C /* ListViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -144,6 +146,7 @@
 		1841068E235324FD000AE46C /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				1874EACA23532F5900052101 /* ListProtocols.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -256,9 +259,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				184106A823532B6A000AE46C /* ListRouter.swift in Sources */,
 				1841068423531E95000AE46C /* main.swift in Sources */,
 				1841066223531A6A000AE46C /* AppDelegate.swift in Sources */,
+				184106AA23532D37000AE46C /* ListViewController.swift in Sources */,
+				1874EACB23532F5900052101 /* ListProtocols.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -266,8 +270,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				184106A4235326A2000AE46C /* ListRouterTests.swift in Sources */,
-				1841067923531A6C000AE46C /* N26BCTests.swift in Sources */,
 				1841068623532075000AE46C /* TestingAppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
