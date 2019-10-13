@@ -11,6 +11,8 @@
 		1841066B23531A6C000AE46C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1841066A23531A6C000AE46C /* Assets.xcassets */; };
 		1841066E23531A6C000AE46C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1841066C23531A6C000AE46C /* LaunchScreen.storyboard */; };
 		1841067923531A6C000AE46C /* N26BCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1841067823531A6C000AE46C /* N26BCTests.swift */; };
+		1841068423531E95000AE46C /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1841068323531E95000AE46C /* main.swift */; };
+		1841068623532075000AE46C /* TestingAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1841068523532075000AE46C /* TestingAppDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,6 +34,8 @@
 		1841067423531A6C000AE46C /* N26BCTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = N26BCTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1841067823531A6C000AE46C /* N26BCTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = N26BCTests.swift; sourceTree = "<group>"; };
 		1841067A23531A6C000AE46C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1841068323531E95000AE46C /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		1841068523532075000AE46C /* TestingAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestingAppDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +77,7 @@
 		1841066023531A6A000AE46C /* N26BC */ = {
 			isa = PBXGroup;
 			children = (
+				1841068323531E95000AE46C /* main.swift */,
 				1841066123531A6A000AE46C /* AppDelegate.swift */,
 				1841066A23531A6C000AE46C /* Assets.xcassets */,
 				1841066C23531A6C000AE46C /* LaunchScreen.storyboard */,
@@ -84,6 +89,7 @@
 		1841067723531A6C000AE46C /* N26BCTests */ = {
 			isa = PBXGroup;
 			children = (
+				1841068523532075000AE46C /* TestingAppDelegate.swift */,
 				1841067823531A6C000AE46C /* N26BCTests.swift */,
 				1841067A23531A6C000AE46C /* Info.plist */,
 			);
@@ -190,6 +196,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1841068423531E95000AE46C /* main.swift in Sources */,
 				1841066223531A6A000AE46C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -199,6 +206,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1841067923531A6C000AE46C /* N26BCTests.swift in Sources */,
+				1841068623532075000AE46C /* TestingAppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
