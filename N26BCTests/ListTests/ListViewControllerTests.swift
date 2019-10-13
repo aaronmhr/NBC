@@ -33,6 +33,14 @@ class ListViewControllerTests: XCTestCase {
         XCTAssertTrue(sut === delegate, "ViewController is tableview delegate")
     }
     
+    func testTableViewDoesNotDisplayAnyCellPriorToUpdate() {
+        let (sut,_) = makeSUT()
+        
+        givenViewDidLoadOn(sut)
+        
+        XCTAssertTrue(sut.tableView.visibleCells.isEmpty)
+    }
+    
     
     
     // MARK: - Helpers
