@@ -21,8 +21,10 @@ class ListViewControllerTests: XCTestCase {
     func testViewDidLoad_setsUpTableViewDelegateAndDataSource() {
         let (sut,_) = makeSUT()
         sut.loadViewIfNeeded()
-        XCTAssertNotNil(sut.tableView?.delegate)
-        XCTAssertNotNil(sut.tableView?.dataSource)
+        let delegate = sut.tableView?.delegate
+        let dataSource = sut.tableView?.dataSource
+        XCTAssertTrue(sut === dataSource, "ViewController is tableview data source")
+        XCTAssertTrue(sut === delegate, "ViewController is tableview delegate")
     }
     
     
