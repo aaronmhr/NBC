@@ -42,6 +42,11 @@ class ListRouterTests: XCTestCase {
         XCTAssertNotNil(router, "presenter contains Router that conforms to ListRouterProtocol")
         XCTAssertNotNil(router?.view, "router contains view that conforms to ListViewProtocol")
     }
+    
+    func testDefaultViewController_InstantiatesListViewController() {
+        let viewController = ListRouter.defaultViewController(for: ListViewController.self)
+        XCTAssertNotNil(viewController)
+    }
 }
 
 

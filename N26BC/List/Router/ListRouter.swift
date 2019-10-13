@@ -8,7 +8,7 @@
 
 import UIKit
 
-final class ListRouter {
+final class ListRouter: StoryboardInstantiator {
     weak var view: ListViewController!
     
     init(_ view: ListViewController) {
@@ -16,28 +16,13 @@ final class ListRouter {
     }
     
     static func assembleModule() -> UIViewController {
-        let viewController = defaultViewController
+        let viewController = defaultViewController(for: ListViewController.self)
         let interactor = ListInteractor()
         let router = ListRouter(viewController)
         let presenter = ListPresenter(view: viewController, interactor: interactor, router: router)
         viewController.presenter = presenter
         return viewController
     }
-    
-    private static var defaultViewController: ListViewController {
-        let storyaboard = UIStoryboard(name: Constants.storyboard, bundle: nil)
-        guard let viewController = storyaboard.instantiateViewController(withIdentifier: Constants.viewControllerID) as? ListViewController else {
-            fatalError("Failed to instantiate \(Constants.viewControllerID)")
-        }
-        return viewController
-    }
 }
 
 extension ListRouter: ListRouterProtocol { }
-
-extension ListRouter {
-    private enum Constants {
-        static let storyboard = "List"
-        static let viewControllerID = String(describing: ListViewController.self)
-    }
-}
