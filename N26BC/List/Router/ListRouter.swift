@@ -10,6 +10,6 @@ import UIKit
 
 final class ListRouter {
     static func assembleModule() -> UIViewController {
-        return UIViewController()
+        return ListViewController()
     }
 }

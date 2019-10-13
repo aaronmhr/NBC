@@ -11,12 +11,12 @@ import XCTest
 
 class ListRouterTests: XCTestCase {
     func testAssembleModule_returnsViewController() {
-        XCTAssertNil(ListRouter.assembleModule())
+        XCTAssertNotNil(ListRouter.assembleModule())
     }
     
     func testAssembleModule_returnsListViewController() {
         let viewController = ListRouter.assembleModule()
-        XCTAssertNil(viewController)
+        XCTAssertTrue(viewController is ListViewController)
     }
 }
 
