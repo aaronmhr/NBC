@@ -16,8 +16,8 @@ public enum APIServiceError: Error, Equatable {
     case decodingError
 }
 
-public extension APIServiceError: CustomStringConvertible {
-    var description: String {
+extension APIServiceError: CustomStringConvertible {
+    public var description: String {
         switch self {
         case .apiError:
             return "Could not reach API successfully"

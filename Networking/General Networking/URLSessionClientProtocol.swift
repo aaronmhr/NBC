@@ -9,5 +9,5 @@
 import Foundation
 
 public protocol URLSessionClientProtocol {
-    func fetchResources<T: Decodable>(url: URL?, completion: (Result<T, APIServiceError>))
+    func fetchResources<T: Decodable>(url: URL?, completion: @escaping (Result<T, APIServiceError>) -> Void)
 }
