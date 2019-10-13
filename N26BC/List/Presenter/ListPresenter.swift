@@ -20,4 +20,8 @@ final class ListPresenter {
     }
 }
 
-extension ListPresenter: ListPresenterProtocol { }
+extension ListPresenter: ListPresenterProtocol {
+    func viewDidLoad() {
+        view.pricesModel = (1...30).map { "\($0)" }
+    }
+}

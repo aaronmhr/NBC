@@ -15,9 +15,9 @@ protocol ListRouterProtocol {
 }
 
 protocol ListPresenterProtocol {
-    
+    func viewDidLoad()
 }
 
 protocol ListViewProtocol: class {
-    
+    var pricesModel: [String] { get set }
 }

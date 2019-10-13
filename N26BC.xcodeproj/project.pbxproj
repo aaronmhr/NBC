@@ -19,6 +19,7 @@
 		1874EAD32353345700052101 /* ListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1874EAD22353345700052101 /* ListPresenter.swift */; };
 		1874EAD52353386E00052101 /* ListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1874EAD42353386E00052101 /* ListInteractor.swift */; };
 		1874EAD72353444D00052101 /* List.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1874EAD62353444D00052101 /* List.storyboard */; };
+		1874EAD9235373EB00052101 /* ListViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1874EAD8235373EB00052101 /* ListViewControllerTests.swift */; };
 		1874EADE23537A6100052101 /* StoryboardInstantiator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1874EADD23537A6100052101 /* StoryboardInstantiator.swift */; };
 /* End PBXBuildFile section */
 
@@ -49,6 +50,7 @@
 		1874EAD22353345700052101 /* ListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPresenter.swift; sourceTree = "<group>"; };
 		1874EAD42353386E00052101 /* ListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListInteractor.swift; sourceTree = "<group>"; };
 		1874EAD62353444D00052101 /* List.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = List.storyboard; sourceTree = "<group>"; };
+		1874EAD8235373EB00052101 /* ListViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewControllerTests.swift; sourceTree = "<group>"; };
 		1874EADD23537A6100052101 /* StoryboardInstantiator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardInstantiator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -169,6 +171,7 @@
 			isa = PBXGroup;
 			children = (
 				1874EACC235330B200052101 /* ListRouterTests.swift */,
+				1874EAD8235373EB00052101 /* ListViewControllerTests.swift */,
 			);
 			path = ListTests;
 			sourceTree = "<group>";
@@ -297,6 +300,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1874EAD9235373EB00052101 /* ListViewControllerTests.swift in Sources */,
 				1874EACF235330D200052101 /* ListRouterTests.swift in Sources */,
 				1841068623532075000AE46C /* TestingAppDelegate.swift in Sources */,
 			);
