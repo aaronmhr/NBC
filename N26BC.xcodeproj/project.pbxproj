@@ -313,7 +313,7 @@
 			isa = PBXGroup;
 			children = (
 				1874EB142353C5BC00052101 /* Extensions */,
-				1874EB0B235397A500052101 /* General Networking */,
+				1874EB0B235397A500052101 /* Networking */,
 				1874EB062353943100052101 /* API */,
 				1874EAE623538F9E00052101 /* Networking.h */,
 				1874EAE723538F9E00052101 /* Info.plist */,
@@ -340,14 +340,14 @@
 			path = API;
 			sourceTree = "<group>";
 		};
-		1874EB0B235397A500052101 /* General Networking */ = {
+		1874EB0B235397A500052101 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
 				18740AAF2354E7A800A27C5D /* URLSession */,
 				18740AB02354E7BB00A27C5D /* URLSessionClient */,
 				18740AB12354E7CB00A27C5D /* Networking Error */,
 			);
-			path = "General Networking";
+			path = Networking;
 			sourceTree = "<group>";
 		};
 		1874EB102353BEFE00052101 /* API */ = {
