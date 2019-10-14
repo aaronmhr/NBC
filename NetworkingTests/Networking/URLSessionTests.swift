@@ -1,5 +1,5 @@
 //
-//  URLSessionExtensionsTest.swift
+//  URLSessionTests.swift
 //  NetworkingTests
 //
 //  Created by Aaron Huánuco on 14/10/2019.
@@ -9,7 +9,7 @@
 import XCTest
 @testable import Networking
 
-class URLSessionExtensionTests: XCTestCase {
+class URLSessionTests: XCTestCase {
     func testDataTask_returnsErrorAtIncompleteURL() {
         let session = makeSUT()
         let expectation = XCTestExpectation(description: "Try incomplete URL")
@@ -24,7 +24,7 @@ class URLSessionExtensionTests: XCTestCase {
             }
             expectation.fulfill()
         }
-        dataTask.resume()
+        dataTask?.resume()
         wait(for: [expectation], timeout: 3.0)
     }
     
@@ -42,7 +42,7 @@ class URLSessionExtensionTests: XCTestCase {
             }
             expectation.fulfill()
         }
-        dataTask.resume()
+        dataTask?.resume()
         wait(for: [expectation], timeout: 3.0)
     }
     
@@ -61,7 +61,7 @@ class URLSessionExtensionTests: XCTestCase {
             }
             expectation.fulfill()
         }
-        dataTask.resume()
+        dataTask?.resume()
         wait(for: [expectation], timeout: 3.0)
     }
     

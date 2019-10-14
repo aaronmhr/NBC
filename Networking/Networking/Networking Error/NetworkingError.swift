@@ -9,26 +9,29 @@
 import Foundation
 
 public enum NetworkingError: Error, Equatable {
-    case apiError(String)
-    case invalidEndpoint
+    case couldNotBuildURL
     case invalidResponse
-    case noData
     case decodingError
+    case clientError(String)
+    case serverError(String)
+    case other(String)
 }
 
 extension NetworkingError: CustomStringConvertible {
     public var description: String {
         switch self {
-        case .apiError:
-            return "Could not reach API successfully"
-        case .invalidEndpoint:
+        case .couldNotBuildURL:
             return "Could not build propper URL"
         case .invalidResponse:
             return "Could not get propper response"
-        case .noData:
-            return "Could not find data"
         case .decodingError:
             return "Could not decode data"
+        case .clientError(let error):
+            return "Could not reach API successfully! Error: \(error)"
+        case .serverError(let error):
+            return "Server couldn't process request. Error: \(error)"
+        case .other(let error):
+            return "Could not identify the error! Error: \(error) ☹️"
         }
     }
 }

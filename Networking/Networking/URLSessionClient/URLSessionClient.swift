@@ -19,26 +19,40 @@ public final class URLSessionClient: URLSessionClientProtocol {
     
     public func fetchResources<T: Decodable>(url: URL?, completion: @escaping (Result<T, NetworkingError>) -> Void) {
         guard let url = url else {
-            completion(.failure(.invalidEndpoint))
+            completion(.failure(.couldNotBuildURL))
             return
         }
         
         session.makeRequest(for: url) { result in
             switch result {
             case .success(let (response, data)):
-                guard let statusCode = (response as? HTTPURLResponse)?.statusCode, 200..<299 ~= statusCode else {
+                guard let response = response as? HTTPURLResponse else {
                     completion(.failure(.invalidResponse))
                     return
                 }
+                checkSuccessCase(response: response, data: data, completion: completion)
+            case .failure(let error):
+                completion(.failure(.other(error.localizedDescription)))
+            }
+            }?.resume()
+        
+        func checkSuccessCase<T: Decodable>(response: HTTPURLResponse, data: Data, completion: @escaping (Result<T, NetworkingError>) -> Void) {
+            let statusCode = response.statusCode
+            switch statusCode {
+            case 200...299:
                 do {
                     let values = try self.decoder.decode(T.self, from: data)
                     completion(.success(values))
                 } catch {
                     completion(.failure(.decodingError))
                 }
-            case .failure(let error):
-                completion(.failure(.apiError(error.localizedDescription)))
+            case 400...499:
+                completion(.failure(.clientError("\(statusCode)")))
+            case 500...599:
+                completion(.failure(.serverError("\(statusCode)")))
+            default:
+                completion(.failure(.other("\(statusCode)")))
             }
-        }.resume()
+        }
     }
 }

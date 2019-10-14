@@ -11,5 +11,5 @@ import Foundation
 public protocol URLSessionProtocol {
     typealias RemoteResult = Result<(URLResponse, Data), Error>
     
-    func makeRequest(for url: URL, result: @escaping (RemoteResult) -> Void) -> URLSessionDataTask
+    func makeRequest(for url: URL, completion: @escaping (RemoteResult) -> Void) -> URLSessionDataTask?
 }

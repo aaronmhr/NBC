@@ -9,15 +9,15 @@
 import Foundation
 
 extension URLSession: URLSessionProtocol {
-    public func makeRequest(for url: URL, result: @escaping (RemoteResult) -> Void) -> URLSessionDataTask {
+    public func makeRequest(for url: URL, completion: @escaping (RemoteResult) -> Void) -> URLSessionDataTask? {
         return dataTask(with: url) { (data, response, error) in
             if let error = error {
-                result(.failure(error))
+                completion(.failure(error))
             } else if let response = response, let data = data {
-                result(.success((response, data)))
+                completion(.success((response, data)))
             } else {
                 let error = NSError(domain: "Unidentified Error at \(#file)", code: 0, userInfo: nil)
-                result(.failure(error))
+                completion(.failure(error))
             }
         }
     }
