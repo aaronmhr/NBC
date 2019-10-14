@@ -20,7 +20,7 @@ class URLSessionExtensionTests: XCTestCase {
             case .failure(let error):
                 XCTAssertNotNil(error)
             case .success:
-                assertionFailure()
+                XCTFail()
             }
             expectation.fulfill()
         }
@@ -38,7 +38,7 @@ class URLSessionExtensionTests: XCTestCase {
             case .failure(let error):
                 XCTAssertNotNil(error)
             case .success:
-                assertionFailure()
+                XCTFail()
             }
             expectation.fulfill()
         }
@@ -54,7 +54,7 @@ class URLSessionExtensionTests: XCTestCase {
         let dataTask = session.makeRequest(for: url) { (result) in
             switch result {
             case .failure:
-                assertionFailure()
+                XCTFail()
             case let .success(response, data):
                 XCTAssertNotNil(response)
                 XCTAssertNotNil(data)
