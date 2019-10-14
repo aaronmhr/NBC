@@ -29,7 +29,7 @@
 		1874EAF923538F9F00052101 /* Networking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1874EAE423538F9E00052101 /* Networking.framework */; };
 		1874EAFA23538F9F00052101 /* Networking.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1874EAE423538F9E00052101 /* Networking.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		1874EB03235390AE00052101 /* URLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1874EB02235390AE00052101 /* URLSession.swift */; };
-		1874EB082353944E00052101 /* APIServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1874EB072353944E00052101 /* APIServiceError.swift */; };
+		1874EB082353944E00052101 /* NetworkingError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1874EB072353944E00052101 /* NetworkingError.swift */; };
 		1874EB0A2353947900052101 /* URLSessionClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1874EB092353947900052101 /* URLSessionClient.swift */; };
 		1874EB0D2353996F00052101 /* URLSessionClientProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1874EB0C2353996F00052101 /* URLSessionClientProtocol.swift */; };
 		1874EB0F23539B0200052101 /* BitCoinDeskAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1874EB0E23539B0200052101 /* BitCoinDeskAPI.swift */; };
@@ -113,7 +113,7 @@
 		1874EAEC23538F9F00052101 /* NetworkingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NetworkingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1874EAF523538F9F00052101 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1874EB02235390AE00052101 /* URLSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSession.swift; sourceTree = "<group>"; };
-		1874EB072353944E00052101 /* APIServiceError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIServiceError.swift; sourceTree = "<group>"; };
+		1874EB072353944E00052101 /* NetworkingError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingError.swift; sourceTree = "<group>"; };
 		1874EB092353947900052101 /* URLSessionClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionClient.swift; sourceTree = "<group>"; };
 		1874EB0C2353996F00052101 /* URLSessionClientProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionClientProtocol.swift; sourceTree = "<group>"; };
 		1874EB0E23539B0200052101 /* BitCoinDeskAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitCoinDeskAPI.swift; sourceTree = "<group>"; };
@@ -275,6 +275,32 @@
 			path = Networking;
 			sourceTree = "<group>";
 		};
+		18740AAF2354E7A800A27C5D /* URLSession */ = {
+			isa = PBXGroup;
+			children = (
+				18740AAD2354E60600A27C5D /* URLSessionProtocol.swift */,
+				1874EB02235390AE00052101 /* URLSession.swift */,
+			);
+			path = URLSession;
+			sourceTree = "<group>";
+		};
+		18740AB02354E7BB00A27C5D /* URLSessionClient */ = {
+			isa = PBXGroup;
+			children = (
+				1874EB0C2353996F00052101 /* URLSessionClientProtocol.swift */,
+				1874EB092353947900052101 /* URLSessionClient.swift */,
+			);
+			path = URLSessionClient;
+			sourceTree = "<group>";
+		};
+		18740AB12354E7CB00A27C5D /* Networking Error */ = {
+			isa = PBXGroup;
+			children = (
+				1874EB072353944E00052101 /* NetworkingError.swift */,
+			);
+			path = "Networking Error";
+			sourceTree = "<group>";
+		};
 		1874EADA235378BA00052101 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
@@ -317,11 +343,9 @@
 		1874EB0B235397A500052101 /* General Networking */ = {
 			isa = PBXGroup;
 			children = (
-				18740AAD2354E60600A27C5D /* URLSessionProtocol.swift */,
-				1874EB02235390AE00052101 /* URLSession.swift */,
-				1874EB0C2353996F00052101 /* URLSessionClientProtocol.swift */,
-				1874EB092353947900052101 /* URLSessionClient.swift */,
-				1874EB072353944E00052101 /* APIServiceError.swift */,
+				18740AAF2354E7A800A27C5D /* URLSession */,
+				18740AB02354E7BB00A27C5D /* URLSessionClient */,
+				18740AB12354E7CB00A27C5D /* Networking Error */,
 			);
 			path = "General Networking";
 			sourceTree = "<group>";
@@ -556,7 +580,7 @@
 				18740AAE2354E60600A27C5D /* URLSessionProtocol.swift in Sources */,
 				1874EB0F23539B0200052101 /* BitCoinDeskAPI.swift in Sources */,
 				1874EB0D2353996F00052101 /* URLSessionClientProtocol.swift in Sources */,
-				1874EB082353944E00052101 /* APIServiceError.swift in Sources */,
+				1874EB082353944E00052101 /* NetworkingError.swift in Sources */,
 				1874EB0A2353947900052101 /* URLSessionClient.swift in Sources */,
 				1874EB182353C67E00052101 /* DateToString.swift in Sources */,
 				1874EB162353C5D200052101 /* StringToDate.swift in Sources */,

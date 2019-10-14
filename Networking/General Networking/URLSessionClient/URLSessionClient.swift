@@ -17,7 +17,7 @@ public final class URLSessionClient: URLSessionClientProtocol {
         self.decoder = decoder
     }
     
-    public func fetchResources<T: Decodable>(url: URL?, completion: @escaping (Result<T, APIServiceError>) -> Void) {
+    public func fetchResources<T: Decodable>(url: URL?, completion: @escaping (Result<T, NetworkingError>) -> Void) {
         guard let url = url else {
             completion(.failure(.invalidEndpoint))
             return

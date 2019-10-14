@@ -1,5 +1,5 @@
 //
-//  APIServiceError.swift
+//  NetworkingError.swift
 //  Networking
 //
 //  Created by Aaron Huánuco on 13/10/2019.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-public enum APIServiceError: Error, Equatable {
+public enum NetworkingError: Error, Equatable {
     case apiError(String)
     case invalidEndpoint
     case invalidResponse
@@ -16,7 +16,7 @@ public enum APIServiceError: Error, Equatable {
     case decodingError
 }
 
-extension APIServiceError: CustomStringConvertible {
+extension NetworkingError: CustomStringConvertible {
     public var description: String {
         switch self {
         case .apiError:
