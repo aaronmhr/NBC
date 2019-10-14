@@ -14,6 +14,8 @@
 		1841068623532075000AE46C /* TestingAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1841068523532075000AE46C /* TestingAppDelegate.swift */; };
 		184106AA23532D37000AE46C /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184106A923532D37000AE46C /* ListViewController.swift */; };
 		18740AAA2354DF9C00A27C5D /* URLSessionExtensionsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18740AA92354DF9C00A27C5D /* URLSessionExtensionsTest.swift */; };
+		18740AAC2354E5D800A27C5D /* URLSessioClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18740AAB2354E5D800A27C5D /* URLSessioClientTests.swift */; };
+		18740AAE2354E60600A27C5D /* URLSessionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18740AAD2354E60600A27C5D /* URLSessionProtocol.swift */; };
 		1874EACB23532F5900052101 /* ListProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1874EACA23532F5900052101 /* ListProtocols.swift */; };
 		1874EACF235330D200052101 /* ListRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1874EACC235330B200052101 /* ListRouterTests.swift */; };
 		1874EAD12353311700052101 /* ListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1874EAD02353311700052101 /* ListRouter.swift */; };
@@ -27,7 +29,7 @@
 		1874EAF623538F9F00052101 /* Networking.h in Headers */ = {isa = PBXBuildFile; fileRef = 1874EAE623538F9E00052101 /* Networking.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1874EAF923538F9F00052101 /* Networking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1874EAE423538F9E00052101 /* Networking.framework */; };
 		1874EAFA23538F9F00052101 /* Networking.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1874EAE423538F9E00052101 /* Networking.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		1874EB03235390AE00052101 /* URLSessionExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1874EB02235390AE00052101 /* URLSessionExtension.swift */; };
+		1874EB03235390AE00052101 /* URLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1874EB02235390AE00052101 /* URLSession.swift */; };
 		1874EB082353944E00052101 /* APIServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1874EB072353944E00052101 /* APIServiceError.swift */; };
 		1874EB0A2353947900052101 /* URLSessionClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1874EB092353947900052101 /* URLSessionClient.swift */; };
 		1874EB0D2353996F00052101 /* URLSessionClientProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1874EB0C2353996F00052101 /* URLSessionClientProtocol.swift */; };
@@ -96,6 +98,8 @@
 		1841068523532075000AE46C /* TestingAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestingAppDelegate.swift; sourceTree = "<group>"; };
 		184106A923532D37000AE46C /* ListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		18740AA92354DF9C00A27C5D /* URLSessionExtensionsTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionExtensionsTest.swift; sourceTree = "<group>"; };
+		18740AAB2354E5D800A27C5D /* URLSessioClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessioClientTests.swift; sourceTree = "<group>"; };
+		18740AAD2354E60600A27C5D /* URLSessionProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionProtocol.swift; sourceTree = "<group>"; };
 		1874EACA23532F5900052101 /* ListProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListProtocols.swift; sourceTree = "<group>"; };
 		1874EACC235330B200052101 /* ListRouterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListRouterTests.swift; sourceTree = "<group>"; };
 		1874EAD02353311700052101 /* ListRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListRouter.swift; sourceTree = "<group>"; };
@@ -110,7 +114,7 @@
 		1874EAEC23538F9F00052101 /* NetworkingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NetworkingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1874EAF323538F9F00052101 /* NetworkingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingTests.swift; sourceTree = "<group>"; };
 		1874EAF523538F9F00052101 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1874EB02235390AE00052101 /* URLSessionExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionExtension.swift; sourceTree = "<group>"; };
+		1874EB02235390AE00052101 /* URLSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSession.swift; sourceTree = "<group>"; };
 		1874EB072353944E00052101 /* APIServiceError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIServiceError.swift; sourceTree = "<group>"; };
 		1874EB092353947900052101 /* URLSessionClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionClient.swift; sourceTree = "<group>"; };
 		1874EB0C2353996F00052101 /* URLSessionClientProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionClientProtocol.swift; sourceTree = "<group>"; };
@@ -268,6 +272,7 @@
 			isa = PBXGroup;
 			children = (
 				18740AA92354DF9C00A27C5D /* URLSessionExtensionsTest.swift */,
+				18740AAB2354E5D800A27C5D /* URLSessioClientTests.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -315,7 +320,8 @@
 		1874EB0B235397A500052101 /* General Networking */ = {
 			isa = PBXGroup;
 			children = (
-				1874EB02235390AE00052101 /* URLSessionExtension.swift */,
+				18740AAD2354E60600A27C5D /* URLSessionProtocol.swift */,
+				1874EB02235390AE00052101 /* URLSession.swift */,
 				1874EB0C2353996F00052101 /* URLSessionClientProtocol.swift */,
 				1874EB092353947900052101 /* URLSessionClient.swift */,
 				1874EB072353944E00052101 /* APIServiceError.swift */,
@@ -549,7 +555,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1874EB03235390AE00052101 /* URLSessionExtension.swift in Sources */,
+				1874EB03235390AE00052101 /* URLSession.swift in Sources */,
+				18740AAE2354E60600A27C5D /* URLSessionProtocol.swift in Sources */,
 				1874EB0F23539B0200052101 /* BitCoinDeskAPI.swift in Sources */,
 				1874EB0D2353996F00052101 /* URLSessionClientProtocol.swift in Sources */,
 				1874EB082353944E00052101 /* APIServiceError.swift in Sources */,
@@ -565,6 +572,7 @@
 			files = (
 				1874EB1B2353C72F00052101 /* StringToDateTests.swift in Sources */,
 				18740AAA2354DF9C00A27C5D /* URLSessionExtensionsTest.swift in Sources */,
+				18740AAC2354E5D800A27C5D /* URLSessioClientTests.swift in Sources */,
 				1874EB1D2353C99E00052101 /* DateToStringTests.swift in Sources */,
 				1874EB132353BF8B00052101 /* BitCoinDeskAPITests.swift in Sources */,
 				1874EAF423538F9F00052101 /* NetworkingTests.swift in Sources */,

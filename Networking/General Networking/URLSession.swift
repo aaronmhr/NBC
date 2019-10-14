@@ -8,8 +8,8 @@
 
 import Foundation
 
-extension URLSession: URLSessionResultProtocol {
-    func dataTask(with url: URL, result: @escaping (RemoteResult) -> Void) -> URLSessionDataTask {
+extension URLSession: URLSessionProtocol {
+    public func makeRequest(for url: URL, result: @escaping (RemoteResult) -> Void) -> URLSessionDataTask {
         return dataTask(with: url) { (data, response, error) in
             if let error = error {
                 result(.failure(error))
@@ -21,10 +21,4 @@ extension URLSession: URLSessionResultProtocol {
             }
         }
     }
-}
-
-protocol URLSessionResultProtocol {
-    typealias RemoteResult = Result<(URLResponse, Data), Error>
-    
-    func dataTask(with url: URL, result: @escaping (RemoteResult) -> Void) -> URLSessionDataTask
 }

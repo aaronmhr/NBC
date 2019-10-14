@@ -15,7 +15,7 @@ class URLSessionExtensionTests: XCTestCase {
         let expectation = XCTestExpectation(description: "Try incomplete URL")
         let url = URL(string: "https://google")!
         
-        let dataTask = session.dataTask(with: url) { (result) in
+        let dataTask = session.makeRequest(for: url) { (result) in
             switch result {
             case .failure(let error):
                 XCTAssertNotNil(error)
@@ -33,7 +33,7 @@ class URLSessionExtensionTests: XCTestCase {
         let expectation = XCTestExpectation(description: "Try random URL")
         let url = URL(string: "https://gggggggggggggggggggggggg123123.com")!
         
-        let dataTask = session.dataTask(with: url) { (result) in
+        let dataTask = session.makeRequest(for: url) { (result) in
             switch result {
             case .failure(let error):
                 XCTAssertNotNil(error)
@@ -51,7 +51,7 @@ class URLSessionExtensionTests: XCTestCase {
         let expectation = XCTestExpectation(description: "Try random URL")
         let url = URL(string: "https://google.com")!
         
-        let dataTask = session.dataTask(with: url) { (result) in
+        let dataTask = session.makeRequest(for: url) { (result) in
             switch result {
             case .failure:
                 assertionFailure()

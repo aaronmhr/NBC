@@ -9,10 +9,10 @@
 import Foundation
 
 public final class URLSessionClient: URLSessionClientProtocol {
-    private let session: URLSession
+    private let session: URLSessionProtocol
     private let decoder: JSONDecoder
     
-    public init(session: URLSession, decoder: JSONDecoder) {
+    public init(session: URLSessionProtocol, decoder: JSONDecoder) {
         self.session = session
         self.decoder = decoder
     }
@@ -23,7 +23,7 @@ public final class URLSessionClient: URLSessionClientProtocol {
             return
         }
         
-        session.dataTask(with: url) { result in
+        session.makeRequest(for: url) { result in
             switch result {
             case .success(let (response, data)):
                 guard let statusCode = (response as? HTTPURLResponse)?.statusCode, 200..<299 ~= statusCode else {
