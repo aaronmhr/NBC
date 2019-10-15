@@ -1,0 +1,6 @@
+framework module Pods_N26BC {
+  umbrella header "Pods-N26BC-umbrella.h"
+
+  export *
+  module * { export * }
+}

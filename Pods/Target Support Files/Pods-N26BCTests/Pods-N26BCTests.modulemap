@@ -1,0 +1,6 @@
+framework module Pods_N26BCTests {
+  umbrella header "Pods-N26BCTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
