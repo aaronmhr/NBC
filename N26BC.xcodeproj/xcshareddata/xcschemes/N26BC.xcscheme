@@ -50,6 +50,16 @@
                ReferencedContainer = "container:N26BC.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "18731E482356BC6E00BB577A"
+               BuildableName = "CommonsTests.xctest"
+               BlueprintName = "CommonsTests"
+               ReferencedContainer = "container:N26BC.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction

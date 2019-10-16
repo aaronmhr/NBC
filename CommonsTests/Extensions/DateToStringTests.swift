@@ -1,13 +1,13 @@
 //
 //  DateToStringTests.swift
-//  NetworkingTests
+//  CommonsTests
 //
-//  Created by Aaron Huánuco on 13/10/2019.
+//  Created by Aaron Huánuco on 16/10/2019.
 //  Copyright © 2019 Aaron Huánuco. All rights reserved.
 //
 
 import XCTest
-@testable import Networking
+@testable import Commons
 
 class DateToStringTests: XCTestCase {
     func testDateToDate_createsString() {

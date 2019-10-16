@@ -7,6 +7,7 @@
 //
 
 import XCTest
+import Commons
 @testable import Networking
 
 class BitCoinDeskAPITests: XCTestCase {
