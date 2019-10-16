@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,15 @@
 		1841068423531E95000AE46C /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1841068323531E95000AE46C /* main.swift */; };
 		1841068623532075000AE46C /* TestingAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1841068523532075000AE46C /* TestingAppDelegate.swift */; };
 		184106AA23532D37000AE46C /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184106A923532D37000AE46C /* ListViewController.swift */; };
+		187017B423558CA5009270AA /* HistoricalDataRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187017B323558CA5009270AA /* HistoricalDataRepository.swift */; };
+		187017B723559097009270AA /* HistoricalResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187017B623559097009270AA /* HistoricalResponseModel.swift */; };
+		187017BB235591E6009270AA /* DefaultHistoricalDataRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187017BA235591E6009270AA /* DefaultHistoricalDataRepository.swift */; };
+		187017BE235597AA009270AA /* NetworkingDependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187017BD235597AA009270AA /* NetworkingDependencies.swift */; };
+		187017C0235597C8009270AA /* DefaultNetworkingDependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187017BF235597C8009270AA /* DefaultNetworkingDependencies.swift */; };
+		18731DA723564A6000BB577A /* ShowableError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18731DA623564A6000BB577A /* ShowableError.swift */; };
+		18731DAA23564A8500BB577A /* HistoricalPrice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18731DA923564A8500BB577A /* HistoricalPrice.swift */; };
+		18731DAD23564B0500BB577A /* CurrentDataRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18731DAC23564B0500BB577A /* CurrentDataRepository.swift */; };
+		18731DAF23564B5400BB577A /* CurrentResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18731DAE23564B5400BB577A /* CurrentResponseModel.swift */; };
 		18740AAA2354DF9C00A27C5D /* URLSessionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18740AA92354DF9C00A27C5D /* URLSessionTests.swift */; };
 		18740AAC2354E5D800A27C5D /* URLSessioClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18740AAB2354E5D800A27C5D /* URLSessioClientTests.swift */; };
 		18740AAE2354E60600A27C5D /* URLSessionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18740AAD2354E60600A27C5D /* URLSessionProtocol.swift */; };
@@ -101,6 +110,15 @@
 		1841068323531E95000AE46C /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		1841068523532075000AE46C /* TestingAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestingAppDelegate.swift; sourceTree = "<group>"; };
 		184106A923532D37000AE46C /* ListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
+		187017B323558CA5009270AA /* HistoricalDataRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoricalDataRepository.swift; sourceTree = "<group>"; };
+		187017B623559097009270AA /* HistoricalResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoricalResponseModel.swift; sourceTree = "<group>"; };
+		187017BA235591E6009270AA /* DefaultHistoricalDataRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultHistoricalDataRepository.swift; sourceTree = "<group>"; };
+		187017BD235597AA009270AA /* NetworkingDependencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingDependencies.swift; sourceTree = "<group>"; };
+		187017BF235597C8009270AA /* DefaultNetworkingDependencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultNetworkingDependencies.swift; sourceTree = "<group>"; };
+		18731DA623564A6000BB577A /* ShowableError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowableError.swift; sourceTree = "<group>"; };
+		18731DA923564A8500BB577A /* HistoricalPrice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoricalPrice.swift; sourceTree = "<group>"; };
+		18731DAC23564B0500BB577A /* CurrentDataRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentDataRepository.swift; sourceTree = "<group>"; };
+		18731DAE23564B5400BB577A /* CurrentResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentResponseModel.swift; sourceTree = "<group>"; };
 		18740AA92354DF9C00A27C5D /* URLSessionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionTests.swift; sourceTree = "<group>"; };
 		18740AAB2354E5D800A27C5D /* URLSessioClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessioClientTests.swift; sourceTree = "<group>"; };
 		18740AAD2354E60600A27C5D /* URLSessionProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionProtocol.swift; sourceTree = "<group>"; };
@@ -208,6 +226,9 @@
 				1874EADA235378BA00052101 /* Utils */,
 				1841068323531E95000AE46C /* main.swift */,
 				1841066123531A6A000AE46C /* AppDelegate.swift */,
+				18731DA823564A7800BB577A /* Model */,
+				187017B523558F3A009270AA /* Reponse Models */,
+				187017B123558C50009270AA /* Repository */,
 				1841068723532484000AE46C /* List */,
 				1841066A23531A6C000AE46C /* Assets.xcassets */,
 				1841066C23531A6C000AE46C /* LaunchScreen.storyboard */,
@@ -286,6 +307,68 @@
 				1874EAD8235373EB00052101 /* ListViewControllerTests.swift */,
 			);
 			path = ListTests;
+			sourceTree = "<group>";
+		};
+		187017B123558C50009270AA /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				187017BC23559791009270AA /* Networking Dependencies */,
+				187017B8235591B9009270AA /* HistoricalData */,
+				18731DAB23564AE600BB577A /* CurrentData */,
+				18731DA523564A4300BB577A /* Error */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		187017B523558F3A009270AA /* Reponse Models */ = {
+			isa = PBXGroup;
+			children = (
+				187017B623559097009270AA /* HistoricalResponseModel.swift */,
+				18731DAE23564B5400BB577A /* CurrentResponseModel.swift */,
+			);
+			path = "Reponse Models";
+			sourceTree = "<group>";
+		};
+		187017B8235591B9009270AA /* HistoricalData */ = {
+			isa = PBXGroup;
+			children = (
+				187017B323558CA5009270AA /* HistoricalDataRepository.swift */,
+				187017BA235591E6009270AA /* DefaultHistoricalDataRepository.swift */,
+			);
+			path = HistoricalData;
+			sourceTree = "<group>";
+		};
+		187017BC23559791009270AA /* Networking Dependencies */ = {
+			isa = PBXGroup;
+			children = (
+				187017BD235597AA009270AA /* NetworkingDependencies.swift */,
+				187017BF235597C8009270AA /* DefaultNetworkingDependencies.swift */,
+			);
+			path = "Networking Dependencies";
+			sourceTree = "<group>";
+		};
+		18731DA523564A4300BB577A /* Error */ = {
+			isa = PBXGroup;
+			children = (
+				18731DA623564A6000BB577A /* ShowableError.swift */,
+			);
+			path = Error;
+			sourceTree = "<group>";
+		};
+		18731DA823564A7800BB577A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				18731DA923564A8500BB577A /* HistoricalPrice.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		18731DAB23564AE600BB577A /* CurrentData */ = {
+			isa = PBXGroup;
+			children = (
+				18731DAC23564B0500BB577A /* CurrentDataRepository.swift */,
+			);
+			path = CurrentData;
 			sourceTree = "<group>";
 		};
 		18740AA82354DF8000A27C5D /* Networking */ = {
@@ -421,7 +504,6 @@
 				4B90046ADEA9BBF08AFC2154 /* Pods-NetworkingTests.debug.xcconfig */,
 				E33C65A92870420936957B07 /* Pods-NetworkingTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -713,13 +795,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18731DAF23564B5400BB577A /* CurrentResponseModel.swift in Sources */,
 				1874EADE23537A6100052101 /* StoryboardInstantiator.swift in Sources */,
 				1841068423531E95000AE46C /* main.swift in Sources */,
+				18731DAA23564A8500BB577A /* HistoricalPrice.swift in Sources */,
+				18731DAD23564B0500BB577A /* CurrentDataRepository.swift in Sources */,
+				187017B723559097009270AA /* HistoricalResponseModel.swift in Sources */,
 				1841066223531A6A000AE46C /* AppDelegate.swift in Sources */,
+				187017B423558CA5009270AA /* HistoricalDataRepository.swift in Sources */,
+				18731DA723564A6000BB577A /* ShowableError.swift in Sources */,
 				184106AA23532D37000AE46C /* ListViewController.swift in Sources */,
+				187017C0235597C8009270AA /* DefaultNetworkingDependencies.swift in Sources */,
+				187017BB235591E6009270AA /* DefaultHistoricalDataRepository.swift in Sources */,
 				1874EAD52353386E00052101 /* ListInteractor.swift in Sources */,
 				1874EAD12353311700052101 /* ListRouter.swift in Sources */,
 				1874EAD32353345700052101 /* ListPresenter.swift in Sources */,
+				187017BE235597AA009270AA /* NetworkingDependencies.swift in Sources */,
 				1874EACB23532F5900052101 /* ListProtocols.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1012,7 +1103,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = Networking/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1043,7 +1134,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = Networking/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
