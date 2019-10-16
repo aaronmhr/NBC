@@ -113,7 +113,7 @@ struct TodayTableViewModel: ListViewSection {
     static func makeSectionViewModel(from model: [Valuation], title: String, type: ListSectionType) -> TodayTableViewModel {
         
         let pricesModel: [PricesViewModel] = model.map {
-            let date: String = $0.date.toStringWithFormat("MM-dd-yyyy")
+            let date: String = $0.date.toStringWithFormat("MM-dd-yyyy HH:mm:ss")
             let price = "1BTC = \($0.price) \($0.currency.rawValue)"
             return PricesViewModel(date: date, price: price)
         }
@@ -136,7 +136,7 @@ struct HistoricalTableViewModel: ListViewSection {
     static func makeSectionViewModel(from model: [Valuation], title: String, type: ListSectionType) -> HistoricalTableViewModel {
         
         let pricesModel: [PricesViewModel] = model.map {
-            let date: String = $0.date.toStringWithFormat("MM-dd-yyyy")
+            let date: String = $0.date.toStringWithFormat("MM-dd-yyyy HH:mm:ss")
             let price = "1BTC = \($0.price) \($0.currency.rawValue)"
             return PricesViewModel(date: date, price: price)
         }

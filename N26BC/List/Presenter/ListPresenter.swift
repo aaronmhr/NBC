@@ -6,12 +6,14 @@
 //  Copyright © 2019 Aaron Huánuco. All rights reserved.
 //
 
-import Foundation
+import Commons
 
 final class ListPresenter {
     let router: ListRouterProtocol
     let interactor: ListInteractorProtocol
     weak var view: ListViewProtocol!
+    
+    let timer: TimerProtocol = DefaultTimer()
     
     private var firstSection: TodayTableViewModel? {
         didSet {
@@ -41,6 +43,7 @@ extension ListPresenter: ListPresenterProtocol {
         interactor.retrieveHistoricalData { [weak self] result in
             switch result {
             case .success(let historicalPrices):
+                print("Downloaded Historical")
                 self?.secondSection = HistoricalTableViewModel.makeSectionViewModel(from: historicalPrices, title: Localizables.secondSection, type: .historical)
             case .failure(let error):
                 print("Error")
@@ -51,18 +54,22 @@ extension ListPresenter: ListPresenterProtocol {
     }
     
     func viewWillAppear() {
-        interactor.retrieveCurrentData { [weak self] result in
-            switch result {
-            case .success(let todayPrices):
-                self?.firstSection = TodayTableViewModel.makeSectionViewModel(from: [todayPrices], title: Localizables.firstSection, type: .today)
-            case .failure(let error):
-                print("Error")
+        timer.schedule(timeInterval: 10, repeats: true) { [weak self] in
+            self?.interactor.retrieveCurrentData { result in
+                switch result {
+                case .success(let todayPrices):
+                    print("Downloaded Today")
+                    self?.firstSection = TodayTableViewModel.makeSectionViewModel(from: [todayPrices], title: Localizables.firstSection, type: .today)
+                case .failure(let error):
+                    print("Error")
+                }
             }
         }
+        timer.fire()
     }
     
     func viewWillDissapear() {
-        //        interactor.invalidateTimer
+        timer.invalidate()
     }
     
     private enum Localizables {

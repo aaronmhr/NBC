@@ -22,10 +22,11 @@ class DefaultTimerTests: XCTestCase {
         let sut = makeSUT()
         let exp = expectation(description: "timer")
         XCTAssertNil(sut.timer)
-        sut.schedule(timeInterval: 0, repeats: false, completionBlock: {
+        sut.schedule(timeInterval: 1, repeats: false, completionBlock: {
             times += 1
             exp.fulfill()
         })
+        sut.fire()
         wait(for: [exp], timeout: 1)
         XCTAssertNotNil(sut.timer)
         XCTAssertEqual(times, 1)

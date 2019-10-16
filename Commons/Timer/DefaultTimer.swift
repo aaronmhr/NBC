@@ -11,6 +11,8 @@ import Foundation
 public final class DefaultTimer: TimerProtocol {
     private(set) weak var timer: Timer?
     
+    public init() { }
+    
     public func schedule(timeInterval: TimerProtocol.TimeInterval, repeats: Bool, completionBlock: @escaping CompletionBlock) {
         self.timer?.invalidate()
         let timer = Timer.scheduledTimer(withTimeInterval: timeInterval, repeats: repeats) {
@@ -25,6 +27,10 @@ public final class DefaultTimer: TimerProtocol {
     public func invalidate() {
         timer?.invalidate()
         timer = nil
+    }
+    
+    public func fire() {
+        timer?.fire()
     }
     
     deinit {

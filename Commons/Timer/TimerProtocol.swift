@@ -12,6 +12,7 @@ public protocol TimerProtocol {
     typealias TimeInterval = Foundation.TimeInterval
     typealias CompletionBlock = () -> Void
     
-    func schedule(timeInterval: TimeInterval, repeats: Bool, completionBlock: @escaping CompletionBlock)
+    func fire()
     func invalidate()
+    func schedule(timeInterval: TimeInterval, repeats: Bool, completionBlock: @escaping CompletionBlock)
 }
