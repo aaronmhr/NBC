@@ -53,6 +53,7 @@
 		1874EB0D2353996F00052101 /* URLSessionClientProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1874EB0C2353996F00052101 /* URLSessionClientProtocol.swift */; };
 		1874EB0F23539B0200052101 /* BitCoinDeskAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1874EB0E23539B0200052101 /* BitCoinDeskAPI.swift */; };
 		1874EB132353BF8B00052101 /* BitCoinDeskAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1874EB122353BF8B00052101 /* BitCoinDeskAPITests.swift */; };
+		187E998A2357896900B57FCC /* TimerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187E99892357896900B57FCC /* TimerProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -175,6 +176,7 @@
 		1874EB0C2353996F00052101 /* URLSessionClientProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionClientProtocol.swift; sourceTree = "<group>"; };
 		1874EB0E23539B0200052101 /* BitCoinDeskAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitCoinDeskAPI.swift; sourceTree = "<group>"; };
 		1874EB122353BF8B00052101 /* BitCoinDeskAPITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitCoinDeskAPITests.swift; sourceTree = "<group>"; };
+		187E99892357896900B57FCC /* TimerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -409,6 +411,7 @@
 		18731E422356BC6E00BB577A /* Commons */ = {
 			isa = PBXGroup;
 			children = (
+				187E99882357883F00B57FCC /* Timer */,
 				18731E5E2356BC8000BB577A /* Extensions */,
 				18731E432356BC6E00BB577A /* Commons.h */,
 				18731E442356BC6E00BB577A /* Info.plist */,
@@ -532,6 +535,14 @@
 				1874EB122353BF8B00052101 /* BitCoinDeskAPITests.swift */,
 			);
 			path = API;
+			sourceTree = "<group>";
+		};
+		187E99882357883F00B57FCC /* Timer */ = {
+			isa = PBXGroup;
+			children = (
+				187E99892357896900B57FCC /* TimerProtocol.swift */,
+			);
+			path = Timer;
 			sourceTree = "<group>";
 		};
 		9B3BDFAF2973DD7FDC305AE1 /* Pods */ = {
@@ -823,6 +834,7 @@
 			files = (
 				18731E602356BC9900BB577A /* StringToDate.swift in Sources */,
 				18731E622356BCB700BB577A /* DateToString.swift in Sources */,
+				187E998A2357896900B57FCC /* TimerProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
