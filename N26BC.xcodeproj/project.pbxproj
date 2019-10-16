@@ -23,7 +23,6 @@
 		18731DAD23564B0500BB577A /* CurrentDataRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18731DAC23564B0500BB577A /* CurrentDataRepository.swift */; };
 		18731DAF23564B5400BB577A /* CurrentResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18731DAE23564B5400BB577A /* CurrentResponseModel.swift */; };
 		18731E4A2356BC6E00BB577A /* Commons.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18731E412356BC6E00BB577A /* Commons.framework */; };
-		18731E512356BC6E00BB577A /* CommonsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18731E502356BC6E00BB577A /* CommonsTests.swift */; };
 		18731E532356BC6E00BB577A /* Commons.h in Headers */ = {isa = PBXBuildFile; fileRef = 18731E432356BC6E00BB577A /* Commons.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		18731E562356BC6E00BB577A /* Commons.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18731E412356BC6E00BB577A /* Commons.framework */; };
 		18731E572356BC6E00BB577A /* Commons.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 18731E412356BC6E00BB577A /* Commons.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -148,7 +147,6 @@
 		18731E432356BC6E00BB577A /* Commons.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Commons.h; sourceTree = "<group>"; };
 		18731E442356BC6E00BB577A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		18731E492356BC6E00BB577A /* CommonsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CommonsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		18731E502356BC6E00BB577A /* CommonsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonsTests.swift; sourceTree = "<group>"; };
 		18731E522356BC6E00BB577A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		18731E5F2356BC9900BB577A /* StringToDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringToDate.swift; sourceTree = "<group>"; };
 		18731E612356BCB700BB577A /* DateToString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateToString.swift; sourceTree = "<group>"; };
@@ -425,7 +423,6 @@
 			isa = PBXGroup;
 			children = (
 				18731E632356BCCA00BB577A /* Extensions */,
-				18731E502356BC6E00BB577A /* CommonsTests.swift */,
 				18731E522356BC6E00BB577A /* Info.plist */,
 			);
 			path = CommonsTests;
@@ -847,7 +844,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				18731E672356BD1500BB577A /* DateToStringTests.swift in Sources */,
-				18731E512356BC6E00BB577A /* CommonsTests.swift in Sources */,
 				18731E652356BCF700BB577A /* StringToDateTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
