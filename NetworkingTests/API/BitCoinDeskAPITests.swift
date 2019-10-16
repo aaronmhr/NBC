@@ -15,14 +15,17 @@ class BitCoinDeskAPITests: XCTestCase {
         let euroURL = URL(string: "https://api.coindesk.com/v1/bpi/currentprice/EUR.json")
         let dollarURL = URL(string: "https://api.coindesk.com/v1/bpi/currentprice/USD.json")
         let poundURL = URL(string: "https://api.coindesk.com/v1/bpi/currentprice/GBP.json")
+        let nonDefinedCurrencyURL = URL(string: "https://api.coindesk.com/v1/bpi/currentprice.json")
         
         let euroConstructor = BitcoinDeskAPI.today(.euro)
         let dollarConstructor = BitcoinDeskAPI.today(.dollar)
         let poundConstructor = BitcoinDeskAPI.today(.pound)
+        let nonDefinedContructor = BitcoinDeskAPI.today(.nonDefined)
         
         XCTAssertEqual(euroConstructor.url, euroURL)
         XCTAssertEqual(dollarConstructor.url, dollarURL)
         XCTAssertEqual(poundConstructor.url, poundURL)
+        XCTAssertEqual(nonDefinedContructor.url, nonDefinedCurrencyURL)
     }
     
     func testURLConstructor_forHistoricalConstructsTheProperHistoricalURL() {

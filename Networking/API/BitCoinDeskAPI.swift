@@ -27,7 +27,7 @@ public enum BitcoinDeskAPI {
         var components = URLComponents()
         components.scheme = Constants.scheme
         components.host = Constants.baseURL
-        components.path = String(format: Constants.todayPath, currency.rawValue)
+        components.path = String(format: Constants.todayPath, currency.currencyPath)
         return components.url
     }
     
@@ -45,7 +45,7 @@ extension BitcoinDeskAPI {
     private enum Constants {
         static let scheme = "https"
         static let baseURL = "api.coindesk.com"
-        static let todayPath = "/v1/bpi/currentprice/%@.json"
+        static let todayPath = "/v1/bpi/currentprice%@.json"
         static let historicalPath = "/v1/bpi/historical/close.json"
     }
     
@@ -53,6 +53,16 @@ extension BitcoinDeskAPI {
         case euro = "EUR"
         case dollar = "USD"
         case pound = "GBP"
+        case nonDefined = ""
+        
+        var currencyPath: String {
+            switch self {
+            case .euro, .dollar, .pound:
+                return "/" + self.rawValue
+            case .nonDefined:
+                return self.rawValue
+            }
+        }
     }
     
     public struct HistoricalQuery {

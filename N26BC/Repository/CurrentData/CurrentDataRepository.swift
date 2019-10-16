@@ -9,5 +9,5 @@
 import Foundation
 
 protocol CurrentDataRepository {
-    func getCurrentData(url: URL?, completion: @escaping (Result<HistoricalResponseModel, ShowableError>) -> Void)
+    func getCurrentData(url: URL?, completion: @escaping (Result<CurrentResponseModel, ShowableError>) -> Void)
 }

@@ -7,3 +7,30 @@
 //
 
 import Foundation
+
+struct CurrentResponseModel: Decodable {
+    let time: TimeResponseModel?
+    let bpi: BpiResponseModel?
+}
+
+// MARK: BpiResponseModel
+struct BpiResponseModel: Decodable {
+    let usd, gbp, eur: CurrencyResponseModel?
+
+    enum CodingKeys: String, CodingKey {
+        case usd = "USD"
+        case gbp = "GBP"
+        case eur = "EUR"
+    }
+}
+
+// MARK: CurrencyResponseModel
+struct CurrencyResponseModel: Decodable {
+    let code: String?
+    let rateFloat: Double?
+}
+
+// MARK: TimeResponseModel
+struct TimeResponseModel: Decodable {
+    let updatedISO: String?
+}

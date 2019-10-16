@@ -13,6 +13,22 @@ final class ListPresenter {
     let interactor: ListInteractorProtocol
     weak var view: ListViewProtocol!
     
+    private var firstSection: TodayTableViewModel? {
+        didSet {
+            buildNewViewModel(with: firstSection, and: secondSection)
+        }
+    }
+    private var secondSection: HistoricalTableViewModel? {
+        didSet {
+            buildNewViewModel(with: firstSection, and: secondSection)
+        }
+    }
+    
+    //    Try with mapper order at the interactor
+    private func buildNewViewModel(with firstSection: ListViewSection?, and secondSection: ListViewSection?) {
+        view.tableViewModel = [firstSection, secondSection].compactMap { $0 }
+    }
+    
     init(view: ListViewProtocol, interactor: ListInteractorProtocol, router: ListRouterProtocol) {
         self.view = view
         self.interactor = interactor
@@ -25,15 +41,33 @@ extension ListPresenter: ListPresenterProtocol {
         interactor.retrieveHistoricalData { [weak self] result in
             switch result {
             case .success(let historicalPrices):
-                self?.view.pricesModel = historicalPrices.map {
-                    let date = "\($0.date)"
-                    let price = "1BTC = \($0.price) \($0.currency.rawValue)"
-                    return PricesViewModel(date: date, price: price)
-                }
+                self?.secondSection = HistoricalTableViewModel.makeSectionViewModel(from: historicalPrices, title: Localizables.secondSection, type: .historical)
             case .failure(let error):
-                self?.view.pricesModel = []
+                print("Error")
             }
         }
+        
+        
+    }
+    
+    func viewWillAppear() {
+        interactor.retrieveCurrentData { [weak self] result in
+            switch result {
+            case .success(let todayPrices):
+                self?.firstSection = TodayTableViewModel.makeSectionViewModel(from: [todayPrices], title: Localizables.firstSection, type: .today)
+            case .failure(let error):
+                print("Error")
+            }
+        }
+    }
+    
+    func viewWillDissapear() {
+        //        interactor.invalidateTimer
+    }
+    
+    private enum Localizables {
+        static let firstSection = "Today"
+        static let secondSection = "Historical"
     }
 }
 

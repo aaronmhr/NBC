@@ -19,7 +19,7 @@
 		187017BE235597AA009270AA /* NetworkingDependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187017BD235597AA009270AA /* NetworkingDependencies.swift */; };
 		187017C0235597C8009270AA /* DefaultNetworkingDependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187017BF235597C8009270AA /* DefaultNetworkingDependencies.swift */; };
 		18731DA723564A6000BB577A /* ShowableError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18731DA623564A6000BB577A /* ShowableError.swift */; };
-		18731DAA23564A8500BB577A /* HistoricalPrice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18731DA923564A8500BB577A /* HistoricalPrice.swift */; };
+		18731DAA23564A8500BB577A /* Valuation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18731DA923564A8500BB577A /* Valuation.swift */; };
 		18731DAD23564B0500BB577A /* CurrentDataRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18731DAC23564B0500BB577A /* CurrentDataRepository.swift */; };
 		18731DAF23564B5400BB577A /* CurrentResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18731DAE23564B5400BB577A /* CurrentResponseModel.swift */; };
 		18731E4A2356BC6E00BB577A /* Commons.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18731E412356BC6E00BB577A /* Commons.framework */; };
@@ -31,6 +31,7 @@
 		18731E622356BCB700BB577A /* DateToString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18731E612356BCB700BB577A /* DateToString.swift */; };
 		18731E652356BCF700BB577A /* StringToDateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18731E642356BCF700BB577A /* StringToDateTests.swift */; };
 		18731E672356BD1500BB577A /* DateToStringTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18731E662356BD1500BB577A /* DateToStringTests.swift */; };
+		18731E692356C0B700BB577A /* DefaultCurrentDataRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18731E682356C0B700BB577A /* DefaultCurrentDataRepository.swift */; };
 		18740AAA2354DF9C00A27C5D /* URLSessionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18740AA92354DF9C00A27C5D /* URLSessionTests.swift */; };
 		18740AAC2354E5D800A27C5D /* URLSessioClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18740AAB2354E5D800A27C5D /* URLSessioClientTests.swift */; };
 		18740AAE2354E60600A27C5D /* URLSessionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18740AAD2354E60600A27C5D /* URLSessionProtocol.swift */; };
@@ -138,7 +139,7 @@
 		187017BD235597AA009270AA /* NetworkingDependencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingDependencies.swift; sourceTree = "<group>"; };
 		187017BF235597C8009270AA /* DefaultNetworkingDependencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultNetworkingDependencies.swift; sourceTree = "<group>"; };
 		18731DA623564A6000BB577A /* ShowableError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowableError.swift; sourceTree = "<group>"; };
-		18731DA923564A8500BB577A /* HistoricalPrice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoricalPrice.swift; sourceTree = "<group>"; };
+		18731DA923564A8500BB577A /* Valuation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Valuation.swift; sourceTree = "<group>"; };
 		18731DAC23564B0500BB577A /* CurrentDataRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentDataRepository.swift; sourceTree = "<group>"; };
 		18731DAE23564B5400BB577A /* CurrentResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentResponseModel.swift; sourceTree = "<group>"; };
 		18731E412356BC6E00BB577A /* Commons.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Commons.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -151,6 +152,7 @@
 		18731E612356BCB700BB577A /* DateToString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateToString.swift; sourceTree = "<group>"; };
 		18731E642356BCF700BB577A /* StringToDateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringToDateTests.swift; sourceTree = "<group>"; };
 		18731E662356BD1500BB577A /* DateToStringTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateToStringTests.swift; sourceTree = "<group>"; };
+		18731E682356C0B700BB577A /* DefaultCurrentDataRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultCurrentDataRepository.swift; sourceTree = "<group>"; };
 		18740AA92354DF9C00A27C5D /* URLSessionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionTests.swift; sourceTree = "<group>"; };
 		18740AAB2354E5D800A27C5D /* URLSessioClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessioClientTests.swift; sourceTree = "<group>"; };
 		18740AAD2354E60600A27C5D /* URLSessionProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionProtocol.swift; sourceTree = "<group>"; };
@@ -390,7 +392,7 @@
 		18731DA823564A7800BB577A /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				18731DA923564A8500BB577A /* HistoricalPrice.swift */,
+				18731DA923564A8500BB577A /* Valuation.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -399,6 +401,7 @@
 			isa = PBXGroup;
 			children = (
 				18731DAC23564B0500BB577A /* CurrentDataRepository.swift */,
+				18731E682356C0B700BB577A /* DefaultCurrentDataRepository.swift */,
 			);
 			path = CurrentData;
 			sourceTree = "<group>";
@@ -786,7 +789,7 @@
 				18731DAF23564B5400BB577A /* CurrentResponseModel.swift in Sources */,
 				1874EADE23537A6100052101 /* StoryboardInstantiator.swift in Sources */,
 				1841068423531E95000AE46C /* main.swift in Sources */,
-				18731DAA23564A8500BB577A /* HistoricalPrice.swift in Sources */,
+				18731DAA23564A8500BB577A /* Valuation.swift in Sources */,
 				18731DAD23564B0500BB577A /* CurrentDataRepository.swift in Sources */,
 				187017B723559097009270AA /* HistoricalResponseModel.swift in Sources */,
 				1841066223531A6A000AE46C /* AppDelegate.swift in Sources */,
@@ -798,6 +801,7 @@
 				1874EAD52353386E00052101 /* ListInteractor.swift in Sources */,
 				1874EAD12353311700052101 /* ListRouter.swift in Sources */,
 				1874EAD32353345700052101 /* ListPresenter.swift in Sources */,
+				18731E692356C0B700BB577A /* DefaultCurrentDataRepository.swift in Sources */,
 				187017BE235597AA009270AA /* NetworkingDependencies.swift in Sources */,
 				1874EACB23532F5900052101 /* ListProtocols.swift in Sources */,
 			);

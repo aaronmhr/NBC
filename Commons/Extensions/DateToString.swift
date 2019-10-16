@@ -17,3 +17,12 @@ public extension Date {
         return formatter.string(from: self)
     }
 }
+
+public extension Optional where Wrapped == Date {
+  func toStringWithFormat(_ format: String) -> String? {
+    guard let date = self else {
+        return nil
+    }
+    return date.toStringWithFormat(format)
+  }
+}

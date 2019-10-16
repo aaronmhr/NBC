@@ -16,3 +16,12 @@ public extension String {
         return formatter.date(from: self)
     }
 }
+
+public extension Optional where Wrapped == String {
+  func toDateWithFormat(_ format: String) -> Date? {
+    guard let string = self else {
+        return nil
+    }
+    return string.toDateWithFormat(format)
+  }
+}

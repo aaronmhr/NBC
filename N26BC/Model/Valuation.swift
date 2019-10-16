@@ -1,5 +1,5 @@
 //
-//  HistoricalPrice.swift
+//  Valuation.swift
 //  N26BC
 //
 //  Created by Aaron Huánuco on 15/10/2019.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct HistoricalPrice {
+struct Valuation {
     let date: Date
     let price: Double
     let currency: Currency
