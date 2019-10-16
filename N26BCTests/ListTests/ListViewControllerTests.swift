@@ -46,7 +46,7 @@ class ListViewControllerTests: XCTestCase {
         
         givenViewDidLoadOn(sut)
         
-        let cellModelsToBeDisplayed = ["1", "2"]
+        let cellModelsToBeDisplayed = [PricesViewModel(date: "today", price: "1"), PricesViewModel(date: "yesterday", price: "2")]
         sut.pricesModel = cellModelsToBeDisplayed
         
         XCTAssertEqual(cellModelsToBeDisplayed.count, sut.tableView.numberOfRows(inSection: 0))
