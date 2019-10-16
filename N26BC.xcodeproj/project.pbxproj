@@ -54,6 +54,7 @@
 		1874EB0F23539B0200052101 /* BitCoinDeskAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1874EB0E23539B0200052101 /* BitCoinDeskAPI.swift */; };
 		1874EB132353BF8B00052101 /* BitCoinDeskAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1874EB122353BF8B00052101 /* BitCoinDeskAPITests.swift */; };
 		187E998A2357896900B57FCC /* TimerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187E99892357896900B57FCC /* TimerProtocol.swift */; };
+		187E998C23578FD400B57FCC /* DefaultTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187E998B23578FD400B57FCC /* DefaultTimer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -177,6 +178,7 @@
 		1874EB0E23539B0200052101 /* BitCoinDeskAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitCoinDeskAPI.swift; sourceTree = "<group>"; };
 		1874EB122353BF8B00052101 /* BitCoinDeskAPITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitCoinDeskAPITests.swift; sourceTree = "<group>"; };
 		187E99892357896900B57FCC /* TimerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerProtocol.swift; sourceTree = "<group>"; };
+		187E998B23578FD400B57FCC /* DefaultTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultTimer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -541,6 +543,7 @@
 			isa = PBXGroup;
 			children = (
 				187E99892357896900B57FCC /* TimerProtocol.swift */,
+				187E998B23578FD400B57FCC /* DefaultTimer.swift */,
 			);
 			path = Timer;
 			sourceTree = "<group>";
@@ -835,6 +838,7 @@
 				18731E602356BC9900BB577A /* StringToDate.swift in Sources */,
 				18731E622356BCB700BB577A /* DateToString.swift in Sources */,
 				187E998A2357896900B57FCC /* TimerProtocol.swift in Sources */,
+				187E998C23578FD400B57FCC /* DefaultTimer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

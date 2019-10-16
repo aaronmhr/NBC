@@ -15,19 +15,3 @@ public protocol TimerProtocol {
     func schedule(timeInterval: TimeInterval, repeats: Bool, completionBlock: @escaping CompletionBlock)
     func invalidate()
 }
-
-public final class DefaultTimer: TimerProtocol {
-    private(set) weak var timer: Timer?
-    
-    public func schedule(timeInterval: TimerProtocol.TimeInterval, repeats: Bool, completionBlock: @escaping CompletionBlock) {
-        self.timer?.invalidate()
-        self.timer = Timer.scheduledTimer(withTimeInterval: timeInterval, repeats: repeats) {
-          (timer) -> Void in
-          completionBlock()
-        }
-    }
-    
-    public func invalidate() {
-        timer?.invalidate()
-    }
-}
