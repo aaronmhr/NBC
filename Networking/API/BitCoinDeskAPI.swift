@@ -9,6 +9,8 @@
 import Foundation
 
 public enum BitcoinDeskAPI {
+    public static let defaultDateFormat = "yyyy-MM-dd"
+    
     case today(Currency)
     case historical(HistoricalQuery)
     

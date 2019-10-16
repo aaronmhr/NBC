@@ -11,4 +11,11 @@ import Foundation
 struct HistoricalPrice {
     let date: Date
     let price: Double
+    let currency: Currency
+}
+
+enum Currency: String {
+    case euro = "EUR"
+    case dollar = "USD"
+    case pound = "GBP"
 }

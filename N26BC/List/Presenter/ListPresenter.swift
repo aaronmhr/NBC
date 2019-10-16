@@ -22,6 +22,22 @@ final class ListPresenter {
 
 extension ListPresenter: ListPresenterProtocol {
     func viewDidLoad() {
-        view.pricesModel = (1...30).map { "\($0)" }
+        interactor.retrieveHistoricalData { [weak self] result in
+            switch result {
+            case .success(let historicalPrices):
+                self?.view.pricesModel = historicalPrices.map {
+                    let date = "\($0.date)"
+                    let price = "1BTC = \($0.price) \($0.currency.rawValue)"
+                    return PricesViewModel(date: date, price: price)
+                }
+            case .failure(let error):
+                self?.view.pricesModel = []
+            }
+        }
     }
+}
+
+struct PricesViewModel {
+    let date: String
+    let price: String
 }

@@ -8,7 +8,7 @@
 
 import Foundation
 
-extension String {
+public extension String {
     func toDateWithFormat(_ format: String) -> Date? {
         let formatter = DateFormatter()
         formatter.timeZone = TimeZone(identifier:"GMT")

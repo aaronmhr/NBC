@@ -7,7 +7,7 @@
 //
 
 protocol ListInteractorProtocol {
-    
+    func retrieveHistoricalData(completion: @escaping (Result<[HistoricalPrice], ShowableError>) -> Void)
 }
 
 protocol ListRouterProtocol {
@@ -19,5 +19,5 @@ protocol ListPresenterProtocol {
 }
 
 protocol ListViewProtocol: class {
-    var pricesModel: [String] { get set }
+    var pricesModel: [PricesViewModel] { get set }
 }

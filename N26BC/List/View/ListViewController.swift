@@ -12,9 +12,11 @@ final class ListViewController: UIViewController {
     var presenter: ListPresenterProtocol!
     @IBOutlet private(set) var tableView: UITableView!
     
-    var pricesModel: [String] = [] {
+    var pricesModel: [PricesViewModel] = [] {
         didSet {
-            tableView.reloadData()
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
         }
     }
     
@@ -41,8 +43,10 @@ extension ListViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell(style: .default, reuseIdentifier: nil)
-        cell.textLabel?.text = pricesModel[indexPath.row]
+        let cell = UITableViewCell(style: .subtitle, reuseIdentifier: nil)
+        let day = pricesModel[indexPath.row]
+        cell.textLabel?.text = day.price
+        cell.detailTextLabel?.text = day.date
         return cell
     }
 }
