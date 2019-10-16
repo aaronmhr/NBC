@@ -28,4 +28,10 @@ class StringToDateTests: XCTestCase {
         let sut = ""
         XCTAssertNil(sut.toDateWithFormat(dateFormat))
     }
+    
+    func testOptionalNilToString_createsString() {
+        let dateFormat = "YYYY-MM-DD"
+        let sut: String? = nil
+        XCTAssertEqual(sut.toDateWithFormat(dateFormat), nil)
+    }
 }

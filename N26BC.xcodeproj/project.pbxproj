@@ -54,6 +54,7 @@
 		1874EB132353BF8B00052101 /* BitCoinDeskAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1874EB122353BF8B00052101 /* BitCoinDeskAPITests.swift */; };
 		187E998A2357896900B57FCC /* TimerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187E99892357896900B57FCC /* TimerProtocol.swift */; };
 		187E998C23578FD400B57FCC /* DefaultTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187E998B23578FD400B57FCC /* DefaultTimer.swift */; };
+		187E998F235790A700B57FCC /* DefaultTimerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187E998E235790A700B57FCC /* DefaultTimerTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -177,6 +178,7 @@
 		1874EB122353BF8B00052101 /* BitCoinDeskAPITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitCoinDeskAPITests.swift; sourceTree = "<group>"; };
 		187E99892357896900B57FCC /* TimerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerProtocol.swift; sourceTree = "<group>"; };
 		187E998B23578FD400B57FCC /* DefaultTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultTimer.swift; sourceTree = "<group>"; };
+		187E998E235790A700B57FCC /* DefaultTimerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultTimerTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -422,6 +424,7 @@
 		18731E4F2356BC6E00BB577A /* CommonsTests */ = {
 			isa = PBXGroup;
 			children = (
+				187E998D2357908F00B57FCC /* Timer */,
 				18731E632356BCCA00BB577A /* Extensions */,
 				18731E522356BC6E00BB577A /* Info.plist */,
 			);
@@ -541,6 +544,14 @@
 			children = (
 				187E99892357896900B57FCC /* TimerProtocol.swift */,
 				187E998B23578FD400B57FCC /* DefaultTimer.swift */,
+			);
+			path = Timer;
+			sourceTree = "<group>";
+		};
+		187E998D2357908F00B57FCC /* Timer */ = {
+			isa = PBXGroup;
+			children = (
+				187E998E235790A700B57FCC /* DefaultTimerTests.swift */,
 			);
 			path = Timer;
 			sourceTree = "<group>";
@@ -843,6 +854,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				187E998F235790A700B57FCC /* DefaultTimerTests.swift in Sources */,
 				18731E672356BD1500BB577A /* DateToStringTests.swift in Sources */,
 				18731E652356BCF700BB577A /* StringToDateTests.swift in Sources */,
 			);
