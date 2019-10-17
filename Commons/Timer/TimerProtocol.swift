@@ -9,7 +9,6 @@
 import Foundation
 
 public protocol TimerProtocol {
-    typealias TimeInterval = Foundation.TimeInterval
     typealias CompletionBlock = () -> Void
     
     func fire()

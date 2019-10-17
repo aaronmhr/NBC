@@ -13,7 +13,7 @@ public final class DefaultTimer: TimerProtocol {
     
     public init() { }
     
-    public func schedule(timeInterval: TimerProtocol.TimeInterval, repeats: Bool, completionBlock: @escaping CompletionBlock) {
+    public func schedule(timeInterval: TimeInterval, repeats: Bool, completionBlock: @escaping CompletionBlock) {
         self.timer?.invalidate()
         let timer = Timer.scheduledTimer(withTimeInterval: timeInterval, repeats: repeats) {
             (timer) -> Void in
