@@ -34,6 +34,11 @@
 		1873DFF22358232E00A85C2A /* CurrentResponseMapperProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1873DFF12358232E00A85C2A /* CurrentResponseMapperProtocol.swift */; };
 		1873DFF42358236100A85C2A /* DefaultCurrentResponseMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1873DFF32358236100A85C2A /* DefaultCurrentResponseMapper.swift */; };
 		1873DFF6235823D700A85C2A /* DefaultHistoricalResponseMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1873DFF5235823D700A85C2A /* DefaultHistoricalResponseMapper.swift */; };
+		1873DFFB2358287200A85C2A /* PricesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1873DFFA2358287200A85C2A /* PricesViewModel.swift */; };
+		1873DFFD235828CB00A85C2A /* ListViewSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1873DFFC235828CB00A85C2A /* ListViewSection.swift */; };
+		1873DFFF235828DE00A85C2A /* ListSectionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1873DFFE235828DE00A85C2A /* ListSectionType.swift */; };
+		1873E001235828F100A85C2A /* TodayTableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1873E000235828F100A85C2A /* TodayTableViewModel.swift */; };
+		1873E0032358293600A85C2A /* HistoricalTableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1873E0022358293600A85C2A /* HistoricalTableViewModel.swift */; };
 		18740AAA2354DF9C00A27C5D /* URLSessionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18740AA92354DF9C00A27C5D /* URLSessionTests.swift */; };
 		18740AAC2354E5D800A27C5D /* URLSessioClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18740AAB2354E5D800A27C5D /* URLSessioClientTests.swift */; };
 		18740AAE2354E60600A27C5D /* URLSessionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18740AAD2354E60600A27C5D /* URLSessionProtocol.swift */; };
@@ -162,6 +167,11 @@
 		1873DFF12358232E00A85C2A /* CurrentResponseMapperProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentResponseMapperProtocol.swift; sourceTree = "<group>"; };
 		1873DFF32358236100A85C2A /* DefaultCurrentResponseMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultCurrentResponseMapper.swift; sourceTree = "<group>"; };
 		1873DFF5235823D700A85C2A /* DefaultHistoricalResponseMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultHistoricalResponseMapper.swift; sourceTree = "<group>"; };
+		1873DFFA2358287200A85C2A /* PricesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PricesViewModel.swift; sourceTree = "<group>"; };
+		1873DFFC235828CB00A85C2A /* ListViewSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewSection.swift; sourceTree = "<group>"; };
+		1873DFFE235828DE00A85C2A /* ListSectionType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListSectionType.swift; sourceTree = "<group>"; };
+		1873E000235828F100A85C2A /* TodayTableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayTableViewModel.swift; sourceTree = "<group>"; };
+		1873E0022358293600A85C2A /* HistoricalTableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoricalTableViewModel.swift; sourceTree = "<group>"; };
 		18740AA92354DF9C00A27C5D /* URLSessionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionTests.swift; sourceTree = "<group>"; };
 		18740AAB2354E5D800A27C5D /* URLSessioClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessioClientTests.swift; sourceTree = "<group>"; };
 		18740AAD2354E60600A27C5D /* URLSessionProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionProtocol.swift; sourceTree = "<group>"; };
@@ -274,8 +284,9 @@
 				1874EADA235378BA00052101 /* Utils */,
 				1841068323531E95000AE46C /* main.swift */,
 				1841066123531A6A000AE46C /* AppDelegate.swift */,
+				1873DFF92358284D00A85C2A /* View Model */,
 				18731DA823564A7800BB577A /* Model */,
-				187017B523558F3A009270AA /* Reponse Models */,
+				187017B523558F3A009270AA /* Reponse Model */,
 				187017B123558C50009270AA /* Repository */,
 				1841068723532484000AE46C /* List */,
 				1841066A23531A6C000AE46C /* Assets.xcassets */,
@@ -369,13 +380,13 @@
 			path = Repository;
 			sourceTree = "<group>";
 		};
-		187017B523558F3A009270AA /* Reponse Models */ = {
+		187017B523558F3A009270AA /* Reponse Model */ = {
 			isa = PBXGroup;
 			children = (
 				187017B623559097009270AA /* HistoricalResponseModel.swift */,
 				18731DAE23564B5400BB577A /* CurrentResponseModel.swift */,
 			);
-			path = "Reponse Models";
+			path = "Reponse Model";
 			sourceTree = "<group>";
 		};
 		187017B8235591B9009270AA /* HistoricalData */ = {
@@ -477,6 +488,18 @@
 				1873DFF32358236100A85C2A /* DefaultCurrentResponseMapper.swift */,
 			);
 			path = Current;
+			sourceTree = "<group>";
+		};
+		1873DFF92358284D00A85C2A /* View Model */ = {
+			isa = PBXGroup;
+			children = (
+				1873DFFA2358287200A85C2A /* PricesViewModel.swift */,
+				1873DFFC235828CB00A85C2A /* ListViewSection.swift */,
+				1873DFFE235828DE00A85C2A /* ListSectionType.swift */,
+				1873E0022358293600A85C2A /* HistoricalTableViewModel.swift */,
+				1873E000235828F100A85C2A /* TodayTableViewModel.swift */,
+			);
+			path = "View Model";
 			sourceTree = "<group>";
 		};
 		18740AA82354DF8000A27C5D /* Networking */ = {
@@ -856,6 +879,7 @@
 				187E99942357C1FF00B57FCC /* HistoricalResponseMapperProtocol.swift in Sources */,
 				187017B723559097009270AA /* HistoricalResponseModel.swift in Sources */,
 				1841066223531A6A000AE46C /* AppDelegate.swift in Sources */,
+				1873DFFD235828CB00A85C2A /* ListViewSection.swift in Sources */,
 				187017B423558CA5009270AA /* HistoricalDataRepository.swift in Sources */,
 				18731DA723564A6000BB577A /* ShowableError.swift in Sources */,
 				184106AA23532D37000AE46C /* ListViewController.swift in Sources */,
@@ -865,9 +889,13 @@
 				1874EAD52353386E00052101 /* ListInteractor.swift in Sources */,
 				1873DFF6235823D700A85C2A /* DefaultHistoricalResponseMapper.swift in Sources */,
 				1874EAD12353311700052101 /* ListRouter.swift in Sources */,
+				1873E0032358293600A85C2A /* HistoricalTableViewModel.swift in Sources */,
+				1873DFFB2358287200A85C2A /* PricesViewModel.swift in Sources */,
 				1873DFF42358236100A85C2A /* DefaultCurrentResponseMapper.swift in Sources */,
+				1873E001235828F100A85C2A /* TodayTableViewModel.swift in Sources */,
 				1874EAD32353345700052101 /* ListPresenter.swift in Sources */,
 				18731E692356C0B700BB577A /* DefaultCurrentDataRepository.swift in Sources */,
+				1873DFFF235828DE00A85C2A /* ListSectionType.swift in Sources */,
 				187017BE235597AA009270AA /* NetworkingDependencies.swift in Sources */,
 				1874EACB23532F5900052101 /* ListProtocols.swift in Sources */,
 			);

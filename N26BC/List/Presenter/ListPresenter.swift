@@ -49,8 +49,6 @@ extension ListPresenter: ListPresenterProtocol {
                 print("Error")
             }
         }
-        
-        
     }
     
     func viewWillAppear() {
@@ -76,9 +74,4 @@ extension ListPresenter: ListPresenterProtocol {
         static let firstSection = "Today"
         static let secondSection = "Historical"
     }
-}
-
-struct PricesViewModel {
-    let date: String
-    let price: String
 }

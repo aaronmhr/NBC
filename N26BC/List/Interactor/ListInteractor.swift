@@ -36,7 +36,7 @@ final class ListInteractor {
 extension ListInteractor: ListInteractorProtocol {
     func retrieveHistoricalData(completion: @escaping (Result<[Valuation], ShowableError>) -> Void) {
         let end = Date()
-        let start = Calendar.current.date(byAdding: .day, value: -14, to: end)!
+        let start = Calendar.current.date(byAdding: .day, value: -14, to: end) ?? end
         let url = BitcoinDeskAPI.historical(.init(start: start, end: end, currency: .euro)).url
         dependencies.historicalDataRepository.getHistoricalData(url: url) { [weak self] result in
             self?.mapHistoricalResponse(response: result, completion: completion)
