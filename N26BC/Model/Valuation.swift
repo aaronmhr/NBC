@@ -14,8 +14,4 @@ struct Valuation {
     let currency: Currency
 }
 
-enum Currency: String {
-    case euro = "EUR"
-    case dollar = "USD"
-    case pound = "GBP"
-}
+

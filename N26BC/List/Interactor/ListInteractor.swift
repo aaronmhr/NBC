@@ -12,11 +12,17 @@ import Networking
 protocol ListInteractorDependenciesProtocol {
     var historicalDataRepository: HistoricalDataRepository { get }
     var currentDataRepository: CurrentDataRepository { get }
+    var timer: TimerProtocol { get }
+    var historicalResponseMapper: HistoricalResponseMapperProtocol { get }
+    var todayResponseMapper: CurrentResponseMapperProtocol { get }
 }
 
 final class DefaultListInteractorDependencies: ListInteractorDependenciesProtocol {
     lazy var historicalDataRepository: HistoricalDataRepository = DefaultHistoricalDataRepository()
     lazy var currentDataRepository: CurrentDataRepository = DefaultCurrentDataRepository()
+    lazy var timer: TimerProtocol = DefaultTimer()
+    lazy var historicalResponseMapper: HistoricalResponseMapperProtocol = DefaultHistoricalResponseMapper()
+    lazy var todayResponseMapper: CurrentResponseMapperProtocol = DefaultCurrentResponseMapper()
 }
 
 final class ListInteractor {
@@ -32,37 +38,42 @@ extension ListInteractor: ListInteractorProtocol {
         let end = Date()
         let start = Calendar.current.date(byAdding: .day, value: -14, to: end)!
         let url = BitcoinDeskAPI.historical(.init(start: start, end: end, currency: .euro)).url
-        dependencies.historicalDataRepository.getHistoricalData(url: url) { result in
-            switch result {
-            case .success(let response):
-                guard let bpi = response.bpi else {
-                    completion(.failure(ShowableError.other))
-                    return
-                }
-                let prices: [Valuation] = bpi.map {
-                    let date = $0.key.toDateWithFormat(BitcoinDeskAPI.defaultDateFormat)!
-                    return Valuation(date: date, price: $0.value, currency: .euro)
-                }
-                let sortedPrices = prices.sorted { $0.date > $1.date }
-                completion(.success(sortedPrices))
-            case .failure(let error):
-                completion(.failure(error))
-            }
+        dependencies.historicalDataRepository.getHistoricalData(url: url) { [weak self] result in
+            self?.mapHistoricalResponse(response: result, completion: completion)
         }
+    }
+    
+    private func mapHistoricalResponse(response: Result<HistoricalResponseModel, ShowableError>, completion: @escaping (Result<[Valuation], ShowableError>) -> Void) {
+        switch response {
+        case .success(let repositoryResponse):
+            dependencies.historicalResponseMapper.map(response: repositoryResponse, for: .euro) { [weak self] mappedResponse in
+                self?.handleMappedResponse(response: mappedResponse, completion: completion)
+            }
+        case .failure(let error):
+            completion(.failure(error))
+        }
+    }
+    
+    private func handleMappedResponse(response: Result<[Valuation], ShowableError>, completion: @escaping (Result<[Valuation], ShowableError>) -> Void) {
+        switch response {
+        case .success(let prices):
+            let sortedPrices = sort(prices)
+            completion(.success(sortedPrices))
+        case .failure(let error):
+            completion(.failure(error))
+        }
+    }
+    
+    private func sort(_ items: [Valuation]) -> [Valuation] {
+        return items.sorted { $0.date > $1.date }
     }
     
     func retrieveCurrentData(completion: @escaping (Result<Valuation, ShowableError>) -> Void) {
         let url = BitcoinDeskAPI.today(.euro).url
-        dependencies.currentDataRepository.getCurrentData(url: url) { result in
+        dependencies.currentDataRepository.getCurrentData(url: url) { [weak self] result in
             switch result {
             case .success(let reponse):
-                let date = reponse.time?.updatedISO.toDateWithFormat("yyyy-MM-dd'T'HH:mm:ss+00:00") ?? Date()
-                guard let price = reponse.bpi?.eur?.rateFloat else {
-                    completion(.failure(.other))
-                    return
-                }
-                let valuation = Valuation(date: date, price: price, currency: .euro)
-                completion(.success(valuation))
+                self?.dependencies.todayResponseMapper.map(response: reponse, for: .euro, completion: completion)
             case .failure(let error):
                 completion(.failure(error))
             }

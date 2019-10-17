@@ -31,6 +31,9 @@
 		18731E652356BCF700BB577A /* StringToDateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18731E642356BCF700BB577A /* StringToDateTests.swift */; };
 		18731E672356BD1500BB577A /* DateToStringTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18731E662356BD1500BB577A /* DateToStringTests.swift */; };
 		18731E692356C0B700BB577A /* DefaultCurrentDataRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18731E682356C0B700BB577A /* DefaultCurrentDataRepository.swift */; };
+		1873DFF22358232E00A85C2A /* CurrentResponseMapperProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1873DFF12358232E00A85C2A /* CurrentResponseMapperProtocol.swift */; };
+		1873DFF42358236100A85C2A /* DefaultCurrentResponseMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1873DFF32358236100A85C2A /* DefaultCurrentResponseMapper.swift */; };
+		1873DFF6235823D700A85C2A /* DefaultHistoricalResponseMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1873DFF5235823D700A85C2A /* DefaultHistoricalResponseMapper.swift */; };
 		18740AAA2354DF9C00A27C5D /* URLSessionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18740AA92354DF9C00A27C5D /* URLSessionTests.swift */; };
 		18740AAC2354E5D800A27C5D /* URLSessioClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18740AAB2354E5D800A27C5D /* URLSessioClientTests.swift */; };
 		18740AAE2354E60600A27C5D /* URLSessionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18740AAD2354E60600A27C5D /* URLSessionProtocol.swift */; };
@@ -55,6 +58,8 @@
 		187E998A2357896900B57FCC /* TimerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187E99892357896900B57FCC /* TimerProtocol.swift */; };
 		187E998C23578FD400B57FCC /* DefaultTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187E998B23578FD400B57FCC /* DefaultTimer.swift */; };
 		187E998F235790A700B57FCC /* DefaultTimerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187E998E235790A700B57FCC /* DefaultTimerTests.swift */; };
+		187E99912357BE4100B57FCC /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187E99902357BE4100B57FCC /* Currency.swift */; };
+		187E99942357C1FF00B57FCC /* HistoricalResponseMapperProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187E99932357C1FF00B57FCC /* HistoricalResponseMapperProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -154,6 +159,9 @@
 		18731E642356BCF700BB577A /* StringToDateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringToDateTests.swift; sourceTree = "<group>"; };
 		18731E662356BD1500BB577A /* DateToStringTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateToStringTests.swift; sourceTree = "<group>"; };
 		18731E682356C0B700BB577A /* DefaultCurrentDataRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultCurrentDataRepository.swift; sourceTree = "<group>"; };
+		1873DFF12358232E00A85C2A /* CurrentResponseMapperProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentResponseMapperProtocol.swift; sourceTree = "<group>"; };
+		1873DFF32358236100A85C2A /* DefaultCurrentResponseMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultCurrentResponseMapper.swift; sourceTree = "<group>"; };
+		1873DFF5235823D700A85C2A /* DefaultHistoricalResponseMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultHistoricalResponseMapper.swift; sourceTree = "<group>"; };
 		18740AA92354DF9C00A27C5D /* URLSessionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionTests.swift; sourceTree = "<group>"; };
 		18740AAB2354E5D800A27C5D /* URLSessioClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessioClientTests.swift; sourceTree = "<group>"; };
 		18740AAD2354E60600A27C5D /* URLSessionProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionProtocol.swift; sourceTree = "<group>"; };
@@ -179,6 +187,8 @@
 		187E99892357896900B57FCC /* TimerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerProtocol.swift; sourceTree = "<group>"; };
 		187E998B23578FD400B57FCC /* DefaultTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultTimer.swift; sourceTree = "<group>"; };
 		187E998E235790A700B57FCC /* DefaultTimerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultTimerTests.swift; sourceTree = "<group>"; };
+		187E99902357BE4100B57FCC /* Currency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
+		187E99932357C1FF00B57FCC /* HistoricalResponseMapperProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoricalResponseMapperProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -317,6 +327,7 @@
 		1841068C235324E9000AE46C /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
+				187E99922357C1E600B57FCC /* Mappers */,
 				1874EAD42353386E00052101 /* ListInteractor.swift */,
 			);
 			path = Interactor;
@@ -397,6 +408,7 @@
 			isa = PBXGroup;
 			children = (
 				18731DA923564A8500BB577A /* Valuation.swift */,
+				187E99902357BE4100B57FCC /* Currency.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -447,6 +459,24 @@
 				18731E662356BD1500BB577A /* DateToStringTests.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		1873DFF72358241900A85C2A /* Historical */ = {
+			isa = PBXGroup;
+			children = (
+				187E99932357C1FF00B57FCC /* HistoricalResponseMapperProtocol.swift */,
+				1873DFF5235823D700A85C2A /* DefaultHistoricalResponseMapper.swift */,
+			);
+			path = Historical;
+			sourceTree = "<group>";
+		};
+		1873DFF82358242500A85C2A /* Current */ = {
+			isa = PBXGroup;
+			children = (
+				1873DFF12358232E00A85C2A /* CurrentResponseMapperProtocol.swift */,
+				1873DFF32358236100A85C2A /* DefaultCurrentResponseMapper.swift */,
+			);
+			path = Current;
 			sourceTree = "<group>";
 		};
 		18740AA82354DF8000A27C5D /* Networking */ = {
@@ -554,6 +584,15 @@
 				187E998E235790A700B57FCC /* DefaultTimerTests.swift */,
 			);
 			path = Timer;
+			sourceTree = "<group>";
+		};
+		187E99922357C1E600B57FCC /* Mappers */ = {
+			isa = PBXGroup;
+			children = (
+				1873DFF82358242500A85C2A /* Current */,
+				1873DFF72358241900A85C2A /* Historical */,
+			);
+			path = Mappers;
 			sourceTree = "<group>";
 		};
 		9B3BDFAF2973DD7FDC305AE1 /* Pods */ = {
@@ -811,17 +850,22 @@
 				18731DAF23564B5400BB577A /* CurrentResponseModel.swift in Sources */,
 				1874EADE23537A6100052101 /* StoryboardInstantiator.swift in Sources */,
 				1841068423531E95000AE46C /* main.swift in Sources */,
+				1873DFF22358232E00A85C2A /* CurrentResponseMapperProtocol.swift in Sources */,
 				18731DAA23564A8500BB577A /* Valuation.swift in Sources */,
 				18731DAD23564B0500BB577A /* CurrentDataRepository.swift in Sources */,
+				187E99942357C1FF00B57FCC /* HistoricalResponseMapperProtocol.swift in Sources */,
 				187017B723559097009270AA /* HistoricalResponseModel.swift in Sources */,
 				1841066223531A6A000AE46C /* AppDelegate.swift in Sources */,
 				187017B423558CA5009270AA /* HistoricalDataRepository.swift in Sources */,
 				18731DA723564A6000BB577A /* ShowableError.swift in Sources */,
 				184106AA23532D37000AE46C /* ListViewController.swift in Sources */,
+				187E99912357BE4100B57FCC /* Currency.swift in Sources */,
 				187017C0235597C8009270AA /* DefaultNetworkingDependencies.swift in Sources */,
 				187017BB235591E6009270AA /* DefaultHistoricalDataRepository.swift in Sources */,
 				1874EAD52353386E00052101 /* ListInteractor.swift in Sources */,
+				1873DFF6235823D700A85C2A /* DefaultHistoricalResponseMapper.swift in Sources */,
 				1874EAD12353311700052101 /* ListRouter.swift in Sources */,
+				1873DFF42358236100A85C2A /* DefaultCurrentResponseMapper.swift in Sources */,
 				1874EAD32353345700052101 /* ListPresenter.swift in Sources */,
 				18731E692356C0B700BB577A /* DefaultCurrentDataRepository.swift in Sources */,
 				187017BE235597AA009270AA /* NetworkingDependencies.swift in Sources */,
