@@ -9,7 +9,7 @@
 import Networking
 
 final class DefaultCurrentResponseMapper: CurrentResponseMapperProtocol {
-    func map(response: CurrentResponseModel, for currency: Currency, completion: @escaping (Result<Valuation, ShowableError>) -> Void) {
+    func map(response: TodayResponseModel, for currency: Currency, completion: @escaping (Result<Valuation, ShowableError>) -> Void) {
         let date = response.time?.updatedISO.toDateWithFormat(BitcoinDeskAPI.todayResponseDateFormat) ?? Date()
         guard let price = response.bpi?.eur?.rateFloat else {
             completion(.failure(.other))

@@ -1,5 +1,5 @@
 //
-//  CurrentResponseModel.swift
+//  TodayResponseModel.swift
 //  N26BC
 //
 //  Created by Aaron Huánuco on 15/10/2019.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct CurrentResponseModel: Decodable {
+struct TodayResponseModel: Decodable {
     let time: TimeResponseModel?
     let bpi: BpiResponseModel?
 }

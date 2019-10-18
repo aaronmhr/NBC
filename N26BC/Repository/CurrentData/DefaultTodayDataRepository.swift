@@ -1,5 +1,5 @@
 //
-//  DefaultCurrentDataRepository.swift
+//  DefaultTodayDataRepository.swift
 //  N26BC
 //
 //  Created by Aaron Huánuco on 16/10/2019.
@@ -8,15 +8,15 @@
 
 import Networking
 
-final class DefaultCurrentDataRepository: CurrentDataRepository {
+final class DefaultTodayDataRepository: TodayDataRepository {
     private let networking: URLSessionClientProtocol
     
     init(networking: URLSessionClientProtocol) {
         self.networking = networking
     }
     
-    func getCurrentData(url: URL?, completion: @escaping (Result<CurrentResponseModel, ShowableError>) -> Void) {
-        self.networking.fetchResources(url: url) { (result: Result<CurrentResponseModel, NetworkingError>) in
+    func getTodayData(url: URL?, completion: @escaping (Result<TodayResponseModel, ShowableError>) -> Void) {
+        self.networking.fetchResources(url: url) { (result: Result<TodayResponseModel, NetworkingError>) in
             switch result {
             case .success(let response):
                 completion(.success(response))

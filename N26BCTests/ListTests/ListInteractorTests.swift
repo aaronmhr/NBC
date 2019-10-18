@@ -22,7 +22,7 @@ class ListInteractorTests: XCTestCase {
 //    final class FakeDependencies: ListInteractorDependenciesProtocol {
 //        var historicalDataRepository: HistoricalDataRepository
 //
-//        var currentDataRepository: CurrentDataRepository
+//        var currentDataRepository: TodayDataRepository
 //
 //        var timer: TimerProtocol
 //
