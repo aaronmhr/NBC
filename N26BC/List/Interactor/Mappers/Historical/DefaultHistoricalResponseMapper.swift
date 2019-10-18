@@ -23,32 +23,3 @@ final class DefaultHistoricalResponseMapper: HistoricalResponseMapperProtocol {
         completion(.success(prices))
     }
 }
-
-protocol HistoricalR {
-    func getHistoricalData(completion: @ escaping (String) -> ())
-}
-final class RemoteHistoricalRepository: HistoricalR {
-    let url: URL
-    
-    init(url: URL) {
-        self.url = url
-    }
-    
-    func getHistoricalData(completion: @ escaping (String) -> ()) {
-        
-    }
-}
-
-protocol HistoricalDataRetriever {
-    func retrieveHistorical(completion: @escaping (Int) -> ())
-}
-
-//final class HistoricalDataUseCase: HistoricalDataRetriever {
-//    let historicalDataRepositoryRemote: HistoricalR
-//    init(repository: HistoricalR) {
-//        <#statements#>
-//    }
-//    func retrieveHistorical(completion: @escaping (Int) -> ()) {
-//        <#code#>
-//    }
-//}
