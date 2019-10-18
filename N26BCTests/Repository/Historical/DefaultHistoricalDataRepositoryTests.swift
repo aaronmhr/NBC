@@ -31,6 +31,32 @@ class DefaultHistoricalDataRepositoryTests: XCTestCase {
         }
     }
     
+    func testGetHistoricalData_providesShowableErrorWhenDependencyReturnsNetworkingError() {
+        let error1 = NetworkingError.clientError("Test1")
+        let error2 = NetworkingError.couldNotBuildURL
+        let error3 = NetworkingError.decodingError
+        let error4 = NetworkingError.invalidResponse
+        let error5 = NetworkingError.other("Test5")
+        let error6 = NetworkingError.serverError("Test6")
+        
+        let showableError: ShowableError = .networking
+        
+        [error1, error2, error3, error4, error5, error6].forEach { currentError in
+            let successInput: Result<HistoricalResponseModel, NetworkingError> = .failure(currentError)
+
+            let (sut, networking) = makeSUT()
+            networking.result = successInput
+            
+            sut.getHistoricalData(url: nil) { response in
+                switch response {
+                case .success: XCTFail()
+                case .failure(let error):
+                    XCTAssertEqual(error, showableError)
+                }
+            }
+        }
+    }
+    
     // MARK: - Helpers
     func makeSUT() -> (DefaultHistoricalDataRepository, TestingURLSessionClient) {
         let networking = TestingURLSessionClient()
