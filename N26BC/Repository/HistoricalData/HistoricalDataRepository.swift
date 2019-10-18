@@ -6,7 +6,7 @@
 //  Copyright © 2019 Aaron Huánuco. All rights reserved.
 //
 
-import Networking
+import Foundation
 
 protocol HistoricalDataRepository {
     func getHistoricalData(url: URL?, completion: @escaping (Result<HistoricalResponseModel, ShowableError>) -> Void)

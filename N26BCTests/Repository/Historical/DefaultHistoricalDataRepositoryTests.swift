@@ -58,21 +58,9 @@ class DefaultHistoricalDataRepositoryTests: XCTestCase {
     }
     
     // MARK: - Helpers
-    func makeSUT() -> (DefaultHistoricalDataRepository, TestingURLSessionClient) {
-        let networking = TestingURLSessionClient()
+    func makeSUT() -> (DefaultHistoricalDataRepository, TestingURLSessionClient<HistoricalResponseModel>) {
+        let networking = TestingURLSessionClient<HistoricalResponseModel>()
         let repository = DefaultHistoricalDataRepository(networking: networking)
         return (repository, networking)
-    }
-    
-    final class TestingURLSessionClient: URLSessionClientProtocol {
-        var result: Result<HistoricalResponseModel, NetworkingError>?
-        
-        func fetchResources<T: Decodable>(url: URL?, completion: @escaping (Result<T, NetworkingError>) -> Void) {
-            guard let result = self.result as? Result<T, NetworkingError> else {
-                XCTFail()
-                return
-            }
-            completion(result)
-        }
     }
 }

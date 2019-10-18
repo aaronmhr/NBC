@@ -8,6 +8,8 @@
 
 import Foundation
 
+private typealias Decodable = Swift.Decodable & Equatable
+
 struct TodayResponseModel: Decodable {
     let time: TimeResponseModel?
     let bpi: BpiResponseModel?

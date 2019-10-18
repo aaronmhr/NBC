@@ -60,6 +60,8 @@
 		1874EB0D2353996F00052101 /* URLSessionClientProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1874EB0C2353996F00052101 /* URLSessionClientProtocol.swift */; };
 		1874EB0F23539B0200052101 /* BitCoinDeskAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1874EB0E23539B0200052101 /* BitCoinDeskAPI.swift */; };
 		1874EB132353BF8B00052101 /* BitCoinDeskAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1874EB122353BF8B00052101 /* BitCoinDeskAPITests.swift */; };
+		187B32092359D4E0007E6E3D /* DefaultTodayDataRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187B32082359D4E0007E6E3D /* DefaultTodayDataRepositoryTests.swift */; };
+		187B320C2359D91A007E6E3D /* TestingURLSessionClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187B320B2359D91A007E6E3D /* TestingURLSessionClient.swift */; };
 		187E998A2357896900B57FCC /* TimerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187E99892357896900B57FCC /* TimerProtocol.swift */; };
 		187E998C23578FD400B57FCC /* DefaultTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187E998B23578FD400B57FCC /* DefaultTimer.swift */; };
 		187E998F235790A700B57FCC /* DefaultTimerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187E998E235790A700B57FCC /* DefaultTimerTests.swift */; };
@@ -194,6 +196,8 @@
 		1874EB0C2353996F00052101 /* URLSessionClientProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionClientProtocol.swift; sourceTree = "<group>"; };
 		1874EB0E23539B0200052101 /* BitCoinDeskAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitCoinDeskAPI.swift; sourceTree = "<group>"; };
 		1874EB122353BF8B00052101 /* BitCoinDeskAPITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitCoinDeskAPITests.swift; sourceTree = "<group>"; };
+		187B32082359D4E0007E6E3D /* DefaultTodayDataRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultTodayDataRepositoryTests.swift; sourceTree = "<group>"; };
+		187B320B2359D91A007E6E3D /* TestingURLSessionClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestingURLSessionClient.swift; sourceTree = "<group>"; };
 		187E99892357896900B57FCC /* TimerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerProtocol.swift; sourceTree = "<group>"; };
 		187E998B23578FD400B57FCC /* DefaultTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultTimer.swift; sourceTree = "<group>"; };
 		187E998E235790A700B57FCC /* DefaultTimerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultTimerTests.swift; sourceTree = "<group>"; };
@@ -497,6 +501,7 @@
 		1873E00623582E9A00A85C2A /* Repository */ = {
 			isa = PBXGroup;
 			children = (
+				187B320A2359D8FA007E6E3D /* Mocks */,
 				187B32072359D3AE007E6E3D /* Today */,
 				1873E00723582EA300A85C2A /* Historical */,
 			);
@@ -604,8 +609,17 @@
 		187B32072359D3AE007E6E3D /* Today */ = {
 			isa = PBXGroup;
 			children = (
+				187B32082359D4E0007E6E3D /* DefaultTodayDataRepositoryTests.swift */,
 			);
 			path = Today;
+			sourceTree = "<group>";
+		};
+		187B320A2359D8FA007E6E3D /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				187B320B2359D91A007E6E3D /* TestingURLSessionClient.swift */,
+			);
+			path = Mocks;
 			sourceTree = "<group>";
 		};
 		187E99882357883F00B57FCC /* Timer */ = {
@@ -921,7 +935,9 @@
 			files = (
 				1874EAD9235373EB00052101 /* ListViewControllerTests.swift in Sources */,
 				1873E00923582EC300A85C2A /* DefaultHistoricalDataRepositoryTests.swift in Sources */,
+				187B320C2359D91A007E6E3D /* TestingURLSessionClient.swift in Sources */,
 				1874EACF235330D200052101 /* ListRouterTests.swift in Sources */,
+				187B32092359D4E0007E6E3D /* DefaultTodayDataRepositoryTests.swift in Sources */,
 				1873E00523582B2D00A85C2A /* ListInteractorTests.swift in Sources */,
 				1841068623532075000AE46C /* TestingAppDelegate.swift in Sources */,
 			);
