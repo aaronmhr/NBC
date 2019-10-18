@@ -9,14 +9,14 @@
 import Networking
 
 final class DefaultCurrentDataRepository: CurrentDataRepository {
-    private let dependencies: NetworkingDependenciesProtocol
+    private let networking: URLSessionClientProtocol
     
-    init(dependencies: NetworkingDependenciesProtocol = DefaultNetworkingDependencies()) {
-        self.dependencies = dependencies
+    init(networking: URLSessionClientProtocol) {
+        self.networking = networking
     }
     
     func getCurrentData(url: URL?, completion: @escaping (Result<CurrentResponseModel, ShowableError>) -> Void) {
-        self.dependencies.apiService.fetchResources(url: url) { (result: Result<CurrentResponseModel, NetworkingError>) in
+        self.networking.fetchResources(url: url) { (result: Result<CurrentResponseModel, NetworkingError>) in
             switch result {
             case .success(let response):
                 completion(.success(response))

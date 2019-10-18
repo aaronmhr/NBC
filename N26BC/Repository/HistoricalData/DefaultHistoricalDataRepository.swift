@@ -9,14 +9,14 @@
 import Networking
 
 final class DefaultHistoricalDataRepository: HistoricalDataRepository {
-    private let dependencies: NetworkingDependenciesProtocol
+    private let networking: URLSessionClientProtocol
     
-    init(dependencies: NetworkingDependenciesProtocol = DefaultNetworkingDependencies()) {
-        self.dependencies = dependencies
+    init(networking: URLSessionClientProtocol) {
+        self.networking = networking
     }
     
     func getHistoricalData(url: URL?, completion: @escaping (Result<HistoricalResponseModel, ShowableError>) -> Void) {
-        self.dependencies.apiService.fetchResources(url: url) { (result: Result<HistoricalResponseModel, NetworkingError>) in
+        self.networking.fetchResources(url: url) { (result: Result<HistoricalResponseModel, NetworkingError>) in
             switch result {
             case .success(let response):
                 completion(.success(response))

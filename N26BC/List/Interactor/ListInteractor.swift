@@ -18,8 +18,14 @@ protocol ListInteractorDependenciesProtocol {
 }
 
 final class DefaultListInteractorDependencies: ListInteractorDependenciesProtocol {
-    lazy var historicalDataRepository: HistoricalDataRepository = DefaultHistoricalDataRepository()
-    lazy var currentDataRepository: CurrentDataRepository = DefaultCurrentDataRepository()
+    let urlSession = URLSession(configuration: .default)
+    lazy var decoder: JSONDecoder = {
+        let decoder = JSONDecoder()
+        decoder.keyDecodingStrategy = .convertFromSnakeCase
+        return decoder
+    }()
+    lazy var historicalDataRepository: HistoricalDataRepository = DefaultHistoricalDataRepository(networking: URLSessionClient(session: urlSession, decoder: decoder))
+    lazy var currentDataRepository: CurrentDataRepository = DefaultCurrentDataRepository(networking: URLSessionClient(session: urlSession, decoder: decoder))
     lazy var timer: TimerProtocol = DefaultTimer()
     lazy var historicalResponseMapper: HistoricalResponseMapperProtocol = DefaultHistoricalResponseMapper()
     lazy var todayResponseMapper: CurrentResponseMapperProtocol = DefaultCurrentResponseMapper()

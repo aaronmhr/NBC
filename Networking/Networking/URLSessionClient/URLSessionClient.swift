@@ -12,7 +12,7 @@ public final class URLSessionClient: URLSessionClientProtocol {
     private let session: URLSessionProtocol
     private let decoder: JSONDecoder
     
-    public init(session: URLSessionProtocol, decoder: JSONDecoder) {
+    public init(session: URLSessionProtocol, decoder: JSONDecoder = JSONDecoder()) {
         self.session = session
         self.decoder = decoder
     }
