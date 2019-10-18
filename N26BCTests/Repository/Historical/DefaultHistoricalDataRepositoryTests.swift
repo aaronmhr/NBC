@@ -11,31 +11,42 @@ import Networking
 @testable import N26BC
 
 class DefaultHistoricalDataRepositoryTests: XCTestCase {
+    func testGetHistoricalData_providesHistoricalData() {
+        let historicalResponse1 = HistoricalResponseModel(bpi: nil, disclaimer: "test1")
+        let historicalResponse2 = HistoricalResponseModel(bpi: nil, disclaimer: "test2")
+        
+        [historicalResponse1, historicalResponse2].forEach { currentResponse in
+            let successInput: Result<HistoricalResponseModel, NetworkingError> = .success(currentResponse)
 
-//    // MARK: - Helpers
-//    func makeSUT() -> DefaultHistoricalDataRepository {
-//        let dependencies = TestingNetworkingDependencies()
-//        let repository = DefaultHistoricalDataRepository(dependencies: )
-//    }
-//    
-//    final class TestingNetworkingDependencies: NetworkingDependenciesProtocol {
-//        var apiService: URLSessionClientProtocol
-//        
-//    }
-//    
-//    final class TestingURLSessionClient: URLSessionClientProtocol {
-//        func fetchResources<T>(url: URL?, completion: @escaping (Result<T, NetworkingError>) -> Void) where T : Decodable {
-//            <#code#>
-//        }
-//        
-//        var result: Result<HistoricalResponseModel, NetworkingError> = .success(HistoricalResponseModel(bpi: nil, disclaimer: ""))
-//
-//    }
+            let (sut, networking) = makeSUT()
+            networking.result = successInput
+            
+            sut.getHistoricalData(url: nil) { response in
+                switch response {
+                case .success(let successResponse):
+                    XCTAssertEqual(successResponse, currentResponse)
+                default: XCTFail()
+                }
+            }
+        }
+    }
+    
+    // MARK: - Helpers
+    func makeSUT() -> (DefaultHistoricalDataRepository, TestingURLSessionClient) {
+        let networking = TestingURLSessionClient()
+        let repository = DefaultHistoricalDataRepository(networking: networking)
+        return (repository, networking)
+    }
+    
+    final class TestingURLSessionClient: URLSessionClientProtocol {
+        var result: Result<HistoricalResponseModel, NetworkingError>?
+        
+        func fetchResources<T: Decodable>(url: URL?, completion: @escaping (Result<T, NetworkingError>) -> Void) {
+            guard let result = self.result as? Result<T, NetworkingError> else {
+                XCTFail()
+                return
+            }
+            completion(result)
+        }
+    }
 }
-//
-//final class TestingHistoricalDataRepository: HistoricalDataRepository {
-//    var result: Result<HistoricalResponseModel, ShowableError>) = .f
-//    func getHistoricalData(url: URL?, completion: @escaping (Result<HistoricalResponseModel, ShowableError>) -> Void) {
-//        completion
-//    }
-//}
