@@ -7,5 +7,5 @@
 //
 
 protocol CurrentResponseMapperProtocol {
-    func map(response: TodayResponseModel, for currency: Currency, completion: @escaping (Result<Valuation, ShowableError>) -> Void)
+    func map(response: TodayResponseModel, for currency: Currency, completion: @escaping (Result<Valuation, N26BCError>) -> Void)
 }

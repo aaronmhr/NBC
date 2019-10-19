@@ -17,7 +17,7 @@ class DefaultHistoricalDataRepositoryTests: XCTestCase {
         let successInput: Result<HistoricalResponseModel, NetworkingError> = .success(historicalResponse)
         
         let (sut, networking, _) = makeSUT()
-        let expectedResponse = ShowableError.other
+        let expectedResponse = N26BCError.other
         networking.result = successInput
         
         sut.getHistoricalData(url: nil) { response in
@@ -77,7 +77,7 @@ class DefaultHistoricalDataRepositoryTests: XCTestCase {
         let error5 = NetworkingError.other("Test5")
         let error6 = NetworkingError.serverError("Test6")
         
-        let showableError: ShowableError = .networking
+        let showableError: N26BCError = .networking
         
         [error1, error2, error3, error4, error5, error6].forEach { currentError in
             let successInput: Result<HistoricalResponseModel, NetworkingError> = .failure(currentError)

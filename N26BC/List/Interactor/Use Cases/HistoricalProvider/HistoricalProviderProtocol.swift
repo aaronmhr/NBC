@@ -9,8 +9,8 @@
 import Networking
 
 protocol HistoricalProviderProtocol {
-    typealias HistoricalResult = Result<[Valuation], ShowableError>
-    typealias ResultBlock = (Result<[Valuation], ShowableError>) -> Void
+    typealias HistoricalResult = Result<[Valuation], N26BCError>
+    typealias ResultBlock = (Result<[Valuation], N26BCError>) -> Void
     
     func retrieveHistoricalData(completion: @escaping ResultBlock)
 }

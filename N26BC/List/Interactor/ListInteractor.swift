@@ -43,11 +43,11 @@ final class ListInteractor {
 }
 
 extension ListInteractor: ListInteractorProtocol {
-    func retrieveHistoricalData(completion: @escaping (Result<[Valuation], ShowableError>) -> Void) {
+    func retrieveHistoricalData(completion: @escaping (Result<[Valuation], N26BCError>) -> Void) {
         dependencies.historicalProvider.retrieveHistoricalData(completion: completion)
     }
 
-    private func handleMappedResponse(response: Result<[Valuation], ShowableError>, completion: @escaping (Result<[Valuation], ShowableError>) -> Void) {
+    private func handleMappedResponse(response: Result<[Valuation], N26BCError>, completion: @escaping (Result<[Valuation], N26BCError>) -> Void) {
         switch response {
         case .success(let prices):
             let sortedPrices = sort(prices)
@@ -61,7 +61,7 @@ extension ListInteractor: ListInteractorProtocol {
         return items.sorted { $0.date > $1.date }
     }
     
-    func retrieveCurrentData(completion: @escaping (Result<Valuation, ShowableError>) -> Void) {
+    func retrieveCurrentData(completion: @escaping (Result<Valuation, N26BCError>) -> Void) {
         let url = BitcoinDeskAPI.today(.euro).url
         dependencies.currentDataRepository.getTodayData(url: url) { [weak self] result in
             switch result {

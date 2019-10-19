@@ -15,13 +15,13 @@ final class DefaultTodayDataRepository: TodayDataRepository {
         self.networking = networking
     }
     
-    func getTodayData(url: URL?, completion: @escaping (Result<TodayResponseModel, ShowableError>) -> Void) {
+    func getTodayData(url: URL?, completion: @escaping (Result<TodayResponseModel, N26BCError>) -> Void) {
         self.networking.fetchResources(url: url) { (result: Result<TodayResponseModel, NetworkingError>) in
             switch result {
             case .success(let response):
                 completion(.success(response))
             case .failure:
-                completion(.failure(ShowableError.networking))
+                completion(.failure(N26BCError.networking))
             }
         }
     }

@@ -42,7 +42,7 @@ class DefaultTodayDataRepositoryTests: XCTestCase {
         let error5 = NetworkingError.other("Test5")
         let error6 = NetworkingError.serverError("Test6")
         
-        let showableError: ShowableError = .networking
+        let showableError: N26BCError = .networking
         
         [error1, error2, error3, error4, error5, error6].forEach { currentError in
             let successInput: Result<TodayResponseModel, NetworkingError> = .failure(currentError)

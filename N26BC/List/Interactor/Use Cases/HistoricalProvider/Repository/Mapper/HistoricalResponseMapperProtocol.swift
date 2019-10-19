@@ -9,6 +9,6 @@
 import Networking
 
 protocol HistoricalResponseMapperProtocol {
-    func map(response: HistoricalResponseModel, for currency: Currency) -> Result<[Valuation], ShowableError>
-    func map(error: NetworkingError) -> ShowableError
+    func map(response: HistoricalResponseModel, for currency: Currency) -> Result<[Valuation], N26BCError>
+    func map(error: NetworkingError) -> N26BCError
 }
