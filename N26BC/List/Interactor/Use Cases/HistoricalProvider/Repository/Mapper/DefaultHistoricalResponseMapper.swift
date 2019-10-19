@@ -9,10 +9,9 @@
 import Networking
 
 final class DefaultHistoricalResponseMapper: HistoricalResponseMapperProtocol {
-    func map(response: HistoricalResponseModel, for currency: Currency, completion: @escaping (Result<[Valuation], ShowableError>) -> Void) {
+    func map(response: HistoricalResponseModel, for currency: Currency) -> Result<[Valuation], ShowableError> {
         guard let bpi = response.bpi else {
-            completion(.failure(ShowableError.other))
-            return
+            return .failure(ShowableError.other)
         }
         let prices: [Valuation] = bpi.compactMap {
             guard let date = $0.key.toDateWithFormat(BitcoinDeskAPI.defaultDateFormat) else {
@@ -20,6 +19,15 @@ final class DefaultHistoricalResponseMapper: HistoricalResponseMapperProtocol {
             }
             return Valuation(date: date, price: $0.value, currency: currency)
         }
-        completion(.success(prices))
+        return .success(prices)
+    }
+    
+    func map(error: NetworkingError) -> ShowableError {
+        let newError: ShowableError
+        switch error {
+        default:
+            newError = .networking
+        }
+        return newError
     }
 }

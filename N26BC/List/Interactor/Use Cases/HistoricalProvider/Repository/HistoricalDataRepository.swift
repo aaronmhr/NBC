@@ -9,5 +9,5 @@
 import Foundation
 
 protocol HistoricalDataRepository {
-    func getHistoricalData(url: URL?, completion: @escaping (Result<HistoricalResponseModel, ShowableError>) -> Void)
+    func getHistoricalData(url: URL?, completion: @escaping HistoricalProviderProtocol.ResultBlock)
 }

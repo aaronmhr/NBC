@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Valuation {
+struct Valuation: Equatable {
     let date: Date
     let price: Double
     let currency: Currency

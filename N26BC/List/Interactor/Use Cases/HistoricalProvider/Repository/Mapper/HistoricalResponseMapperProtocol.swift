@@ -9,5 +9,6 @@
 import Networking
 
 protocol HistoricalResponseMapperProtocol {
-    func map(response: HistoricalResponseModel, for currency: Currency,  completion: @escaping (Result<[Valuation], ShowableError>) -> Void)
+    func map(response: HistoricalResponseModel, for currency: Currency) -> Result<[Valuation], ShowableError>
+    func map(error: NetworkingError) -> ShowableError
 }
