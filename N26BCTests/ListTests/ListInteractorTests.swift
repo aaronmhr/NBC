@@ -22,13 +22,13 @@ class ListInteractorTests: XCTestCase {
 //    final class FakeDependencies: ListInteractorDependenciesProtocol {
 //        var historicalDataRepository: HistoricalDataRepository
 //
-//        var currentDataRepository: TodayDataRepository
+//        var todayDataRepository: TodayDataRepository
 //
 //        var timer: TimerProtocol
 //
 //        var historicalResponseMapper: HistoricalResponseMapperProtocol
 //
-//        var todayResponseMapper: CurrentResponseMapperProtocol
+//        var todayResponseMapper: TodayResponseMapperProtocol
 //
 //
 //    }

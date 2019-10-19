@@ -63,9 +63,9 @@ class DefaultTodayDataRepositoryTests: XCTestCase {
     }
     
     // MARK: - Helpers
-    func makeSUT() -> (DefaultTodayDataRepository, TestingURLSessionClient<TodayResponseModel>, CurrentResponseMapperProtocol) {
+    func makeSUT() -> (DefaultTodayDataRepository, TestingURLSessionClient<TodayResponseModel>, TodayResponseMapperProtocol) {
         let networking = TestingURLSessionClient<TodayResponseModel>()
-        let mapper = DefaultCurrentResponseMapper()
+        let mapper = DefaultTodayResponseMapper()
         let repository = DefaultTodayDataRepository(networking: networking, mapper: mapper)
         return (repository, networking, mapper)
     }

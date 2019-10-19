@@ -69,7 +69,7 @@ class DefaultHistoricalDataRepositoryTests: XCTestCase {
         }
     }
     
-    func testGetHistoricalData_providesShowableErrorWhenDependencyReturnsNetworkingError() {
+    func testGetHistoricalData_providesN26BCErrorWhenDependencyReturnsNetworkingError() {
         let error1 = NetworkingError.clientError("Test1")
         let error2 = NetworkingError.couldNotBuildURL
         let error3 = NetworkingError.decodingError

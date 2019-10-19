@@ -28,11 +28,11 @@ final class DefaultListInteractorDependencies: ListInteractorDependenciesProtoco
     lazy var historicalResponseMapper: HistoricalResponseMapperProtocol = DefaultHistoricalResponseMapper()
     lazy var historicalDataRepository: HistoricalDataRepository = DefaultHistoricalDataRepository(networking: URLSessionClient(session: urlSession, decoder: decoder), mapper: historicalResponseMapper)
 
-    lazy var todayResponseMapper: CurrentResponseMapperProtocol = DefaultCurrentResponseMapper()
-    lazy var currentDataRepository: TodayDataRepository = DefaultTodayDataRepository(networking: URLSessionClient(session: urlSession, decoder: decoder), mapper: todayResponseMapper)
+    lazy var todayResponseMapper: TodayResponseMapperProtocol = DefaultTodayResponseMapper()
+    lazy var todayDataRepository: TodayDataRepository = DefaultTodayDataRepository(networking: URLSessionClient(session: urlSession, decoder: decoder), mapper: todayResponseMapper)
     
     lazy var historicalProvider: HistoricalProviderProtocol = HistoricalDataProvider(repository: historicalDataRepository)
-    lazy var todayProvider: TodayProviderProtocol = TodayDataProvider(repository: currentDataRepository)
+    lazy var todayProvider: TodayProviderProtocol = TodayDataProvider(repository: todayDataRepository)
     lazy var timer: TimerProtocol = DefaultTimer()
 }
 
@@ -54,7 +54,7 @@ extension ListInteractor: ListInteractorProtocol {
         }
     }
     
-    func retrieveCurrentData(completion: @escaping (Result<Valuation, N26BCError>) -> Void) {
+    func retrieveTodayData(completion: @escaping (Result<Valuation, N26BCError>) -> Void) {
         dependencies.todayProvider.retrieveTodayData(currency: Constants.currency, completion: completion)
     }
 }

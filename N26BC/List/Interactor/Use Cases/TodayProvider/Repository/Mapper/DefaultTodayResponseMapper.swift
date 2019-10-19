@@ -1,5 +1,5 @@
 //
-//  DefaultCurrentResponseMapper.swift
+//  DefaultTodayResponseMapper.swift
 //  N26BC
 //
 //  Created by Aaron Huánuco on 17/10/2019.
@@ -8,7 +8,7 @@
 
 import Networking
 
-final class DefaultCurrentResponseMapper: CurrentResponseMapperProtocol {
+final class DefaultTodayResponseMapper: TodayResponseMapperProtocol {
     func map(response: TodayResponseModel, for currency: Currency) -> Result<Valuation, N26BCError> {
         let date = response.time?.updatedISO.toDateWithFormat(BitcoinDeskAPI.todayResponseDateFormat) ?? Date()
         guard let price = response.bpi?.eur?.rateFloat else {

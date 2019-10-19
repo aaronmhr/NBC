@@ -10,9 +10,9 @@ import Networking
 
 final class DefaultTodayDataRepository: TodayDataRepository {
     private let networking: URLSessionClientProtocol
-    private let mapper: CurrentResponseMapperProtocol
+    private let mapper: TodayResponseMapperProtocol
     
-    init(networking: URLSessionClientProtocol, mapper: CurrentResponseMapperProtocol) {
+    init(networking: URLSessionClientProtocol, mapper: TodayResponseMapperProtocol) {
         self.networking = networking
         self.mapper = mapper
     }

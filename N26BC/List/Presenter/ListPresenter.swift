@@ -53,7 +53,7 @@ extension ListPresenter: ListPresenterProtocol {
     
     func viewWillAppear() {
         timer.schedule(timeInterval: 10, repeats: true) { [weak self] in
-            self?.interactor.retrieveCurrentData { result in
+            self?.interactor.retrieveTodayData { result in
                 switch result {
                 case .success(let todayPrices):
                     print("Downloaded Today")
