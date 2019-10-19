@@ -1,6 +1,6 @@
 //
 //  BitCoinDeskAPI.swift
-//  Networking
+//  Valuation
 //
 //  Created by Aaron Huánuco on 13/10/2019.
 //  Copyright © 2019 Aaron Huánuco. All rights reserved.
@@ -50,22 +50,6 @@ extension BitcoinDeskAPI {
         static let historicalPath = "/v1/bpi/historical/close.json"
     }
     
-    public enum Currency: String {
-        case euro = "EUR"
-        case dollar = "USD"
-        case pound = "GBP"
-        case nonDefined = ""
-        
-        var currencyPath: String {
-            switch self {
-            case .euro, .dollar, .pound:
-                return "/" + self.rawValue
-            case .nonDefined:
-                return self.rawValue
-            }
-        }
-    }
-    
     public struct HistoricalQuery {
         public let start: Date
         public let end: Date
@@ -96,6 +80,17 @@ extension BitcoinDeskAPI {
             static let start = "start"
             static let end = "end"
             static let currency = "currency"
+        }
+    }
+}
+
+fileprivate extension Currency {
+    var currencyPath: String {
+        switch self {
+        case .euro, .dollar, .pound:
+            return "/" + self.rawValue
+        case .unknown:
+            return self.rawValue
         }
     }
 }

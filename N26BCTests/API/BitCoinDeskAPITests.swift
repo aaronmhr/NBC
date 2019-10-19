@@ -8,7 +8,8 @@
 
 import XCTest
 import Commons
-@testable import Networking
+import Networking
+@testable import N26BC
 
 class BitCoinDeskAPITests: XCTestCase {
     func testURLConstructor_forTodayConstructsTheProperTodayURL() {
@@ -20,7 +21,7 @@ class BitCoinDeskAPITests: XCTestCase {
         let euroConstructor = BitcoinDeskAPI.today(.euro)
         let dollarConstructor = BitcoinDeskAPI.today(.dollar)
         let poundConstructor = BitcoinDeskAPI.today(.pound)
-        let nonDefinedContructor = BitcoinDeskAPI.today(.nonDefined)
+        let nonDefinedContructor = BitcoinDeskAPI.today(.unknown)
         
         XCTAssertEqual(euroConstructor.url, euroURL)
         XCTAssertEqual(dollarConstructor.url, dollarURL)

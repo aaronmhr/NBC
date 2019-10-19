@@ -15,11 +15,13 @@ final class HistoricalDataProvider: HistoricalProviderProtocol {
         self.repository = repository
     }
     
-    func retrieveHistoricalData(completion: @escaping ResultBlock) {
-        let end = Date()
-        let start = Calendar.current.date(byAdding: .day, value: -14, to: end) ?? end
-        let url = BitcoinDeskAPI.historical(.init(start: start, end: end, currency: .euro)).url
-        
+    func retrieveHistoricalData(start: Date, end: Date, currency: Currency, completion: @escaping ResultBlock) {
+        let url = getBitcoinDeskAPIURL(start: start, end: end, currency: currency)
         repository.getHistoricalData(url: url, completion: completion)
+    }
+    
+    private func getBitcoinDeskAPIURL(start: Date, end: Date, currency: Currency) -> URL? {
+        let url = BitcoinDeskAPI.historical(.init(start: start, end: end, currency: currency)).url
+        return url
     }
 }

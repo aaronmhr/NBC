@@ -46,7 +46,9 @@ final class ListInteractor {
 
 extension ListInteractor: ListInteractorProtocol {
     func retrieveHistoricalData(completion: @escaping (Result<[Valuation], N26BCError>) -> Void) {
-        dependencies.historicalProvider.retrieveHistoricalData { [weak self] result in
+        let end = Date()
+        let start = Calendar.current.date(byAdding: .day, value: Constants.daysInPeriod, to: end) ?? end
+        dependencies.historicalProvider.retrieveHistoricalData(start: start, end: end, currency: Constants.currency) { [weak self] result in
             guard let self = self else  { return }
             completion(self.dependencies.valuationSorter.sort(result))
         }
@@ -54,5 +56,12 @@ extension ListInteractor: ListInteractorProtocol {
     
     func retrieveCurrentData(completion: @escaping (Result<Valuation, N26BCError>) -> Void) {
         dependencies.todayProvider.retrieveTodayData(completion: completion)
+    }
+}
+
+extension ListInteractor  {
+    private enum Constants {
+        static let currency: Currency = Currency.euro
+        static let daysInPeriod = -14
     }
 }

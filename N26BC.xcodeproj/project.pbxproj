@@ -58,8 +58,6 @@
 		1874EB082353944E00052101 /* NetworkingError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1874EB072353944E00052101 /* NetworkingError.swift */; };
 		1874EB0A2353947900052101 /* URLSessionClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1874EB092353947900052101 /* URLSessionClient.swift */; };
 		1874EB0D2353996F00052101 /* URLSessionClientProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1874EB0C2353996F00052101 /* URLSessionClientProtocol.swift */; };
-		1874EB0F23539B0200052101 /* BitCoinDeskAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1874EB0E23539B0200052101 /* BitCoinDeskAPI.swift */; };
-		1874EB132353BF8B00052101 /* BitCoinDeskAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1874EB122353BF8B00052101 /* BitCoinDeskAPITests.swift */; };
 		187B32092359D4E0007E6E3D /* DefaultTodayDataRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187B32082359D4E0007E6E3D /* DefaultTodayDataRepositoryTests.swift */; };
 		187B320C2359D91A007E6E3D /* TestingURLSessionClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187B320B2359D91A007E6E3D /* TestingURLSessionClient.swift */; };
 		187B3212235ABACC007E6E3D /* HistoricalProviderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187B3211235ABACC007E6E3D /* HistoricalProviderProtocol.swift */; };
@@ -73,6 +71,8 @@
 		18FB7DC1235B2BD500E2DA2E /* HistoricalDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FB7DC0235B2BD500E2DA2E /* HistoricalDataProvider.swift */; };
 		18FB7DC4235B30AB00E2DA2E /* TodayProviderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FB7DC3235B30AB00E2DA2E /* TodayProviderProtocol.swift */; };
 		18FB7DC6235B35A600E2DA2E /* TodayDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FB7DC5235B35A600E2DA2E /* TodayDataProvider.swift */; };
+		18FB7DC8235B5E4900E2DA2E /* BitCoinDeskAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FB7DC7235B5E4900E2DA2E /* BitCoinDeskAPI.swift */; };
+		18FB7DCA235B5F6000E2DA2E /* BitCoinDeskAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FB7DC9235B5F6000E2DA2E /* BitCoinDeskAPITests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -200,8 +200,6 @@
 		1874EB072353944E00052101 /* NetworkingError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingError.swift; sourceTree = "<group>"; };
 		1874EB092353947900052101 /* URLSessionClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionClient.swift; sourceTree = "<group>"; };
 		1874EB0C2353996F00052101 /* URLSessionClientProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionClientProtocol.swift; sourceTree = "<group>"; };
-		1874EB0E23539B0200052101 /* BitCoinDeskAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitCoinDeskAPI.swift; sourceTree = "<group>"; };
-		1874EB122353BF8B00052101 /* BitCoinDeskAPITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitCoinDeskAPITests.swift; sourceTree = "<group>"; };
 		187B32082359D4E0007E6E3D /* DefaultTodayDataRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultTodayDataRepositoryTests.swift; sourceTree = "<group>"; };
 		187B320B2359D91A007E6E3D /* TestingURLSessionClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestingURLSessionClient.swift; sourceTree = "<group>"; };
 		187B3211235ABACC007E6E3D /* HistoricalProviderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoricalProviderProtocol.swift; sourceTree = "<group>"; };
@@ -215,6 +213,8 @@
 		18FB7DC0235B2BD500E2DA2E /* HistoricalDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoricalDataProvider.swift; sourceTree = "<group>"; };
 		18FB7DC3235B30AB00E2DA2E /* TodayProviderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayProviderProtocol.swift; sourceTree = "<group>"; };
 		18FB7DC5235B35A600E2DA2E /* TodayDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayDataProvider.swift; sourceTree = "<group>"; };
+		18FB7DC7235B5E4900E2DA2E /* BitCoinDeskAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BitCoinDeskAPI.swift; sourceTree = "<group>"; };
+		18FB7DC9235B5F6000E2DA2E /* BitCoinDeskAPITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BitCoinDeskAPITests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -304,6 +304,7 @@
 				18731DA823564A7800BB577A /* Entities */,
 				187017B523558F3A009270AA /* Reponse Model */,
 				1841068723532484000AE46C /* List */,
+				1874EB062353943100052101 /* API */,
 				1841066A23531A6C000AE46C /* Assets.xcassets */,
 				1841066C23531A6C000AE46C /* LaunchScreen.storyboard */,
 				1841066F23531A6C000AE46C /* Info.plist */,
@@ -317,6 +318,7 @@
 				1841068523532075000AE46C /* TestingAppDelegate.swift */,
 				1873E00623582E9A00A85C2A /* Repository */,
 				1841069523532637000AE46C /* ListTests */,
+				1874EB102353BEFE00052101 /* API */,
 				1841067A23531A6C000AE46C /* Info.plist */,
 			);
 			path = N26BCTests;
@@ -539,7 +541,6 @@
 			isa = PBXGroup;
 			children = (
 				1874EB0B235397A500052101 /* Networking */,
-				1874EB062353943100052101 /* API */,
 				1874EAE623538F9E00052101 /* Networking.h */,
 				1874EAE723538F9E00052101 /* Info.plist */,
 			);
@@ -550,7 +551,6 @@
 			isa = PBXGroup;
 			children = (
 				18740AA82354DF8000A27C5D /* Networking */,
-				1874EB102353BEFE00052101 /* API */,
 				1874EAF523538F9F00052101 /* Info.plist */,
 			);
 			path = NetworkingTests;
@@ -559,7 +559,7 @@
 		1874EB062353943100052101 /* API */ = {
 			isa = PBXGroup;
 			children = (
-				1874EB0E23539B0200052101 /* BitCoinDeskAPI.swift */,
+				18FB7DC7235B5E4900E2DA2E /* BitCoinDeskAPI.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -577,7 +577,7 @@
 		1874EB102353BEFE00052101 /* API */ = {
 			isa = PBXGroup;
 			children = (
-				1874EB122353BF8B00052101 /* BitCoinDeskAPITests.swift */,
+				18FB7DC9235B5F6000E2DA2E /* BitCoinDeskAPITests.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -941,6 +941,7 @@
 				18731DA723564A6000BB577A /* N26BCError.swift in Sources */,
 				184106AA23532D37000AE46C /* ListViewController.swift in Sources */,
 				187E99912357BE4100B57FCC /* Currency.swift in Sources */,
+				18FB7DC8235B5E4900E2DA2E /* BitCoinDeskAPI.swift in Sources */,
 				187017BB235591E6009270AA /* DefaultHistoricalDataRepository.swift in Sources */,
 				1874EAD52353386E00052101 /* ListInteractor.swift in Sources */,
 				1873DFF6235823D700A85C2A /* DefaultHistoricalResponseMapper.swift in Sources */,
@@ -965,6 +966,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18FB7DCA235B5F6000E2DA2E /* BitCoinDeskAPITests.swift in Sources */,
 				1874EAD9235373EB00052101 /* ListViewControllerTests.swift in Sources */,
 				1873E00923582EC300A85C2A /* DefaultHistoricalDataRepositoryTests.swift in Sources */,
 				187B320C2359D91A007E6E3D /* TestingURLSessionClient.swift in Sources */,
@@ -1002,7 +1004,6 @@
 			files = (
 				1874EB03235390AE00052101 /* URLSession.swift in Sources */,
 				18740AAE2354E60600A27C5D /* URLSessionProtocol.swift in Sources */,
-				1874EB0F23539B0200052101 /* BitCoinDeskAPI.swift in Sources */,
 				1874EB0D2353996F00052101 /* URLSessionClientProtocol.swift in Sources */,
 				1874EB082353944E00052101 /* NetworkingError.swift in Sources */,
 				1874EB0A2353947900052101 /* URLSessionClient.swift in Sources */,
@@ -1015,7 +1016,6 @@
 			files = (
 				18740AAA2354DF9C00A27C5D /* URLSessionTests.swift in Sources */,
 				18740AAC2354E5D800A27C5D /* URLSessioClientTests.swift in Sources */,
-				1874EB132353BF8B00052101 /* BitCoinDeskAPITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

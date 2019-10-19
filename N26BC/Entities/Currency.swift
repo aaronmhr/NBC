@@ -6,8 +6,9 @@
 //  Copyright © 2019 Aaron Huánuco. All rights reserved.
 //
 
-enum Currency: String {
+public enum Currency: String, Equatable {
     case euro = "EUR"
     case dollar = "USD"
     case pound = "GBP"
+    case unknown = ""
 }

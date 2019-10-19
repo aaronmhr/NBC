@@ -12,5 +12,5 @@ protocol HistoricalProviderProtocol {
     typealias HistoricalResult = Result<[Valuation], N26BCError>
     typealias ResultBlock = (Result<[Valuation], N26BCError>) -> Void
     
-    func retrieveHistoricalData(completion: @escaping ResultBlock)
+    func retrieveHistoricalData(start: Date, end: Date, currency: Currency, completion: @escaping ResultBlock)
 }
