@@ -11,6 +11,7 @@ import Networking
 
 protocol ListInteractorDependenciesProtocol {
     var historicalProvider: HistoricalProviderProtocol { get }
+    var valuationSorter: ValuationSorterProtocol { get }
     var currentDataRepository: TodayDataRepository { get }
     var timer: TimerProtocol { get }
     var todayResponseMapper: CurrentResponseMapperProtocol { get }
@@ -24,6 +25,7 @@ final class DefaultListInteractorDependencies: ListInteractorDependenciesProtoco
         decoder.keyDecodingStrategy = .convertFromSnakeCase
         return decoder
     }()
+    lazy var valuationSorter: ValuationSorterProtocol = ValuationSorter()
     lazy var historicalResponseMapper: HistoricalResponseMapperProtocol = DefaultHistoricalResponseMapper()
     lazy var historicalDataRepository: HistoricalDataRepository = DefaultHistoricalDataRepository(networking: URLSessionClient(session: urlSession, decoder: decoder), mapper: historicalResponseMapper)
 
@@ -44,7 +46,10 @@ final class ListInteractor {
 
 extension ListInteractor: ListInteractorProtocol {
     func retrieveHistoricalData(completion: @escaping (Result<[Valuation], N26BCError>) -> Void) {
-        dependencies.historicalProvider.retrieveHistoricalData(completion: completion)
+        dependencies.historicalProvider.retrieveHistoricalData { [weak self] result in
+            guard let self = self else  { return }
+            completion(self.dependencies.valuationSorter.sort(result))
+        }
     }
 
     private func handleMappedResponse(response: Result<[Valuation], N26BCError>, completion: @escaping (Result<[Valuation], N26BCError>) -> Void) {

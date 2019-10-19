@@ -68,6 +68,8 @@
 		187E998F235790A700B57FCC /* DefaultTimerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187E998E235790A700B57FCC /* DefaultTimerTests.swift */; };
 		187E99912357BE4100B57FCC /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187E99902357BE4100B57FCC /* Currency.swift */; };
 		187E99942357C1FF00B57FCC /* HistoricalResponseMapperProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187E99932357C1FF00B57FCC /* HistoricalResponseMapperProtocol.swift */; };
+		18FB7DB9235B19C200E2DA2E /* ValuationSorter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FB7DB8235B19C200E2DA2E /* ValuationSorter.swift */; };
+		18FB7DBB235B19D600E2DA2E /* ValuationSorterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FB7DBA235B19D600E2DA2E /* ValuationSorterProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -205,6 +207,8 @@
 		187E998E235790A700B57FCC /* DefaultTimerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultTimerTests.swift; sourceTree = "<group>"; };
 		187E99902357BE4100B57FCC /* Currency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
 		187E99932357C1FF00B57FCC /* HistoricalResponseMapperProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoricalResponseMapperProtocol.swift; sourceTree = "<group>"; };
+		18FB7DB8235B19C200E2DA2E /* ValuationSorter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValuationSorter.swift; sourceTree = "<group>"; };
+		18FB7DBA235B19D600E2DA2E /* ValuationSorterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValuationSorterProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -629,6 +633,7 @@
 		187B320D235ABA0F007E6E3D /* Use Cases */ = {
 			isa = PBXGroup;
 			children = (
+				18FB7DB7235B19B200E2DA2E /* ValuationSorter */,
 				187B320E235ABA6B007E6E3D /* HistoricalProvider */,
 			);
 			path = "Use Cases";
@@ -665,6 +670,15 @@
 			children = (
 			);
 			path = Mappers;
+			sourceTree = "<group>";
+		};
+		18FB7DB7235B19B200E2DA2E /* ValuationSorter */ = {
+			isa = PBXGroup;
+			children = (
+				18FB7DB8235B19C200E2DA2E /* ValuationSorter.swift */,
+				18FB7DBA235B19D600E2DA2E /* ValuationSorterProtocol.swift */,
+			);
+			path = ValuationSorter;
 			sourceTree = "<group>";
 		};
 		9B3BDFAF2973DD7FDC305AE1 /* Pods */ = {
@@ -921,6 +935,7 @@
 			files = (
 				18731DAF23564B5400BB577A /* TodayResponseModel.swift in Sources */,
 				1874EADE23537A6100052101 /* StoryboardInstantiator.swift in Sources */,
+				18FB7DBB235B19D600E2DA2E /* ValuationSorterProtocol.swift in Sources */,
 				1841068423531E95000AE46C /* main.swift in Sources */,
 				1873DFF22358232E00A85C2A /* CurrentResponseMapperProtocol.swift in Sources */,
 				18731DAA23564A8500BB577A /* Valuation.swift in Sources */,
@@ -945,6 +960,7 @@
 				1874EAD32353345700052101 /* ListPresenter.swift in Sources */,
 				18731E692356C0B700BB577A /* DefaultTodayDataRepository.swift in Sources */,
 				1873DFFF235828DE00A85C2A /* ListSectionType.swift in Sources */,
+				18FB7DB9235B19C200E2DA2E /* ValuationSorter.swift in Sources */,
 				1874EACB23532F5900052101 /* ListProtocols.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
