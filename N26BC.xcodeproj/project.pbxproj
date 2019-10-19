@@ -350,7 +350,6 @@
 			isa = PBXGroup;
 			children = (
 				187B320D235ABA0F007E6E3D /* Use Cases */,
-				187E99922357C1E600B57FCC /* Mappers */,
 				1874EAD42353386E00052101 /* ListInteractor.swift */,
 			);
 			path = Interactor;
@@ -663,13 +662,6 @@
 				187E998E235790A700B57FCC /* DefaultTimerTests.swift */,
 			);
 			path = Timer;
-			sourceTree = "<group>";
-		};
-		187E99922357C1E600B57FCC /* Mappers */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Mappers;
 			sourceTree = "<group>";
 		};
 		18FB7DB7235B19B200E2DA2E /* ValuationSorter */ = {
