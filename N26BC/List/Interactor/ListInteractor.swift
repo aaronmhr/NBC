@@ -51,20 +51,6 @@ extension ListInteractor: ListInteractorProtocol {
             completion(self.dependencies.valuationSorter.sort(result))
         }
     }
-
-    private func handleMappedResponse(response: Result<[Valuation], N26BCError>, completion: @escaping (Result<[Valuation], N26BCError>) -> Void) {
-        switch response {
-        case .success(let prices):
-            let sortedPrices = sort(prices)
-            completion(.success(sortedPrices))
-        case .failure(let error):
-            completion(.failure(error))
-        }
-    }
-    
-    private func sort(_ items: [Valuation]) -> [Valuation] {
-        return items.sorted { $0.date > $1.date }
-    }
     
     func retrieveCurrentData(completion: @escaping (Result<Valuation, N26BCError>) -> Void) {
         let url = BitcoinDeskAPI.today(.euro).url
