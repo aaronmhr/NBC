@@ -55,7 +55,7 @@ extension ListInteractor: ListInteractorProtocol {
     }
     
     func retrieveCurrentData(completion: @escaping (Result<Valuation, N26BCError>) -> Void) {
-        dependencies.todayProvider.retrieveTodayData(completion: completion)
+        dependencies.todayProvider.retrieveTodayData(currency: Constants.currency, completion: completion)
     }
 }
 

@@ -12,5 +12,5 @@ protocol TodayProviderProtocol {
     typealias TodayResult = Result<Valuation, N26BCError>
     typealias ResultBlock = (Result<Valuation, N26BCError>) -> Void
     
-    func retrieveTodayData(completion: @escaping ResultBlock)
+    func retrieveTodayData(currency: Currency, completion: @escaping ResultBlock)
 }

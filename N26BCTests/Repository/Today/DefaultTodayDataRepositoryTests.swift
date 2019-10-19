@@ -16,8 +16,7 @@ class DefaultTodayDataRepositoryTests: XCTestCase {
     func testGetTodayData_providesTodayData() {
         let response1 = givenTodayResponseModel(withRate: 1000.0)
         let response2 = givenTodayResponseModel(withRate: 2000.0)
-        
-        
+
         [response1, response2].forEach { currentResponse in
             let successInput: Result<TodayResponseModel, NetworkingError> = .success(currentResponse)
 
@@ -28,6 +27,7 @@ class DefaultTodayDataRepositoryTests: XCTestCase {
             sut.getTodayData(url: nil) { response in
                 switch response {
                 case .success(let successResponse):
+                    XCTAssertEqual(successResponse.date.toStringWithFormat("yyyy-MM-dd"), expectedResponse.date.toStringWithFormat("yyyy-MM-dd"))
                     XCTAssertEqual(successResponse.currency, expectedResponse.currency)
                     XCTAssertEqual(successResponse.price, expectedResponse.price)
                 default: XCTFail()
