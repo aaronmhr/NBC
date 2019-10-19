@@ -11,10 +11,9 @@ import Networking
 
 protocol ListInteractorDependenciesProtocol {
     var historicalProvider: HistoricalProviderProtocol { get }
+    var todayProvider: TodayProviderProtocol { get }
     var valuationSorter: ValuationSorterProtocol { get }
-    var currentDataRepository: TodayDataRepository { get }
     var timer: TimerProtocol { get }
-    var todayResponseMapper: CurrentResponseMapperProtocol { get }
 }
 
 final class DefaultListInteractorDependencies: ListInteractorDependenciesProtocol {
@@ -29,11 +28,12 @@ final class DefaultListInteractorDependencies: ListInteractorDependenciesProtoco
     lazy var historicalResponseMapper: HistoricalResponseMapperProtocol = DefaultHistoricalResponseMapper()
     lazy var historicalDataRepository: HistoricalDataRepository = DefaultHistoricalDataRepository(networking: URLSessionClient(session: urlSession, decoder: decoder), mapper: historicalResponseMapper)
 
-    lazy var historicalProvider: HistoricalProviderProtocol = HistoricalDataProvider(repository: historicalDataRepository)
-    lazy var currentDataRepository: TodayDataRepository = DefaultTodayDataRepository(networking: URLSessionClient(session: urlSession, decoder: decoder))
-    lazy var timer: TimerProtocol = DefaultTimer()
-
     lazy var todayResponseMapper: CurrentResponseMapperProtocol = DefaultCurrentResponseMapper()
+    lazy var currentDataRepository: TodayDataRepository = DefaultTodayDataRepository(networking: URLSessionClient(session: urlSession, decoder: decoder), mapper: todayResponseMapper)
+    
+    lazy var historicalProvider: HistoricalProviderProtocol = HistoricalDataProvider(repository: historicalDataRepository)
+    lazy var todayProvider: TodayProviderProtocol = TodayDataProvider(repository: currentDataRepository)
+    lazy var timer: TimerProtocol = DefaultTimer()
 }
 
 final class ListInteractor {
@@ -53,14 +53,6 @@ extension ListInteractor: ListInteractorProtocol {
     }
     
     func retrieveCurrentData(completion: @escaping (Result<Valuation, N26BCError>) -> Void) {
-        let url = BitcoinDeskAPI.today(.euro).url
-        dependencies.currentDataRepository.getTodayData(url: url) { [weak self] result in
-            switch result {
-            case .success(let reponse):
-                self?.dependencies.todayResponseMapper.map(response: reponse, for: .euro, completion: completion)
-            case .failure(let error):
-                completion(.failure(error))
-            }
-        }
+        dependencies.todayProvider.retrieveTodayData(completion: completion)
     }
 }

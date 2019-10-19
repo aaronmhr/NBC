@@ -9,5 +9,5 @@
 import Foundation
 
 protocol TodayDataRepository {
-    func getTodayData(url: URL?, completion: @escaping (Result<TodayResponseModel, N26BCError>) -> Void)
+    func getTodayData(url: URL?, completion: @escaping TodayProviderProtocol.ResultBlock)
 }

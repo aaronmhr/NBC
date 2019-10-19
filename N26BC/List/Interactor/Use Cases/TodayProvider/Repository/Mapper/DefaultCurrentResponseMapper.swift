@@ -9,13 +9,21 @@
 import Networking
 
 final class DefaultCurrentResponseMapper: CurrentResponseMapperProtocol {
-    func map(response: TodayResponseModel, for currency: Currency, completion: @escaping (Result<Valuation, N26BCError>) -> Void) {
+    func map(response: TodayResponseModel, for currency: Currency) -> Result<Valuation, N26BCError> {
         let date = response.time?.updatedISO.toDateWithFormat(BitcoinDeskAPI.todayResponseDateFormat) ?? Date()
         guard let price = response.bpi?.eur?.rateFloat else {
-            completion(.failure(.other))
-            return
+            return .failure(.other)
         }
         let valuation = Valuation(date: date, price: price, currency: currency)
-        completion(.success(valuation))
+        return .success(valuation)
+    }
+    
+    func map(error: NetworkingError) -> N26BCError {
+        let newError: N26BCError
+        switch error {
+        default:
+            newError = .networking
+        }
+        return newError
     }
 }

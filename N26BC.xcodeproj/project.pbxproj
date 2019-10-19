@@ -70,7 +70,9 @@
 		187E99942357C1FF00B57FCC /* HistoricalResponseMapperProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187E99932357C1FF00B57FCC /* HistoricalResponseMapperProtocol.swift */; };
 		18FB7DB9235B19C200E2DA2E /* ValuationSorter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FB7DB8235B19C200E2DA2E /* ValuationSorter.swift */; };
 		18FB7DBB235B19D600E2DA2E /* ValuationSorterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FB7DBA235B19D600E2DA2E /* ValuationSorterProtocol.swift */; };
-		18FB7DC1235B2BD500E2DA2E /* HistoricalProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FB7DC0235B2BD500E2DA2E /* HistoricalProvider.swift */; };
+		18FB7DC1235B2BD500E2DA2E /* HistoricalDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FB7DC0235B2BD500E2DA2E /* HistoricalDataProvider.swift */; };
+		18FB7DC4235B30AB00E2DA2E /* TodayProviderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FB7DC3235B30AB00E2DA2E /* TodayProviderProtocol.swift */; };
+		18FB7DC6235B35A600E2DA2E /* TodayDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FB7DC5235B35A600E2DA2E /* TodayDataProvider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -210,7 +212,9 @@
 		187E99932357C1FF00B57FCC /* HistoricalResponseMapperProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoricalResponseMapperProtocol.swift; sourceTree = "<group>"; };
 		18FB7DB8235B19C200E2DA2E /* ValuationSorter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValuationSorter.swift; sourceTree = "<group>"; };
 		18FB7DBA235B19D600E2DA2E /* ValuationSorterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValuationSorterProtocol.swift; sourceTree = "<group>"; };
-		18FB7DC0235B2BD500E2DA2E /* HistoricalProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoricalProvider.swift; sourceTree = "<group>"; };
+		18FB7DC0235B2BD500E2DA2E /* HistoricalDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoricalDataProvider.swift; sourceTree = "<group>"; };
+		18FB7DC3235B30AB00E2DA2E /* TodayProviderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayProviderProtocol.swift; sourceTree = "<group>"; };
+		18FB7DC5235B35A600E2DA2E /* TodayDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayDataProvider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -609,7 +613,7 @@
 			isa = PBXGroup;
 			children = (
 				187B3211235ABACC007E6E3D /* HistoricalProviderProtocol.swift */,
-				18FB7DC0235B2BD500E2DA2E /* HistoricalProvider.swift */,
+				18FB7DC0235B2BD500E2DA2E /* HistoricalDataProvider.swift */,
 				187017B8235591B9009270AA /* Repository */,
 			);
 			path = HistoricalProvider;
@@ -644,6 +648,8 @@
 		18FB7DBC235B2B7700E2DA2E /* TodayProvider */ = {
 			isa = PBXGroup;
 			children = (
+				18FB7DC3235B30AB00E2DA2E /* TodayProviderProtocol.swift */,
+				18FB7DC5235B35A600E2DA2E /* TodayDataProvider.swift */,
 				18FB7DBD235B2B9500E2DA2E /* Repository */,
 			);
 			path = TodayProvider;
@@ -938,13 +944,15 @@
 				187017BB235591E6009270AA /* DefaultHistoricalDataRepository.swift in Sources */,
 				1874EAD52353386E00052101 /* ListInteractor.swift in Sources */,
 				1873DFF6235823D700A85C2A /* DefaultHistoricalResponseMapper.swift in Sources */,
-				18FB7DC1235B2BD500E2DA2E /* HistoricalProvider.swift in Sources */,
+				18FB7DC1235B2BD500E2DA2E /* HistoricalDataProvider.swift in Sources */,
 				1874EAD12353311700052101 /* ListRouter.swift in Sources */,
 				187B3212235ABACC007E6E3D /* HistoricalProviderProtocol.swift in Sources */,
 				1873E0032358293600A85C2A /* HistoricalTableViewModel.swift in Sources */,
+				18FB7DC4235B30AB00E2DA2E /* TodayProviderProtocol.swift in Sources */,
 				1873DFFB2358287200A85C2A /* PricesViewModel.swift in Sources */,
 				1873DFF42358236100A85C2A /* DefaultCurrentResponseMapper.swift in Sources */,
 				1873E001235828F100A85C2A /* TodayTableViewModel.swift in Sources */,
+				18FB7DC6235B35A600E2DA2E /* TodayDataProvider.swift in Sources */,
 				1874EAD32353345700052101 /* ListPresenter.swift in Sources */,
 				18731E692356C0B700BB577A /* DefaultTodayDataRepository.swift in Sources */,
 				1873DFFF235828DE00A85C2A /* ListSectionType.swift in Sources */,

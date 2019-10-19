@@ -10,18 +10,21 @@ import Networking
 
 final class DefaultTodayDataRepository: TodayDataRepository {
     private let networking: URLSessionClientProtocol
+    private let mapper: CurrentResponseMapperProtocol
     
-    init(networking: URLSessionClientProtocol) {
+    init(networking: URLSessionClientProtocol, mapper: CurrentResponseMapperProtocol) {
         self.networking = networking
+        self.mapper = mapper
     }
     
-    func getTodayData(url: URL?, completion: @escaping (Result<TodayResponseModel, N26BCError>) -> Void) {
-        self.networking.fetchResources(url: url) { (result: Result<TodayResponseModel, NetworkingError>) in
+    func getTodayData(url: URL?, completion: @escaping TodayProviderProtocol.ResultBlock) {
+        self.networking.fetchResources(url: url) { [weak self] (result: Result<TodayResponseModel, NetworkingError>) in
+            guard let self = self else { return }
             switch result {
             case .success(let response):
-                completion(.success(response))
-            case .failure:
-                completion(.failure(N26BCError.networking))
+                completion(self.mapper.map(response:response, for: .euro))
+            case .failure(let error):
+                completion(.failure(self.mapper.map(error: error)))
             }
         }
     }

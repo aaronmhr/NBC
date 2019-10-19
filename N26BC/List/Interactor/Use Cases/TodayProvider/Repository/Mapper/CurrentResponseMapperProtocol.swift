@@ -6,6 +6,9 @@
 //  Copyright © 2019 Aaron Huánuco. All rights reserved.
 //
 
+import Networking
+
 protocol CurrentResponseMapperProtocol {
-    func map(response: TodayResponseModel, for currency: Currency, completion: @escaping (Result<Valuation, N26BCError>) -> Void)
+    func map(response: TodayResponseModel, for currency: Currency) -> Result<Valuation, N26BCError>
+    func map(error: NetworkingError) -> N26BCError
 }
