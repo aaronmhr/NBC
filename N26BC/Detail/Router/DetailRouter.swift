@@ -8,7 +8,7 @@
 
 import UIKit
 
-final class DetailRouter {
+final class DetailRouter: StoryboardInstantiator {
     weak var view: DetailViewController!
 
     init(_ view: DetailViewController) {
@@ -16,8 +16,12 @@ final class DetailRouter {
     }
 
     static func assembleModule() -> UIViewController {
-        
-        return UIViewController()
+        let viewController = defaultViewController(for: DetailViewController.self)
+        let interactor = DetailInteractorComposer.compose()
+        let router = DetailRouter(viewController)
+        let presenter = DetailPresenter(view: viewController, interactor: interactor, router: router)
+        viewController.presenter = presenter
+        return viewController
     }
 }
 

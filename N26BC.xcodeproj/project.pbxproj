@@ -13,6 +13,7 @@
 		1822413E235CBE6A00C13541 /* DetailProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18224136235CBE6A00C13541 /* DetailProtocols.swift */; };
 		1822413F235CBE6A00C13541 /* DetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18224138235CBE6A00C13541 /* DetailInteractor.swift */; };
 		18224140235CBE6A00C13541 /* DetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1822413A235CBE6A00C13541 /* DetailRouter.swift */; };
+		18224143235CD67200C13541 /* DetailInteractorComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18224142235CD67200C13541 /* DetailInteractorComposer.swift */; };
 		1841066223531A6A000AE46C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1841066123531A6A000AE46C /* AppDelegate.swift */; };
 		1841066B23531A6C000AE46C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1841066A23531A6C000AE46C /* Assets.xcassets */; };
 		1841066E23531A6C000AE46C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1841066C23531A6C000AE46C /* LaunchScreen.storyboard */; };
@@ -192,6 +193,7 @@
 		18224136235CBE6A00C13541 /* DetailProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailProtocols.swift; sourceTree = "<group>"; };
 		18224138235CBE6A00C13541 /* DetailInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailInteractor.swift; sourceTree = "<group>"; };
 		1822413A235CBE6A00C13541 /* DetailRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailRouter.swift; sourceTree = "<group>"; };
+		18224142235CD67200C13541 /* DetailInteractorComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailInteractorComposer.swift; sourceTree = "<group>"; };
 		1841065E23531A6A000AE46C /* N26BC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = N26BC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1841066123531A6A000AE46C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1841066A23531A6C000AE46C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -351,11 +353,11 @@
 		1822412F235CBE6A00C13541 /* Detail */ = {
 			isa = PBXGroup;
 			children = (
+				18224135235CBE6A00C13541 /* Protocols */,
+				18224139235CBE6A00C13541 /* Router */,
+				18224137235CBE6A00C13541 /* Interactor */,
 				18224130235CBE6A00C13541 /* Presenter */,
 				18224132235CBE6A00C13541 /* View */,
-				18224135235CBE6A00C13541 /* Protocols */,
-				18224137235CBE6A00C13541 /* Interactor */,
-				18224139235CBE6A00C13541 /* Router */,
 			);
 			path = Detail;
 			sourceTree = "<group>";
@@ -397,8 +399,17 @@
 			isa = PBXGroup;
 			children = (
 				1822413A235CBE6A00C13541 /* DetailRouter.swift */,
+				18224141235CD65500C13541 /* Composers */,
 			);
 			path = Router;
+			sourceTree = "<group>";
+		};
+		18224141235CD65500C13541 /* Composers */ = {
+			isa = PBXGroup;
+			children = (
+				18224142235CD67200C13541 /* DetailInteractorComposer.swift */,
+			);
+			path = Composers;
 			sourceTree = "<group>";
 		};
 		1841065523531A6A000AE46C = {
@@ -1232,6 +1243,7 @@
 				187391CE235C86EA00FE9108 /* Coverable.swift in Sources */,
 				187017BB235591E6009270AA /* DefaultHistoricalDataRepository.swift in Sources */,
 				1822413E235CBE6A00C13541 /* DetailProtocols.swift in Sources */,
+				18224143235CD67200C13541 /* DetailInteractorComposer.swift in Sources */,
 				1874EAD52353386E00052101 /* ListInteractor.swift in Sources */,
 				1873DFF6235823D700A85C2A /* DefaultHistoricalResponseMapper.swift in Sources */,
 				18FB7DC1235B2BD500E2DA2E /* HistoricalDataProvider.swift in Sources */,
