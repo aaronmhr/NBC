@@ -7,6 +7,7 @@
 //
 
 import Networking
+import Valuation
 
 final class DefaultHistoricalResponseMapper: HistoricalResponseMapperProtocol {
     func map(response: HistoricalResponseModel, for currency: Currency) -> Result<[Valuation], N26BCError> {

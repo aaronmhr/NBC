@@ -8,6 +8,7 @@
 
 import Commons
 import Networking
+import Valuation
 
 final class ListInteractorComposer {
     static func compose() -> ListInteractor {
