@@ -63,7 +63,6 @@ extension ListViewController: ListViewProtocol {
             guard let view = self.fullScreenView else { return }
             self.tableView.isUserInteractionEnabled = false
             self.navigationController?.navigationBar.addSubview(view)
-            print("Added")
         }
     }
     
