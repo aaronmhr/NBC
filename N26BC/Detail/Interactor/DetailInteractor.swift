@@ -8,6 +8,7 @@
 
 import Commons
 import Networking
+import Valuation
 
 final class DetailInteractor {
     let historicalProvider: HistoricalProviderProtocol
@@ -20,5 +21,31 @@ final class DetailInteractor {
 }
 
 extension DetailInteractor: DetailInteractorProtocol {
+    func retrieveData(for currency: Currency, date: Date, completion: @escaping (Result<Valuation, N26BCError>) -> Void) {
+        let isToday = Calendar.current.isDateInToday(date)
+        switch isToday {
+        case true:
+            retrieveToday(for: currency, date: date, completion: completion)
+        case false:
+            retrieveHistorical(for: currency, date: date, completion: completion)
+        }
+    }
     
+    private func retrieveToday(for currency: Currency, date: Date, completion: @escaping (Result<Valuation, N26BCError>) -> Void) {
+        todayProvider.retrieveTodayData(currency: currency) { result in
+            completion(result)
+        }
+    }
+    
+    private func retrieveHistorical(for currency: Currency, date: Date, completion: @escaping (Result<Valuation, N26BCError>) -> Void) {
+        historicalProvider.retrieveHistoricalData(start: date, end: date, currency: currency) { resultArray in
+            let result: Result<Valuation, N26BCError> = resultArray.flatMap {
+                guard let valuation = $0.first else {
+                    return .failure(N26BCError.other)
+                }
+                return .success(valuation)
+            }
+            completion(result)
+        }
+    }
 }
