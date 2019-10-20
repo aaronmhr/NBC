@@ -17,7 +17,7 @@ final class ListRouter: StoryboardInstantiator {
     
     static func assembleModule() -> UIViewController {
         let viewController = defaultViewController(for: ListViewController.self)
-        let interactor = ListInteractor()
+        let interactor = ListInteractorComposer.compose()
         let router = ListRouter(viewController)
         let presenter = ListPresenter(view: viewController, interactor: interactor, router: router)
         viewController.presenter = presenter

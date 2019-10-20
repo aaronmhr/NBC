@@ -31,6 +31,7 @@
 		18731E692356C0B700BB577A /* DefaultTodayDataRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18731E682356C0B700BB577A /* DefaultTodayDataRepository.swift */; };
 		187391C5235C424A00FE9108 /* TodayProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187391C4235C424A00FE9108 /* TodayProviderTests.swift */; };
 		187391C8235C548000FE9108 /* HistoricalProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187391C7235C548000FE9108 /* HistoricalProvider.swift */; };
+		187391CB235C661700FE9108 /* ListInteractorComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187391CA235C661700FE9108 /* ListInteractorComposer.swift */; };
 		1873DFF22358232E00A85C2A /* TodayResponseMapperProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1873DFF12358232E00A85C2A /* TodayResponseMapperProtocol.swift */; };
 		1873DFF42358236100A85C2A /* DefaultTodayResponseMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1873DFF32358236100A85C2A /* DefaultTodayResponseMapper.swift */; };
 		1873DFF6235823D700A85C2A /* DefaultHistoricalResponseMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1873DFF5235823D700A85C2A /* DefaultHistoricalResponseMapper.swift */; };
@@ -178,6 +179,7 @@
 		18731E682356C0B700BB577A /* DefaultTodayDataRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultTodayDataRepository.swift; sourceTree = "<group>"; };
 		187391C4235C424A00FE9108 /* TodayProviderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayProviderTests.swift; sourceTree = "<group>"; };
 		187391C7235C548000FE9108 /* HistoricalProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoricalProvider.swift; sourceTree = "<group>"; };
+		187391CA235C661700FE9108 /* ListInteractorComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListInteractorComposer.swift; sourceTree = "<group>"; };
 		1873DFF12358232E00A85C2A /* TodayResponseMapperProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayResponseMapperProtocol.swift; sourceTree = "<group>"; };
 		1873DFF32358236100A85C2A /* DefaultTodayResponseMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultTodayResponseMapper.swift; sourceTree = "<group>"; };
 		1873DFF5235823D700A85C2A /* DefaultHistoricalResponseMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultHistoricalResponseMapper.swift; sourceTree = "<group>"; };
@@ -376,6 +378,7 @@
 		1841068D235324F2000AE46C /* Router */ = {
 			isa = PBXGroup;
 			children = (
+				187391C9235C660500FE9108 /* Composers */,
 				1874EAD02353311700052101 /* ListRouter.swift */,
 			);
 			path = Router;
@@ -467,6 +470,14 @@
 				18FB7DD2235B733F00E2DA2E /* ResultGetErrorTests.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		187391C9235C660500FE9108 /* Composers */ = {
+			isa = PBXGroup;
+			children = (
+				187391CA235C661700FE9108 /* ListInteractorComposer.swift */,
+			);
+			path = Composers;
 			sourceTree = "<group>";
 		};
 		1873DFF72358241900A85C2A /* Mapper */ = {
@@ -996,6 +1007,7 @@
 				1874EAD52353386E00052101 /* ListInteractor.swift in Sources */,
 				1873DFF6235823D700A85C2A /* DefaultHistoricalResponseMapper.swift in Sources */,
 				18FB7DC1235B2BD500E2DA2E /* HistoricalDataProvider.swift in Sources */,
+				187391CB235C661700FE9108 /* ListInteractorComposer.swift in Sources */,
 				1874EAD12353311700052101 /* ListRouter.swift in Sources */,
 				187B3212235ABACC007E6E3D /* HistoricalProviderProtocol.swift in Sources */,
 				1873E0032358293600A85C2A /* HistoricalTableViewModel.swift in Sources */,

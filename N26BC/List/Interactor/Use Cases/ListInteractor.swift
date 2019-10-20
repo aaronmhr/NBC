@@ -9,38 +9,17 @@
 import Commons
 import Networking
 
-protocol ListInteractorDependenciesProtocol {
-    var historicalProvider: HistoricalProviderProtocol { get }
-    var todayProvider: TodayProviderProtocol { get }
-    var valuationSorter: ValuationSorterProtocol { get }
-    var timer: TimerProtocol { get }
-}
-
-final class DefaultListInteractorDependencies: ListInteractorDependenciesProtocol {
-    
-    let urlSession = URLSession(configuration: .default)
-    lazy var decoder: JSONDecoder = {
-        let decoder = JSONDecoder()
-        decoder.keyDecodingStrategy = .convertFromSnakeCase
-        return decoder
-    }()
-    lazy var valuationSorter: ValuationSorterProtocol = ValuationSorter()
-    lazy var historicalResponseMapper: HistoricalResponseMapperProtocol = DefaultHistoricalResponseMapper()
-    lazy var historicalDataRepository: HistoricalDataRepository = DefaultHistoricalDataRepository(networking: URLSessionClient(session: urlSession, decoder: decoder), mapper: historicalResponseMapper)
-
-    lazy var todayResponseMapper: TodayResponseMapperProtocol = DefaultTodayResponseMapper()
-    lazy var todayDataRepository: TodayDataRepository = DefaultTodayDataRepository(networking: URLSessionClient(session: urlSession, decoder: decoder), mapper: todayResponseMapper)
-    
-    lazy var historicalProvider: HistoricalProviderProtocol = HistoricalDataProvider(repository: historicalDataRepository)
-    lazy var todayProvider: TodayProviderProtocol = TodayDataProvider(repository: todayDataRepository)
-    lazy var timer: TimerProtocol = DefaultTimer()
-}
-
 final class ListInteractor {
-    let dependencies: ListInteractorDependenciesProtocol
+    let historicalProvider: HistoricalProviderProtocol
+    let todayProvider: TodayProviderProtocol
+    let valuationSorter: ValuationSorterProtocol
+    let timer: TimerProtocol
     
-    init(dependencies: ListInteractorDependenciesProtocol = DefaultListInteractorDependencies()) {
-        self.dependencies = dependencies
+    init(historicalProvider: HistoricalProviderProtocol, todayProvider: TodayProviderProtocol, valuationSorter: ValuationSorterProtocol, timer: TimerProtocol) {
+        self.historicalProvider = historicalProvider
+        self.todayProvider = todayProvider
+        self.valuationSorter = valuationSorter
+        self.timer = timer
     }
 }
 
@@ -48,14 +27,14 @@ extension ListInteractor: ListInteractorProtocol {
     func retrieveHistoricalData(completion: @escaping (Result<[Valuation], N26BCError>) -> Void) {
         let end = Date()
         let start = Calendar.current.date(byAdding: .day, value: Constants.daysInPeriod, to: end) ?? end
-        dependencies.historicalProvider.retrieveHistoricalData(start: start, end: end, currency: Constants.currency) { [weak self] result in
+        historicalProvider.retrieveHistoricalData(start: start, end: end, currency: Constants.currency) { [weak self] result in
             guard let self = self else  { return }
-            completion(self.dependencies.valuationSorter.sort(result))
+            completion(self.valuationSorter.sort(result))
         }
     }
     
     func retrieveTodayData(completion: @escaping (Result<Valuation, N26BCError>) -> Void) {
-        dependencies.todayProvider.retrieveTodayData(currency: Constants.currency, completion: completion)
+        todayProvider.retrieveTodayData(currency: Constants.currency, completion: completion)
     }
 }
 
