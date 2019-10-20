@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct HistoricalResponseModel: Decodable, Equatable {
+public struct HistoricalResponseModel: Decodable, Equatable {
     let bpi: [String: Double]?
     let disclaimer: String?
 }

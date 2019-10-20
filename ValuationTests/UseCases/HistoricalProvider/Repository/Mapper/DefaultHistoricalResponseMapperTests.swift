@@ -8,7 +8,7 @@
 
 import XCTest
 import Networking
-@testable import N26BC
+@testable import Valuation
 
 class DefaultHistoricalResponseMapperTests: XCTestCase {
     func testMapError_whenThereIsNetworkingError_returnsN26BCError() {

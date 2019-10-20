@@ -10,7 +10,7 @@ import Foundation
 
 import XCTest
 import Networking
-@testable import N26BC
+@testable import Valuation
 
 class DefaultTodayDataRepositoryTests: XCTestCase {
     func testGetTodayData_providesTodayData() {

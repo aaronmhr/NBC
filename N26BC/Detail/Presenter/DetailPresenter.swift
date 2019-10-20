@@ -7,6 +7,7 @@
 //
 
 import Commons
+import Valuation
 
 final class DetailPresenter {
     let router: DetailRouterProtocol

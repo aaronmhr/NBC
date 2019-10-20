@@ -6,7 +6,7 @@
 //  Copyright © 2019 Aaron Huánuco. All rights reserved.
 //
 
-enum N26BCError: Error {
+public enum N26BCError: Error {
     case networking
     case other
 }

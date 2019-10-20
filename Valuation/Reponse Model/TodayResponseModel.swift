@@ -10,13 +10,13 @@ import Foundation
 
 private typealias Decodable = Swift.Decodable & Equatable
 
-struct TodayResponseModel: Decodable {
+public struct TodayResponseModel: Decodable {
     let time: TimeResponseModel?
     let bpi: BpiResponseModel?
 }
 
 // MARK: BpiResponseModel
-struct BpiResponseModel: Decodable {
+public struct BpiResponseModel: Decodable {
     let usd, gbp, eur: CurrencyResponseModel?
 
     enum CodingKeys: String, CodingKey {
@@ -27,12 +27,12 @@ struct BpiResponseModel: Decodable {
 }
 
 // MARK: CurrencyResponseModel
-struct CurrencyResponseModel: Decodable {
+public struct CurrencyResponseModel: Decodable {
     let code: String?
     let rateFloat: Double?
 }
 
 // MARK: TimeResponseModel
-struct TimeResponseModel: Decodable {
+public struct TimeResponseModel: Decodable {
     let updatedISO: String?
 }

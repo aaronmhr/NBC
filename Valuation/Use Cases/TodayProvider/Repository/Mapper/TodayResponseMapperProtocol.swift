@@ -8,7 +8,7 @@
 
 import Networking
 
-protocol TodayResponseMapperProtocol {
+public protocol TodayResponseMapperProtocol {
     func map(response: TodayResponseModel, for currency: Currency) -> Result<Valuation, N26BCError>
     func map(error: NetworkingError) -> N26BCError
 }

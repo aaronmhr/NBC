@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Valuation
 
 final class DetailRouter: StoryboardInstantiator {
     weak var view: DetailViewController!

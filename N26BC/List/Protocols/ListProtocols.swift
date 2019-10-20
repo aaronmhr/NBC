@@ -6,6 +6,8 @@
 //  Copyright © 2019 Aaron Huánuco. All rights reserved.
 //
 
+import Valuation
+
 protocol ListInteractorProtocol {
     func retrieveHistoricalData(completion: @escaping (Result<[Valuation], N26BCError>) -> Void)
     func retrieveTodayData(completion: @escaping (Result<Valuation, N26BCError>) -> Void)

@@ -6,11 +6,12 @@
 //  Copyright © 2019 Aaron Huánuco. All rights reserved.
 //
 
+import Commons
 import Networking
-import Valuation
 
-final class DefaultHistoricalResponseMapper: HistoricalResponseMapperProtocol {
-    func map(response: HistoricalResponseModel, for currency: Currency) -> Result<[Valuation], N26BCError> {
+public final class DefaultHistoricalResponseMapper: HistoricalResponseMapperProtocol {
+    public init() { }
+    public func map(response: HistoricalResponseModel, for currency: Currency) -> Result<[Valuation], N26BCError> {
         guard let bpi = response.bpi else {
             return .failure(N26BCError.other)
         }
@@ -23,7 +24,7 @@ final class DefaultHistoricalResponseMapper: HistoricalResponseMapperProtocol {
         return .success(prices)
     }
     
-    func map(error: NetworkingError) -> N26BCError {
+    public func map(error: NetworkingError) -> N26BCError {
         let newError: N26BCError
         switch error {
         default:

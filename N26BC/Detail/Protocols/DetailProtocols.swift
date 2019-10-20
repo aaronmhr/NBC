@@ -7,6 +7,7 @@
 //
 
 import Networking
+import Valuation
 
 protocol DetailInteractorProtocol {
     var valuation: Valuation { get }

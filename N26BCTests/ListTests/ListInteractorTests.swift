@@ -9,6 +9,7 @@
 import XCTest
 import Commons
 import Networking
+import Valuation
 @testable import N26BC
 
 class ListInteractorTests: XCTestCase {

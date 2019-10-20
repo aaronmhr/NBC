@@ -7,7 +7,7 @@
 //
 
 import XCTest
-@testable import N26BC
+@testable import Valuation
 
 class TodayProviderTests: XCTestCase {
     func testRetrieveTodayData_returnsErrorForNetworkingErrorInRepository() {

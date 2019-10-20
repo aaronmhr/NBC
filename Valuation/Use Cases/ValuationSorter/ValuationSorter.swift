@@ -8,8 +8,9 @@
 
 import Foundation
 
-final class ValuationSorter: ValuationSorterProtocol {
-    func sort(_ result: Result<[Valuation], N26BCError>) -> Result<[Valuation], N26BCError> {
+public final class ValuationSorter: ValuationSorterProtocol {
+    public init() { }
+    public func sort(_ result: Result<[Valuation], N26BCError>) -> Result<[Valuation], N26BCError> {
         return result.map { $0.sorted { $0.date > $1.date }}
     }
 }

@@ -9,7 +9,7 @@
 import XCTest
 import Commons
 import Networking
-@testable import N26BC
+@testable import Valuation
 
 class BitCoinDeskAPITests: XCTestCase {
     func testURLConstructor_forTodayConstructsTheProperTodayURL() {

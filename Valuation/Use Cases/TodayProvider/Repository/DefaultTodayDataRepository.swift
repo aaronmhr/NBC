@@ -8,17 +8,16 @@
 
 import Networking
 
-final class DefaultTodayDataRepository: TodayDataRepository {
+public final class DefaultTodayDataRepository: TodayDataRepository {
     private let networking: URLSessionClientProtocol
     private let mapper: TodayResponseMapperProtocol
     
-    init(networking: URLSessionClientProtocol, mapper: TodayResponseMapperProtocol) {
+    public init(networking: URLSessionClientProtocol, mapper: TodayResponseMapperProtocol) {
         self.networking = networking
         self.mapper = mapper
     }
     
-    func getTodayData(url: URL?, currency: Currency, completion: @escaping TodayProviderProtocol.ResultBlock) {
-        print(url)
+    public func getTodayData(url: URL?, currency: Currency, completion: @escaping TodayProviderProtocol.ResultBlock) {
         self.networking.fetchResources(url: url) { [weak self] (result: Result<TodayResponseModel, NetworkingError>) in
             guard let self = self else { return }
             switch result {

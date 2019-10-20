@@ -8,16 +8,16 @@
 
 import Networking
 
-final class DefaultHistoricalDataRepository: HistoricalDataRepository {
+public final class DefaultHistoricalDataRepository: HistoricalDataRepository {
     private let networking: URLSessionClientProtocol
     private let mapper: HistoricalResponseMapperProtocol
     
-    init(networking: URLSessionClientProtocol, mapper: HistoricalResponseMapperProtocol) {
+    public init(networking: URLSessionClientProtocol, mapper: HistoricalResponseMapperProtocol) {
         self.networking = networking
         self.mapper = mapper
     }
     
-    func getHistoricalData(url: URL?, currency: Currency, completion: @escaping HistoricalProviderProtocol.ResultBlock) {
+    public func getHistoricalData(url: URL?, currency: Currency, completion: @escaping HistoricalProviderProtocol.ResultBlock) {
         self.networking.fetchResources(url: url) { [weak self] (result: Result<HistoricalResponseModel, NetworkingError>) in
             guard let self = self else { return }
             switch result {

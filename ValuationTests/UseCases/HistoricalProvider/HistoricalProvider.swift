@@ -7,7 +7,7 @@
 //
 
 import XCTest
-@testable import N26BC
+@testable import Valuation
 
 class HistoricalProviderTests: XCTestCase {
     func testRetrieveHistoricalData_returnsErrorForNetworkingErrorInRepository() {

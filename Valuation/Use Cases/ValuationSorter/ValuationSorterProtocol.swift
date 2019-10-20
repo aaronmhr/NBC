@@ -6,6 +6,6 @@
 //  Copyright © 2019 Aaron Huánuco. All rights reserved.
 //
 
-protocol ValuationSorterProtocol {
+public protocol ValuationSorterProtocol {
     func sort(_ items: Result<[Valuation], N26BCError>) -> Result<[Valuation], N26BCError>
 }

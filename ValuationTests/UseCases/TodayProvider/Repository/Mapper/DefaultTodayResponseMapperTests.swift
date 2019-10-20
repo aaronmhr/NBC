@@ -8,7 +8,7 @@
 
 import XCTest
 import Networking
-@testable import N26BC
+@testable import Valuation
 
 class DefaultTodayResponseMapperTests: XCTestCase {
     private enum Testing {

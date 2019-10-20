@@ -7,6 +7,7 @@
 //
 
 import XCTest
+import Valuation
 @testable import N26BC
 
 class ListPresenterTestsTests: XCTestCase {

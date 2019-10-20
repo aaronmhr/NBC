@@ -8,8 +8,14 @@
 
 import Foundation
 
-struct Valuation: Equatable {
-    let date: Date
-    let price: Double
-    let currency: Currency
+public struct Valuation: Equatable {
+    public let date: Date
+    public let price: Double
+    public let currency: Currency
+    
+    public init(date: Date, price: Double, currency: Currency) {
+        self.date = date
+        self.price = price
+        self.currency = currency
+    }
 }

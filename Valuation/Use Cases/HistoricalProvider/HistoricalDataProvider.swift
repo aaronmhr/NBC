@@ -8,14 +8,14 @@
 
 import Networking
 
-final class HistoricalDataProvider: HistoricalProviderProtocol {
+public final class HistoricalDataProvider: HistoricalProviderProtocol {
     let repository: HistoricalDataRepository
     
-    init(repository: HistoricalDataRepository) {
+    public init(repository: HistoricalDataRepository) {
         self.repository = repository
     }
     
-    func retrieveHistoricalData(start: Date, end: Date, currency: Currency, completion: @escaping ResultBlock) {
+    public func retrieveHistoricalData(start: Date, end: Date, currency: Currency, completion: @escaping ResultBlock) {
         let url = getBitcoinDeskAPIURL(start: start, end: end, currency: currency)
         repository.getHistoricalData(url: url, currency: currency, completion: completion)
     }

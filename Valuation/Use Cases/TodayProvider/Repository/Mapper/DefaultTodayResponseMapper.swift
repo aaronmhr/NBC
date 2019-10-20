@@ -6,10 +6,12 @@
 //  Copyright © 2019 Aaron Huánuco. All rights reserved.
 //
 
+import Commons
 import Networking
 
-final class DefaultTodayResponseMapper: TodayResponseMapperProtocol {
-    func map(response: TodayResponseModel, for currency: Currency) -> Result<Valuation, N26BCError> {
+public final class DefaultTodayResponseMapper: TodayResponseMapperProtocol {
+    public init() { }
+    public func map(response: TodayResponseModel, for currency: Currency) -> Result<Valuation, N26BCError> {
         guard let dateString = response.time?.updatedISO,
             let date = dateString.toDateWithFormat(BitcoinDeskAPI.todayFormatter) else {
             return .failure(.other)
@@ -36,7 +38,7 @@ final class DefaultTodayResponseMapper: TodayResponseMapperProtocol {
         return .success(rate)
     }
     
-    func map(error: NetworkingError) -> N26BCError {
+    public func map(error: NetworkingError) -> N26BCError {
         let newError: N26BCError
         switch error {
         default:

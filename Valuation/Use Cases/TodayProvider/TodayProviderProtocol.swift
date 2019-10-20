@@ -8,7 +8,7 @@
 
 import Networking
 
-protocol TodayProviderProtocol {
+public protocol TodayProviderProtocol {
     typealias TodayResult = Result<Valuation, N26BCError>
     typealias ResultBlock = (Result<Valuation, N26BCError>) -> Void
     

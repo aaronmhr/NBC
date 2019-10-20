@@ -8,7 +8,7 @@
 
 import Networking
 
-protocol HistoricalProviderProtocol {
+public protocol HistoricalProviderProtocol {
     typealias HistoricalResult = Result<[Valuation], N26BCError>
     typealias ResultBlock = (Result<[Valuation], N26BCError>) -> Void
     

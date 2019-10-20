@@ -8,6 +8,6 @@
 
 import Foundation
 
-protocol HistoricalDataRepository {
+public protocol HistoricalDataRepository {
     func getHistoricalData(url: URL?, currency: Currency, completion: @escaping HistoricalProviderProtocol.ResultBlock)
 }

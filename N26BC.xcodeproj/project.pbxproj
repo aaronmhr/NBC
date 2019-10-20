@@ -14,19 +14,40 @@
 		1822413F235CBE6A00C13541 /* DetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18224138235CBE6A00C13541 /* DetailInteractor.swift */; };
 		18224140235CBE6A00C13541 /* DetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1822413A235CBE6A00C13541 /* DetailRouter.swift */; };
 		18224143235CD67200C13541 /* DetailInteractorComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18224142235CD67200C13541 /* DetailInteractorComposer.swift */; };
+		1832625E235D015C00CBB9CC /* BitCoinDeskAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1832624E235D015C00CBB9CC /* BitCoinDeskAPITests.swift */; };
+		1832625F235D015C00CBB9CC /* TestingURLSessionClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18326251235D015C00CBB9CC /* TestingURLSessionClient.swift */; };
+		18326260235D015C00CBB9CC /* DefaultHistoricalResponseMapperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18326255235D015C00CBB9CC /* DefaultHistoricalResponseMapperTests.swift */; };
+		18326261235D015C00CBB9CC /* DefaultHistoricalDataRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18326256235D015C00CBB9CC /* DefaultHistoricalDataRepositoryTests.swift */; };
+		18326262235D015C00CBB9CC /* HistoricalProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18326257235D015C00CBB9CC /* HistoricalProvider.swift */; };
+		18326263235D015C00CBB9CC /* DefaultTodayResponseMapperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1832625B235D015C00CBB9CC /* DefaultTodayResponseMapperTests.swift */; };
+		18326264235D015C00CBB9CC /* DefaultTodayDataRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1832625C235D015C00CBB9CC /* DefaultTodayDataRepositoryTests.swift */; };
+		18326265235D015C00CBB9CC /* TodayProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1832625D235D015C00CBB9CC /* TodayProviderTests.swift */; };
+		18326285235D01B100CBB9CC /* HistoricalResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18326267235D01B100CBB9CC /* HistoricalResponseModel.swift */; };
+		18326286235D01B100CBB9CC /* TodayResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18326268235D01B100CBB9CC /* TodayResponseModel.swift */; };
+		18326287235D01B100CBB9CC /* DefaultHistoricalResponseMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1832626D235D01B100CBB9CC /* DefaultHistoricalResponseMapper.swift */; };
+		18326288235D01B100CBB9CC /* HistoricalResponseMapperProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1832626E235D01B100CBB9CC /* HistoricalResponseMapperProtocol.swift */; };
+		18326289235D01B100CBB9CC /* DefaultHistoricalDataRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1832626F235D01B100CBB9CC /* DefaultHistoricalDataRepository.swift */; };
+		1832628A235D01B100CBB9CC /* HistoricalDataRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18326270235D01B100CBB9CC /* HistoricalDataRepository.swift */; };
+		1832628B235D01B100CBB9CC /* HistoricalDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18326271235D01B100CBB9CC /* HistoricalDataProvider.swift */; };
+		1832628C235D01B100CBB9CC /* HistoricalProviderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18326272235D01B100CBB9CC /* HistoricalProviderProtocol.swift */; };
+		1832628D235D01B100CBB9CC /* DefaultTodayDataRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18326275235D01B100CBB9CC /* DefaultTodayDataRepository.swift */; };
+		1832628E235D01B100CBB9CC /* DefaultTodayResponseMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18326277235D01B100CBB9CC /* DefaultTodayResponseMapper.swift */; };
+		1832628F235D01B100CBB9CC /* TodayResponseMapperProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18326278235D01B100CBB9CC /* TodayResponseMapperProtocol.swift */; };
+		18326290235D01B100CBB9CC /* TodayDataRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18326279235D01B100CBB9CC /* TodayDataRepository.swift */; };
+		18326291235D01B100CBB9CC /* TodayProviderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1832627A235D01B100CBB9CC /* TodayProviderProtocol.swift */; };
+		18326292235D01B100CBB9CC /* TodayDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1832627B235D01B100CBB9CC /* TodayDataProvider.swift */; };
+		18326293235D01B100CBB9CC /* ValuationSorterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1832627D235D01B100CBB9CC /* ValuationSorterProtocol.swift */; };
+		18326294235D01B100CBB9CC /* ValuationSorter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1832627E235D01B100CBB9CC /* ValuationSorter.swift */; };
+		18326295235D01B100CBB9CC /* N26BCError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18326280235D01B100CBB9CC /* N26BCError.swift */; };
+		18326296235D01B100CBB9CC /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18326281235D01B100CBB9CC /* Currency.swift */; };
+		18326297235D01B100CBB9CC /* Valuation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18326282235D01B100CBB9CC /* Valuation.swift */; };
+		18326298235D01B100CBB9CC /* BitCoinDeskAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18326284235D01B100CBB9CC /* BitCoinDeskAPI.swift */; };
 		1841066223531A6A000AE46C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1841066123531A6A000AE46C /* AppDelegate.swift */; };
 		1841066B23531A6C000AE46C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1841066A23531A6C000AE46C /* Assets.xcassets */; };
 		1841066E23531A6C000AE46C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1841066C23531A6C000AE46C /* LaunchScreen.storyboard */; };
 		1841068423531E95000AE46C /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1841068323531E95000AE46C /* main.swift */; };
 		1841068623532075000AE46C /* TestingAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1841068523532075000AE46C /* TestingAppDelegate.swift */; };
 		184106AA23532D37000AE46C /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184106A923532D37000AE46C /* ListViewController.swift */; };
-		187017B423558CA5009270AA /* HistoricalDataRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187017B323558CA5009270AA /* HistoricalDataRepository.swift */; };
-		187017B723559097009270AA /* HistoricalResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187017B623559097009270AA /* HistoricalResponseModel.swift */; };
-		187017BB235591E6009270AA /* DefaultHistoricalDataRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187017BA235591E6009270AA /* DefaultHistoricalDataRepository.swift */; };
-		18731DA723564A6000BB577A /* N26BCError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18731DA623564A6000BB577A /* N26BCError.swift */; };
-		18731DAA23564A8500BB577A /* Valuation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18731DA923564A8500BB577A /* Valuation.swift */; };
-		18731DAD23564B0500BB577A /* TodayDataRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18731DAC23564B0500BB577A /* TodayDataRepository.swift */; };
-		18731DAF23564B5400BB577A /* TodayResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18731DAE23564B5400BB577A /* TodayResponseModel.swift */; };
 		18731E4A2356BC6E00BB577A /* Commons.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18731E412356BC6E00BB577A /* Commons.framework */; };
 		18731E532356BC6E00BB577A /* Commons.h in Headers */ = {isa = PBXBuildFile; fileRef = 18731E432356BC6E00BB577A /* Commons.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		18731E562356BC6E00BB577A /* Commons.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18731E412356BC6E00BB577A /* Commons.framework */; };
@@ -35,28 +56,20 @@
 		18731E622356BCB700BB577A /* DateToString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18731E612356BCB700BB577A /* DateToString.swift */; };
 		18731E652356BCF700BB577A /* StringToDateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18731E642356BCF700BB577A /* StringToDateTests.swift */; };
 		18731E672356BD1500BB577A /* DateToStringTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18731E662356BD1500BB577A /* DateToStringTests.swift */; };
-		18731E692356C0B700BB577A /* DefaultTodayDataRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18731E682356C0B700BB577A /* DefaultTodayDataRepository.swift */; };
 		187321F0235CAA2E00F22EB7 /* Valuation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 187321E7235CAA2E00F22EB7 /* Valuation.framework */; };
-		187321F7235CAA2E00F22EB7 /* ValuationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187321F6235CAA2E00F22EB7 /* ValuationTests.swift */; };
 		187321F9235CAA2E00F22EB7 /* Valuation.h in Headers */ = {isa = PBXBuildFile; fileRef = 187321E9235CAA2E00F22EB7 /* Valuation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		187321FC235CAA2E00F22EB7 /* Valuation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 187321E7235CAA2E00F22EB7 /* Valuation.framework */; };
 		187321FD235CAA2E00F22EB7 /* Valuation.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 187321E7235CAA2E00F22EB7 /* Valuation.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		187391C5235C424A00FE9108 /* TodayProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187391C4235C424A00FE9108 /* TodayProviderTests.swift */; };
-		187391C8235C548000FE9108 /* HistoricalProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187391C7235C548000FE9108 /* HistoricalProvider.swift */; };
 		187391CB235C661700FE9108 /* ListInteractorComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187391CA235C661700FE9108 /* ListInteractorComposer.swift */; };
 		187391CE235C86EA00FE9108 /* Coverable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187391CD235C86EA00FE9108 /* Coverable.swift */; };
 		187391D1235C93B900FE9108 /* ErrorPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187391D0235C93B900FE9108 /* ErrorPresenter.swift */; };
 		187391D5235C9AAA00FE9108 /* ListPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187391D3235C9A8F00FE9108 /* ListPresenterTests.swift */; };
-		1873DFF22358232E00A85C2A /* TodayResponseMapperProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1873DFF12358232E00A85C2A /* TodayResponseMapperProtocol.swift */; };
-		1873DFF42358236100A85C2A /* DefaultTodayResponseMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1873DFF32358236100A85C2A /* DefaultTodayResponseMapper.swift */; };
-		1873DFF6235823D700A85C2A /* DefaultHistoricalResponseMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1873DFF5235823D700A85C2A /* DefaultHistoricalResponseMapper.swift */; };
 		1873DFFB2358287200A85C2A /* PricesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1873DFFA2358287200A85C2A /* PricesViewModel.swift */; };
 		1873DFFD235828CB00A85C2A /* ListViewSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1873DFFC235828CB00A85C2A /* ListViewSection.swift */; };
 		1873DFFF235828DE00A85C2A /* ListSectionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1873DFFE235828DE00A85C2A /* ListSectionType.swift */; };
 		1873E001235828F100A85C2A /* TodayTableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1873E000235828F100A85C2A /* TodayTableViewModel.swift */; };
 		1873E0032358293600A85C2A /* HistoricalTableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1873E0022358293600A85C2A /* HistoricalTableViewModel.swift */; };
 		1873E00523582B2D00A85C2A /* ListInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1873E00423582B2D00A85C2A /* ListInteractorTests.swift */; };
-		1873E00923582EC300A85C2A /* DefaultHistoricalDataRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1873E00823582EC300A85C2A /* DefaultHistoricalDataRepositoryTests.swift */; };
 		18740AAA2354DF9C00A27C5D /* URLSessionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18740AA92354DF9C00A27C5D /* URLSessionTests.swift */; };
 		18740AAC2354E5D800A27C5D /* URLSessioClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18740AAB2354E5D800A27C5D /* URLSessioClientTests.swift */; };
 		18740AAE2354E60600A27C5D /* URLSessionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18740AAD2354E60600A27C5D /* URLSessionProtocol.swift */; };
@@ -76,25 +89,11 @@
 		1874EB082353944E00052101 /* NetworkingError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1874EB072353944E00052101 /* NetworkingError.swift */; };
 		1874EB0A2353947900052101 /* URLSessionClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1874EB092353947900052101 /* URLSessionClient.swift */; };
 		1874EB0D2353996F00052101 /* URLSessionClientProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1874EB0C2353996F00052101 /* URLSessionClientProtocol.swift */; };
-		187B32092359D4E0007E6E3D /* DefaultTodayDataRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187B32082359D4E0007E6E3D /* DefaultTodayDataRepositoryTests.swift */; };
-		187B320C2359D91A007E6E3D /* TestingURLSessionClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187B320B2359D91A007E6E3D /* TestingURLSessionClient.swift */; };
-		187B3212235ABACC007E6E3D /* HistoricalProviderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187B3211235ABACC007E6E3D /* HistoricalProviderProtocol.swift */; };
 		187E998A2357896900B57FCC /* TimerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187E99892357896900B57FCC /* TimerProtocol.swift */; };
 		187E998C23578FD400B57FCC /* DefaultTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187E998B23578FD400B57FCC /* DefaultTimer.swift */; };
 		187E998F235790A700B57FCC /* DefaultTimerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187E998E235790A700B57FCC /* DefaultTimerTests.swift */; };
-		187E99912357BE4100B57FCC /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187E99902357BE4100B57FCC /* Currency.swift */; };
-		187E99942357C1FF00B57FCC /* HistoricalResponseMapperProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187E99932357C1FF00B57FCC /* HistoricalResponseMapperProtocol.swift */; };
-		18FB7DB9235B19C200E2DA2E /* ValuationSorter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FB7DB8235B19C200E2DA2E /* ValuationSorter.swift */; };
-		18FB7DBB235B19D600E2DA2E /* ValuationSorterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FB7DBA235B19D600E2DA2E /* ValuationSorterProtocol.swift */; };
-		18FB7DC1235B2BD500E2DA2E /* HistoricalDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FB7DC0235B2BD500E2DA2E /* HistoricalDataProvider.swift */; };
-		18FB7DC4235B30AB00E2DA2E /* TodayProviderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FB7DC3235B30AB00E2DA2E /* TodayProviderProtocol.swift */; };
-		18FB7DC6235B35A600E2DA2E /* TodayDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FB7DC5235B35A600E2DA2E /* TodayDataProvider.swift */; };
-		18FB7DC8235B5E4900E2DA2E /* BitCoinDeskAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FB7DC7235B5E4900E2DA2E /* BitCoinDeskAPI.swift */; };
-		18FB7DCA235B5F6000E2DA2E /* BitCoinDeskAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FB7DC9235B5F6000E2DA2E /* BitCoinDeskAPITests.swift */; };
-		18FB7DCE235B71FE00E2DA2E /* DefaultHistoricalResponseMapperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FB7DCD235B71FE00E2DA2E /* DefaultHistoricalResponseMapperTests.swift */; };
 		18FB7DD1235B730800E2DA2E /* Result+Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FB7DD0235B730800E2DA2E /* Result+Error.swift */; };
 		18FB7DD3235B733F00E2DA2E /* ResultGetErrorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FB7DD2235B733F00E2DA2E /* ResultGetErrorTests.swift */; };
-		18FB7DD8235B95F200E2DA2E /* DefaultTodayResponseMapperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FB7DD7235B95F200E2DA2E /* DefaultTodayResponseMapperTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -194,6 +193,34 @@
 		18224138235CBE6A00C13541 /* DetailInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailInteractor.swift; sourceTree = "<group>"; };
 		1822413A235CBE6A00C13541 /* DetailRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailRouter.swift; sourceTree = "<group>"; };
 		18224142235CD67200C13541 /* DetailInteractorComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailInteractorComposer.swift; sourceTree = "<group>"; };
+		1832624E235D015C00CBB9CC /* BitCoinDeskAPITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BitCoinDeskAPITests.swift; sourceTree = "<group>"; };
+		18326251235D015C00CBB9CC /* TestingURLSessionClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestingURLSessionClient.swift; sourceTree = "<group>"; };
+		18326255235D015C00CBB9CC /* DefaultHistoricalResponseMapperTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultHistoricalResponseMapperTests.swift; sourceTree = "<group>"; };
+		18326256235D015C00CBB9CC /* DefaultHistoricalDataRepositoryTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultHistoricalDataRepositoryTests.swift; sourceTree = "<group>"; };
+		18326257235D015C00CBB9CC /* HistoricalProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoricalProvider.swift; sourceTree = "<group>"; };
+		1832625B235D015C00CBB9CC /* DefaultTodayResponseMapperTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultTodayResponseMapperTests.swift; sourceTree = "<group>"; };
+		1832625C235D015C00CBB9CC /* DefaultTodayDataRepositoryTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultTodayDataRepositoryTests.swift; sourceTree = "<group>"; };
+		1832625D235D015C00CBB9CC /* TodayProviderTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodayProviderTests.swift; sourceTree = "<group>"; };
+		18326267235D01B100CBB9CC /* HistoricalResponseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoricalResponseModel.swift; sourceTree = "<group>"; };
+		18326268235D01B100CBB9CC /* TodayResponseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodayResponseModel.swift; sourceTree = "<group>"; };
+		1832626D235D01B100CBB9CC /* DefaultHistoricalResponseMapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultHistoricalResponseMapper.swift; sourceTree = "<group>"; };
+		1832626E235D01B100CBB9CC /* HistoricalResponseMapperProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoricalResponseMapperProtocol.swift; sourceTree = "<group>"; };
+		1832626F235D01B100CBB9CC /* DefaultHistoricalDataRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultHistoricalDataRepository.swift; sourceTree = "<group>"; };
+		18326270235D01B100CBB9CC /* HistoricalDataRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoricalDataRepository.swift; sourceTree = "<group>"; };
+		18326271235D01B100CBB9CC /* HistoricalDataProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoricalDataProvider.swift; sourceTree = "<group>"; };
+		18326272235D01B100CBB9CC /* HistoricalProviderProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoricalProviderProtocol.swift; sourceTree = "<group>"; };
+		18326275235D01B100CBB9CC /* DefaultTodayDataRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultTodayDataRepository.swift; sourceTree = "<group>"; };
+		18326277235D01B100CBB9CC /* DefaultTodayResponseMapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultTodayResponseMapper.swift; sourceTree = "<group>"; };
+		18326278235D01B100CBB9CC /* TodayResponseMapperProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodayResponseMapperProtocol.swift; sourceTree = "<group>"; };
+		18326279235D01B100CBB9CC /* TodayDataRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodayDataRepository.swift; sourceTree = "<group>"; };
+		1832627A235D01B100CBB9CC /* TodayProviderProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodayProviderProtocol.swift; sourceTree = "<group>"; };
+		1832627B235D01B100CBB9CC /* TodayDataProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodayDataProvider.swift; sourceTree = "<group>"; };
+		1832627D235D01B100CBB9CC /* ValuationSorterProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValuationSorterProtocol.swift; sourceTree = "<group>"; };
+		1832627E235D01B100CBB9CC /* ValuationSorter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValuationSorter.swift; sourceTree = "<group>"; };
+		18326280235D01B100CBB9CC /* N26BCError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = N26BCError.swift; sourceTree = "<group>"; };
+		18326281235D01B100CBB9CC /* Currency.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
+		18326282235D01B100CBB9CC /* Valuation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Valuation.swift; sourceTree = "<group>"; };
+		18326284235D01B100CBB9CC /* BitCoinDeskAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BitCoinDeskAPI.swift; sourceTree = "<group>"; };
 		1841065E23531A6A000AE46C /* N26BC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = N26BC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1841066123531A6A000AE46C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1841066A23531A6C000AE46C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -204,13 +231,6 @@
 		1841068323531E95000AE46C /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		1841068523532075000AE46C /* TestingAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestingAppDelegate.swift; sourceTree = "<group>"; };
 		184106A923532D37000AE46C /* ListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
-		187017B323558CA5009270AA /* HistoricalDataRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoricalDataRepository.swift; sourceTree = "<group>"; };
-		187017B623559097009270AA /* HistoricalResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoricalResponseModel.swift; sourceTree = "<group>"; };
-		187017BA235591E6009270AA /* DefaultHistoricalDataRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultHistoricalDataRepository.swift; sourceTree = "<group>"; };
-		18731DA623564A6000BB577A /* N26BCError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = N26BCError.swift; sourceTree = "<group>"; };
-		18731DA923564A8500BB577A /* Valuation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Valuation.swift; sourceTree = "<group>"; };
-		18731DAC23564B0500BB577A /* TodayDataRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayDataRepository.swift; sourceTree = "<group>"; };
-		18731DAE23564B5400BB577A /* TodayResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayResponseModel.swift; sourceTree = "<group>"; };
 		18731E412356BC6E00BB577A /* Commons.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Commons.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		18731E432356BC6E00BB577A /* Commons.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Commons.h; sourceTree = "<group>"; };
 		18731E442356BC6E00BB577A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -220,29 +240,21 @@
 		18731E612356BCB700BB577A /* DateToString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateToString.swift; sourceTree = "<group>"; };
 		18731E642356BCF700BB577A /* StringToDateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringToDateTests.swift; sourceTree = "<group>"; };
 		18731E662356BD1500BB577A /* DateToStringTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateToStringTests.swift; sourceTree = "<group>"; };
-		18731E682356C0B700BB577A /* DefaultTodayDataRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultTodayDataRepository.swift; sourceTree = "<group>"; };
 		187321E7235CAA2E00F22EB7 /* Valuation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Valuation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		187321E9235CAA2E00F22EB7 /* Valuation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Valuation.h; sourceTree = "<group>"; };
 		187321EA235CAA2E00F22EB7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		187321EF235CAA2E00F22EB7 /* ValuationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ValuationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		187321F6235CAA2E00F22EB7 /* ValuationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValuationTests.swift; sourceTree = "<group>"; };
 		187321F8235CAA2E00F22EB7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		187391C4235C424A00FE9108 /* TodayProviderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayProviderTests.swift; sourceTree = "<group>"; };
-		187391C7235C548000FE9108 /* HistoricalProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoricalProvider.swift; sourceTree = "<group>"; };
 		187391CA235C661700FE9108 /* ListInteractorComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListInteractorComposer.swift; sourceTree = "<group>"; };
 		187391CD235C86EA00FE9108 /* Coverable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coverable.swift; sourceTree = "<group>"; };
 		187391D0235C93B900FE9108 /* ErrorPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorPresenter.swift; sourceTree = "<group>"; };
 		187391D3235C9A8F00FE9108 /* ListPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPresenterTests.swift; sourceTree = "<group>"; };
-		1873DFF12358232E00A85C2A /* TodayResponseMapperProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayResponseMapperProtocol.swift; sourceTree = "<group>"; };
-		1873DFF32358236100A85C2A /* DefaultTodayResponseMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultTodayResponseMapper.swift; sourceTree = "<group>"; };
-		1873DFF5235823D700A85C2A /* DefaultHistoricalResponseMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultHistoricalResponseMapper.swift; sourceTree = "<group>"; };
 		1873DFFA2358287200A85C2A /* PricesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PricesViewModel.swift; sourceTree = "<group>"; };
 		1873DFFC235828CB00A85C2A /* ListViewSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewSection.swift; sourceTree = "<group>"; };
 		1873DFFE235828DE00A85C2A /* ListSectionType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListSectionType.swift; sourceTree = "<group>"; };
 		1873E000235828F100A85C2A /* TodayTableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayTableViewModel.swift; sourceTree = "<group>"; };
 		1873E0022358293600A85C2A /* HistoricalTableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoricalTableViewModel.swift; sourceTree = "<group>"; };
 		1873E00423582B2D00A85C2A /* ListInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListInteractorTests.swift; sourceTree = "<group>"; };
-		1873E00823582EC300A85C2A /* DefaultHistoricalDataRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultHistoricalDataRepositoryTests.swift; sourceTree = "<group>"; };
 		18740AA92354DF9C00A27C5D /* URLSessionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionTests.swift; sourceTree = "<group>"; };
 		18740AAB2354E5D800A27C5D /* URLSessioClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessioClientTests.swift; sourceTree = "<group>"; };
 		18740AAD2354E60600A27C5D /* URLSessionProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionProtocol.swift; sourceTree = "<group>"; };
@@ -263,25 +275,11 @@
 		1874EB072353944E00052101 /* NetworkingError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingError.swift; sourceTree = "<group>"; };
 		1874EB092353947900052101 /* URLSessionClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionClient.swift; sourceTree = "<group>"; };
 		1874EB0C2353996F00052101 /* URLSessionClientProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionClientProtocol.swift; sourceTree = "<group>"; };
-		187B32082359D4E0007E6E3D /* DefaultTodayDataRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultTodayDataRepositoryTests.swift; sourceTree = "<group>"; };
-		187B320B2359D91A007E6E3D /* TestingURLSessionClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestingURLSessionClient.swift; sourceTree = "<group>"; };
-		187B3211235ABACC007E6E3D /* HistoricalProviderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoricalProviderProtocol.swift; sourceTree = "<group>"; };
 		187E99892357896900B57FCC /* TimerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerProtocol.swift; sourceTree = "<group>"; };
 		187E998B23578FD400B57FCC /* DefaultTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultTimer.swift; sourceTree = "<group>"; };
 		187E998E235790A700B57FCC /* DefaultTimerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultTimerTests.swift; sourceTree = "<group>"; };
-		187E99902357BE4100B57FCC /* Currency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
-		187E99932357C1FF00B57FCC /* HistoricalResponseMapperProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoricalResponseMapperProtocol.swift; sourceTree = "<group>"; };
-		18FB7DB8235B19C200E2DA2E /* ValuationSorter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValuationSorter.swift; sourceTree = "<group>"; };
-		18FB7DBA235B19D600E2DA2E /* ValuationSorterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValuationSorterProtocol.swift; sourceTree = "<group>"; };
-		18FB7DC0235B2BD500E2DA2E /* HistoricalDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoricalDataProvider.swift; sourceTree = "<group>"; };
-		18FB7DC3235B30AB00E2DA2E /* TodayProviderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayProviderProtocol.swift; sourceTree = "<group>"; };
-		18FB7DC5235B35A600E2DA2E /* TodayDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayDataProvider.swift; sourceTree = "<group>"; };
-		18FB7DC7235B5E4900E2DA2E /* BitCoinDeskAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BitCoinDeskAPI.swift; sourceTree = "<group>"; };
-		18FB7DC9235B5F6000E2DA2E /* BitCoinDeskAPITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BitCoinDeskAPITests.swift; sourceTree = "<group>"; };
-		18FB7DCD235B71FE00E2DA2E /* DefaultHistoricalResponseMapperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultHistoricalResponseMapperTests.swift; sourceTree = "<group>"; };
 		18FB7DD0235B730800E2DA2E /* Result+Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Result+Error.swift"; sourceTree = "<group>"; };
 		18FB7DD2235B733F00E2DA2E /* ResultGetErrorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultGetErrorTests.swift; sourceTree = "<group>"; };
-		18FB7DD7235B95F200E2DA2E /* DefaultTodayResponseMapperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultTodayResponseMapperTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -412,6 +410,188 @@
 			path = Composers;
 			sourceTree = "<group>";
 		};
+		1832624D235D015C00CBB9CC /* API */ = {
+			isa = PBXGroup;
+			children = (
+				1832624E235D015C00CBB9CC /* BitCoinDeskAPITests.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		1832624F235D015C00CBB9CC /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				18326250235D015C00CBB9CC /* Mocks */,
+				18326252235D015C00CBB9CC /* HistoricalProvider */,
+				18326258235D015C00CBB9CC /* TodayProvider */,
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
+		18326250235D015C00CBB9CC /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				18326251235D015C00CBB9CC /* TestingURLSessionClient.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		18326252235D015C00CBB9CC /* HistoricalProvider */ = {
+			isa = PBXGroup;
+			children = (
+				18326253235D015C00CBB9CC /* Repository */,
+				18326257235D015C00CBB9CC /* HistoricalProvider.swift */,
+			);
+			path = HistoricalProvider;
+			sourceTree = "<group>";
+		};
+		18326253235D015C00CBB9CC /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				18326254235D015C00CBB9CC /* Mapper */,
+				18326256235D015C00CBB9CC /* DefaultHistoricalDataRepositoryTests.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		18326254235D015C00CBB9CC /* Mapper */ = {
+			isa = PBXGroup;
+			children = (
+				18326255235D015C00CBB9CC /* DefaultHistoricalResponseMapperTests.swift */,
+			);
+			path = Mapper;
+			sourceTree = "<group>";
+		};
+		18326258235D015C00CBB9CC /* TodayProvider */ = {
+			isa = PBXGroup;
+			children = (
+				18326259235D015C00CBB9CC /* Repository */,
+				1832625D235D015C00CBB9CC /* TodayProviderTests.swift */,
+			);
+			path = TodayProvider;
+			sourceTree = "<group>";
+		};
+		18326259235D015C00CBB9CC /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				1832625A235D015C00CBB9CC /* Mapper */,
+				1832625C235D015C00CBB9CC /* DefaultTodayDataRepositoryTests.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		1832625A235D015C00CBB9CC /* Mapper */ = {
+			isa = PBXGroup;
+			children = (
+				1832625B235D015C00CBB9CC /* DefaultTodayResponseMapperTests.swift */,
+			);
+			path = Mapper;
+			sourceTree = "<group>";
+		};
+		18326266235D01B100CBB9CC /* Reponse Model */ = {
+			isa = PBXGroup;
+			children = (
+				18326267235D01B100CBB9CC /* HistoricalResponseModel.swift */,
+				18326268235D01B100CBB9CC /* TodayResponseModel.swift */,
+			);
+			path = "Reponse Model";
+			sourceTree = "<group>";
+		};
+		18326269235D01B100CBB9CC /* Use Cases */ = {
+			isa = PBXGroup;
+			children = (
+				1832626A235D01B100CBB9CC /* HistoricalProvider */,
+				18326273235D01B100CBB9CC /* TodayProvider */,
+				1832627C235D01B100CBB9CC /* ValuationSorter */,
+			);
+			path = "Use Cases";
+			sourceTree = "<group>";
+		};
+		1832626A235D01B100CBB9CC /* HistoricalProvider */ = {
+			isa = PBXGroup;
+			children = (
+				1832626B235D01B100CBB9CC /* Repository */,
+				18326271235D01B100CBB9CC /* HistoricalDataProvider.swift */,
+				18326272235D01B100CBB9CC /* HistoricalProviderProtocol.swift */,
+			);
+			path = HistoricalProvider;
+			sourceTree = "<group>";
+		};
+		1832626B235D01B100CBB9CC /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				1832626C235D01B100CBB9CC /* Mapper */,
+				1832626F235D01B100CBB9CC /* DefaultHistoricalDataRepository.swift */,
+				18326270235D01B100CBB9CC /* HistoricalDataRepository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		1832626C235D01B100CBB9CC /* Mapper */ = {
+			isa = PBXGroup;
+			children = (
+				1832626D235D01B100CBB9CC /* DefaultHistoricalResponseMapper.swift */,
+				1832626E235D01B100CBB9CC /* HistoricalResponseMapperProtocol.swift */,
+			);
+			path = Mapper;
+			sourceTree = "<group>";
+		};
+		18326273235D01B100CBB9CC /* TodayProvider */ = {
+			isa = PBXGroup;
+			children = (
+				18326274235D01B100CBB9CC /* Repository */,
+				1832627A235D01B100CBB9CC /* TodayProviderProtocol.swift */,
+				1832627B235D01B100CBB9CC /* TodayDataProvider.swift */,
+			);
+			path = TodayProvider;
+			sourceTree = "<group>";
+		};
+		18326274235D01B100CBB9CC /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				18326275235D01B100CBB9CC /* DefaultTodayDataRepository.swift */,
+				18326276235D01B100CBB9CC /* Mapper */,
+				18326279235D01B100CBB9CC /* TodayDataRepository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		18326276235D01B100CBB9CC /* Mapper */ = {
+			isa = PBXGroup;
+			children = (
+				18326277235D01B100CBB9CC /* DefaultTodayResponseMapper.swift */,
+				18326278235D01B100CBB9CC /* TodayResponseMapperProtocol.swift */,
+			);
+			path = Mapper;
+			sourceTree = "<group>";
+		};
+		1832627C235D01B100CBB9CC /* ValuationSorter */ = {
+			isa = PBXGroup;
+			children = (
+				1832627D235D01B100CBB9CC /* ValuationSorterProtocol.swift */,
+				1832627E235D01B100CBB9CC /* ValuationSorter.swift */,
+			);
+			path = ValuationSorter;
+			sourceTree = "<group>";
+		};
+		1832627F235D01B100CBB9CC /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				18326280235D01B100CBB9CC /* N26BCError.swift */,
+				18326281235D01B100CBB9CC /* Currency.swift */,
+				18326282235D01B100CBB9CC /* Valuation.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		18326283235D01B100CBB9CC /* API */ = {
+			isa = PBXGroup;
+			children = (
+				18326284235D01B100CBB9CC /* BitCoinDeskAPI.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
 		1841065523531A6A000AE46C = {
 			isa = PBXGroup;
 			children = (
@@ -535,35 +715,6 @@
 			path = ListTests;
 			sourceTree = "<group>";
 		};
-		187017B523558F3A009270AA /* Reponse Model */ = {
-			isa = PBXGroup;
-			children = (
-				187017B623559097009270AA /* HistoricalResponseModel.swift */,
-				18731DAE23564B5400BB577A /* TodayResponseModel.swift */,
-			);
-			path = "Reponse Model";
-			sourceTree = "<group>";
-		};
-		187017B8235591B9009270AA /* Repository */ = {
-			isa = PBXGroup;
-			children = (
-				187017B323558CA5009270AA /* HistoricalDataRepository.swift */,
-				187017BA235591E6009270AA /* DefaultHistoricalDataRepository.swift */,
-				1873DFF72358241900A85C2A /* Mapper */,
-			);
-			path = Repository;
-			sourceTree = "<group>";
-		};
-		18731DA823564A7800BB577A /* Entities */ = {
-			isa = PBXGroup;
-			children = (
-				18731DA623564A6000BB577A /* N26BCError.swift */,
-				18731DA923564A8500BB577A /* Valuation.swift */,
-				187E99902357BE4100B57FCC /* Currency.swift */,
-			);
-			path = Entities;
-			sourceTree = "<group>";
-		};
 		18731E422356BC6E00BB577A /* Commons */ = {
 			isa = PBXGroup;
 			children = (
@@ -608,10 +759,10 @@
 		187321E8235CAA2E00F22EB7 /* Valuation */ = {
 			isa = PBXGroup;
 			children = (
-				187017B523558F3A009270AA /* Reponse Model */,
-				18731DA823564A7800BB577A /* Entities */,
-				187B320D235ABA0F007E6E3D /* Use Cases */,
-				1874EB062353943100052101 /* API */,
+				18326283235D01B100CBB9CC /* API */,
+				1832627F235D01B100CBB9CC /* Entities */,
+				18326266235D01B100CBB9CC /* Reponse Model */,
+				18326269235D01B100CBB9CC /* Use Cases */,
 				187321E9235CAA2E00F22EB7 /* Valuation.h */,
 				187321EA235CAA2E00F22EB7 /* Info.plist */,
 			);
@@ -621,9 +772,8 @@
 		187321F5235CAA2E00F22EB7 /* ValuationTests */ = {
 			isa = PBXGroup;
 			children = (
-				1873E00623582E9A00A85C2A /* UseCases */,
-				1874EB102353BEFE00052101 /* API */,
-				187321F6235CAA2E00F22EB7 /* ValuationTests.swift */,
+				1832624D235D015C00CBB9CC /* API */,
+				1832624F235D015C00CBB9CC /* UseCases */,
 				187321F8235CAA2E00F22EB7 /* Info.plist */,
 			);
 			path = ValuationTests;
@@ -646,15 +796,6 @@
 			path = Protocols;
 			sourceTree = "<group>";
 		};
-		1873DFF72358241900A85C2A /* Mapper */ = {
-			isa = PBXGroup;
-			children = (
-				187E99932357C1FF00B57FCC /* HistoricalResponseMapperProtocol.swift */,
-				1873DFF5235823D700A85C2A /* DefaultHistoricalResponseMapper.swift */,
-			);
-			path = Mapper;
-			sourceTree = "<group>";
-		};
 		1873DFF92358284D00A85C2A /* View Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -665,25 +806,6 @@
 				1873E000235828F100A85C2A /* TodayTableViewModel.swift */,
 			);
 			path = "View Model";
-			sourceTree = "<group>";
-		};
-		1873E00623582E9A00A85C2A /* UseCases */ = {
-			isa = PBXGroup;
-			children = (
-				187B320A2359D8FA007E6E3D /* Mocks */,
-				18FB7DD4235B7C7A00E2DA2E /* TodayProvider */,
-				1873E00723582EA300A85C2A /* HistoricalProvider */,
-			);
-			path = UseCases;
-			sourceTree = "<group>";
-		};
-		1873E00723582EA300A85C2A /* HistoricalProvider */ = {
-			isa = PBXGroup;
-			children = (
-				187391C7235C548000FE9108 /* HistoricalProvider.swift */,
-				18FB7DCB235B71CF00E2DA2E /* Repository */,
-			);
-			path = HistoricalProvider;
 			sourceTree = "<group>";
 		};
 		18740AA82354DF8000A27C5D /* Networking */ = {
@@ -748,14 +870,6 @@
 			path = NetworkingTests;
 			sourceTree = "<group>";
 		};
-		1874EB062353943100052101 /* API */ = {
-			isa = PBXGroup;
-			children = (
-				18FB7DC7235B5E4900E2DA2E /* BitCoinDeskAPI.swift */,
-			);
-			path = API;
-			sourceTree = "<group>";
-		};
 		1874EB0B235397A500052101 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
@@ -764,42 +878,6 @@
 				18740AB12354E7CB00A27C5D /* Networking Error */,
 			);
 			path = Networking;
-			sourceTree = "<group>";
-		};
-		1874EB102353BEFE00052101 /* API */ = {
-			isa = PBXGroup;
-			children = (
-				18FB7DC9235B5F6000E2DA2E /* BitCoinDeskAPITests.swift */,
-			);
-			path = API;
-			sourceTree = "<group>";
-		};
-		187B320A2359D8FA007E6E3D /* Mocks */ = {
-			isa = PBXGroup;
-			children = (
-				187B320B2359D91A007E6E3D /* TestingURLSessionClient.swift */,
-			);
-			path = Mocks;
-			sourceTree = "<group>";
-		};
-		187B320D235ABA0F007E6E3D /* Use Cases */ = {
-			isa = PBXGroup;
-			children = (
-				18FB7DB7235B19B200E2DA2E /* ValuationSorter */,
-				187B320E235ABA6B007E6E3D /* HistoricalProvider */,
-				18FB7DBC235B2B7700E2DA2E /* TodayProvider */,
-			);
-			path = "Use Cases";
-			sourceTree = "<group>";
-		};
-		187B320E235ABA6B007E6E3D /* HistoricalProvider */ = {
-			isa = PBXGroup;
-			children = (
-				187B3211235ABACC007E6E3D /* HistoricalProviderProtocol.swift */,
-				18FB7DC0235B2BD500E2DA2E /* HistoricalDataProvider.swift */,
-				187017B8235591B9009270AA /* Repository */,
-			);
-			path = HistoricalProvider;
 			sourceTree = "<group>";
 		};
 		187E99882357883F00B57FCC /* Timer */ = {
@@ -817,87 +895,6 @@
 				187E998E235790A700B57FCC /* DefaultTimerTests.swift */,
 			);
 			path = Timer;
-			sourceTree = "<group>";
-		};
-		18FB7DB7235B19B200E2DA2E /* ValuationSorter */ = {
-			isa = PBXGroup;
-			children = (
-				18FB7DB8235B19C200E2DA2E /* ValuationSorter.swift */,
-				18FB7DBA235B19D600E2DA2E /* ValuationSorterProtocol.swift */,
-			);
-			path = ValuationSorter;
-			sourceTree = "<group>";
-		};
-		18FB7DBC235B2B7700E2DA2E /* TodayProvider */ = {
-			isa = PBXGroup;
-			children = (
-				18FB7DC3235B30AB00E2DA2E /* TodayProviderProtocol.swift */,
-				18FB7DC5235B35A600E2DA2E /* TodayDataProvider.swift */,
-				18FB7DBD235B2B9500E2DA2E /* Repository */,
-			);
-			path = TodayProvider;
-			sourceTree = "<group>";
-		};
-		18FB7DBD235B2B9500E2DA2E /* Repository */ = {
-			isa = PBXGroup;
-			children = (
-				18731DAC23564B0500BB577A /* TodayDataRepository.swift */,
-				18731E682356C0B700BB577A /* DefaultTodayDataRepository.swift */,
-				18FB7DBE235B2B9C00E2DA2E /* Mapper */,
-			);
-			path = Repository;
-			sourceTree = "<group>";
-		};
-		18FB7DBE235B2B9C00E2DA2E /* Mapper */ = {
-			isa = PBXGroup;
-			children = (
-				1873DFF12358232E00A85C2A /* TodayResponseMapperProtocol.swift */,
-				1873DFF32358236100A85C2A /* DefaultTodayResponseMapper.swift */,
-			);
-			path = Mapper;
-			sourceTree = "<group>";
-		};
-		18FB7DCB235B71CF00E2DA2E /* Repository */ = {
-			isa = PBXGroup;
-			children = (
-				1873E00823582EC300A85C2A /* DefaultHistoricalDataRepositoryTests.swift */,
-				18FB7DCC235B71DB00E2DA2E /* Mapper */,
-			);
-			path = Repository;
-			sourceTree = "<group>";
-		};
-		18FB7DCC235B71DB00E2DA2E /* Mapper */ = {
-			isa = PBXGroup;
-			children = (
-				18FB7DCD235B71FE00E2DA2E /* DefaultHistoricalResponseMapperTests.swift */,
-			);
-			path = Mapper;
-			sourceTree = "<group>";
-		};
-		18FB7DD4235B7C7A00E2DA2E /* TodayProvider */ = {
-			isa = PBXGroup;
-			children = (
-				187391C4235C424A00FE9108 /* TodayProviderTests.swift */,
-				18FB7DD5235B942300E2DA2E /* Repository */,
-			);
-			path = TodayProvider;
-			sourceTree = "<group>";
-		};
-		18FB7DD5235B942300E2DA2E /* Repository */ = {
-			isa = PBXGroup;
-			children = (
-				187B32082359D4E0007E6E3D /* DefaultTodayDataRepositoryTests.swift */,
-				18FB7DD6235B942700E2DA2E /* Mapper */,
-			);
-			path = Repository;
-			sourceTree = "<group>";
-		};
-		18FB7DD6235B942700E2DA2E /* Mapper */ = {
-			isa = PBXGroup;
-			children = (
-				18FB7DD7235B95F200E2DA2E /* DefaultTodayResponseMapperTests.swift */,
-			);
-			path = Mapper;
 			sourceTree = "<group>";
 		};
 		9B3BDFAF2973DD7FDC305AE1 /* Pods */ = {
@@ -1222,47 +1219,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				18731DAF23564B5400BB577A /* TodayResponseModel.swift in Sources */,
 				1874EADE23537A6100052101 /* StoryboardInstantiator.swift in Sources */,
-				18FB7DBB235B19D600E2DA2E /* ValuationSorterProtocol.swift in Sources */,
 				1841068423531E95000AE46C /* main.swift in Sources */,
-				1873DFF22358232E00A85C2A /* TodayResponseMapperProtocol.swift in Sources */,
-				18731DAA23564A8500BB577A /* Valuation.swift in Sources */,
-				18731DAD23564B0500BB577A /* TodayDataRepository.swift in Sources */,
 				18224140235CBE6A00C13541 /* DetailRouter.swift in Sources */,
 				1822413B235CBE6A00C13541 /* DetailPresenter.swift in Sources */,
-				187E99942357C1FF00B57FCC /* HistoricalResponseMapperProtocol.swift in Sources */,
-				187017B723559097009270AA /* HistoricalResponseModel.swift in Sources */,
 				1841066223531A6A000AE46C /* AppDelegate.swift in Sources */,
 				1873DFFD235828CB00A85C2A /* ListViewSection.swift in Sources */,
-				187017B423558CA5009270AA /* HistoricalDataRepository.swift in Sources */,
-				18731DA723564A6000BB577A /* N26BCError.swift in Sources */,
 				184106AA23532D37000AE46C /* ListViewController.swift in Sources */,
-				187E99912357BE4100B57FCC /* Currency.swift in Sources */,
-				18FB7DC8235B5E4900E2DA2E /* BitCoinDeskAPI.swift in Sources */,
 				187391CE235C86EA00FE9108 /* Coverable.swift in Sources */,
-				187017BB235591E6009270AA /* DefaultHistoricalDataRepository.swift in Sources */,
 				1822413E235CBE6A00C13541 /* DetailProtocols.swift in Sources */,
 				18224143235CD67200C13541 /* DetailInteractorComposer.swift in Sources */,
 				1874EAD52353386E00052101 /* ListInteractor.swift in Sources */,
-				1873DFF6235823D700A85C2A /* DefaultHistoricalResponseMapper.swift in Sources */,
-				18FB7DC1235B2BD500E2DA2E /* HistoricalDataProvider.swift in Sources */,
 				187391CB235C661700FE9108 /* ListInteractorComposer.swift in Sources */,
 				1874EAD12353311700052101 /* ListRouter.swift in Sources */,
-				187B3212235ABACC007E6E3D /* HistoricalProviderProtocol.swift in Sources */,
 				1873E0032358293600A85C2A /* HistoricalTableViewModel.swift in Sources */,
-				18FB7DC4235B30AB00E2DA2E /* TodayProviderProtocol.swift in Sources */,
 				1873DFFB2358287200A85C2A /* PricesViewModel.swift in Sources */,
-				1873DFF42358236100A85C2A /* DefaultTodayResponseMapper.swift in Sources */,
 				1822413D235CBE6A00C13541 /* DetailViewController.swift in Sources */,
 				1822413F235CBE6A00C13541 /* DetailInteractor.swift in Sources */,
 				1873E001235828F100A85C2A /* TodayTableViewModel.swift in Sources */,
 				187391D1235C93B900FE9108 /* ErrorPresenter.swift in Sources */,
-				18FB7DC6235B35A600E2DA2E /* TodayDataProvider.swift in Sources */,
 				1874EAD32353345700052101 /* ListPresenter.swift in Sources */,
-				18731E692356C0B700BB577A /* DefaultTodayDataRepository.swift in Sources */,
 				1873DFFF235828DE00A85C2A /* ListSectionType.swift in Sources */,
-				18FB7DB9235B19C200E2DA2E /* ValuationSorter.swift in Sources */,
 				1874EACB23532F5900052101 /* ListProtocols.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1272,16 +1249,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				187391D5235C9AAA00FE9108 /* ListPresenterTests.swift in Sources */,
-				187391C8235C548000FE9108 /* HistoricalProvider.swift in Sources */,
-				18FB7DCA235B5F6000E2DA2E /* BitCoinDeskAPITests.swift in Sources */,
 				1874EAD9235373EB00052101 /* ListViewControllerTests.swift in Sources */,
-				187391C5235C424A00FE9108 /* TodayProviderTests.swift in Sources */,
-				1873E00923582EC300A85C2A /* DefaultHistoricalDataRepositoryTests.swift in Sources */,
-				18FB7DCE235B71FE00E2DA2E /* DefaultHistoricalResponseMapperTests.swift in Sources */,
-				187B320C2359D91A007E6E3D /* TestingURLSessionClient.swift in Sources */,
-				18FB7DD8235B95F200E2DA2E /* DefaultTodayResponseMapperTests.swift in Sources */,
 				1874EACF235330D200052101 /* ListRouterTests.swift in Sources */,
-				187B32092359D4E0007E6E3D /* DefaultTodayDataRepositoryTests.swift in Sources */,
 				1873E00523582B2D00A85C2A /* ListInteractorTests.swift in Sources */,
 				1841068623532075000AE46C /* TestingAppDelegate.swift in Sources */,
 			);
@@ -1314,6 +1283,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18326296235D01B100CBB9CC /* Currency.swift in Sources */,
+				18326292235D01B100CBB9CC /* TodayDataProvider.swift in Sources */,
+				18326286235D01B100CBB9CC /* TodayResponseModel.swift in Sources */,
+				18326294235D01B100CBB9CC /* ValuationSorter.swift in Sources */,
+				1832628F235D01B100CBB9CC /* TodayResponseMapperProtocol.swift in Sources */,
+				18326293235D01B100CBB9CC /* ValuationSorterProtocol.swift in Sources */,
+				18326289235D01B100CBB9CC /* DefaultHistoricalDataRepository.swift in Sources */,
+				18326290235D01B100CBB9CC /* TodayDataRepository.swift in Sources */,
+				1832628E235D01B100CBB9CC /* DefaultTodayResponseMapper.swift in Sources */,
+				18326291235D01B100CBB9CC /* TodayProviderProtocol.swift in Sources */,
+				18326288235D01B100CBB9CC /* HistoricalResponseMapperProtocol.swift in Sources */,
+				1832628A235D01B100CBB9CC /* HistoricalDataRepository.swift in Sources */,
+				1832628C235D01B100CBB9CC /* HistoricalProviderProtocol.swift in Sources */,
+				1832628B235D01B100CBB9CC /* HistoricalDataProvider.swift in Sources */,
+				18326285235D01B100CBB9CC /* HistoricalResponseModel.swift in Sources */,
+				18326297235D01B100CBB9CC /* Valuation.swift in Sources */,
+				18326298235D01B100CBB9CC /* BitCoinDeskAPI.swift in Sources */,
+				18326295235D01B100CBB9CC /* N26BCError.swift in Sources */,
+				18326287235D01B100CBB9CC /* DefaultHistoricalResponseMapper.swift in Sources */,
+				1832628D235D01B100CBB9CC /* DefaultTodayDataRepository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1321,7 +1310,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				187321F7235CAA2E00F22EB7 /* ValuationTests.swift in Sources */,
+				18326262235D015C00CBB9CC /* HistoricalProvider.swift in Sources */,
+				1832625F235D015C00CBB9CC /* TestingURLSessionClient.swift in Sources */,
+				18326265235D015C00CBB9CC /* TodayProviderTests.swift in Sources */,
+				1832625E235D015C00CBB9CC /* BitCoinDeskAPITests.swift in Sources */,
+				18326264235D015C00CBB9CC /* DefaultTodayDataRepositoryTests.swift in Sources */,
+				18326261235D015C00CBB9CC /* DefaultHistoricalDataRepositoryTests.swift in Sources */,
+				18326263235D015C00CBB9CC /* DefaultTodayResponseMapperTests.swift in Sources */,
+				18326260235D015C00CBB9CC /* DefaultHistoricalResponseMapperTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,14 +8,14 @@
 
 import Networking
 
-final class TodayDataProvider: TodayProviderProtocol {
-    let repository: TodayDataRepository
+public final class TodayDataProvider: TodayProviderProtocol {
+    private let repository: TodayDataRepository
     
-    init(repository: TodayDataRepository) {
+    public init(repository: TodayDataRepository) {
         self.repository = repository
     }
     
-    func retrieveTodayData(currency: Currency, completion: @escaping ResultBlock) {
+    public func retrieveTodayData(currency: Currency, completion: @escaping ResultBlock) {
         let url = getBitcoinDeskAPIURL(currency: currency)
         repository.getTodayData(url: url, currency: currency, completion: completion)
     }

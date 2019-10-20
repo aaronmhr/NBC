@@ -8,6 +8,7 @@
 
 import Valuation
 import Networking
+import Valuation
 
 final class DetailInteractorComposer {
     static func compose(valuation: Valuation) -> DetailInteractor {

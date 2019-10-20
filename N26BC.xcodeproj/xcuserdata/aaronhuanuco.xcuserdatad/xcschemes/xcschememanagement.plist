@@ -7,7 +7,7 @@
 		<key>Commons.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>2</integer>
+			<integer>3</integer>
 		</dict>
 		<key>N26BC.xcscheme_^#shared#^_</key>
 		<dict>
@@ -17,12 +17,12 @@
 		<key>Networking.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>1</integer>
+			<integer>2</integer>
 		</dict>
 		<key>Valuation.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>3</integer>
+			<integer>1</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
@@ -33,6 +33,16 @@
 			<true/>
 		</dict>
 		<key>1841067323531A6C000AE46C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>187321E6235CAA2E00F22EB7</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>187321EE235CAA2E00F22EB7</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -8,6 +8,6 @@
 
 import Foundation
 
-protocol TodayDataRepository {
+public protocol TodayDataRepository {
     func getTodayData(url: URL?, currency: Currency, completion: @escaping TodayProviderProtocol.ResultBlock)
 }
