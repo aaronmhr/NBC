@@ -15,6 +15,13 @@ final class ListViewController: UIViewController {
     var presenter: ListPresenterProtocol!
     @IBOutlet private(set) var tableView: UITableView!
     
+    lazy var fullScreenView: UIView? = {
+        let view = UIView(frame: UIScreen.main.bounds)
+        view.backgroundColor = .black
+        view.alpha = 0.3
+        return view
+    }()
+
     var tableViewModel: [ListViewSection] = [] {
         didSet {
             DispatchQueue.main.async {
@@ -22,6 +29,7 @@ final class ListViewController: UIViewController {
             }
         }
     }
+
     var pricesModel: [PricesViewModel] = [] {
         didSet {
             DispatchQueue.main.async {
@@ -49,8 +57,24 @@ extension ListViewController {
     }
 }
 
-extension ListViewController: ListViewProtocol { }
-
+extension ListViewController: ListViewProtocol { 
+    func addFullScreenLoadingView() {
+        DispatchQueue.main.async {
+            guard let view = self.fullScreenView else { return }
+            self.tableView.isUserInteractionEnabled = false
+            self.navigationController?.navigationBar.addSubview(view)
+            print("Added")
+        }
+    }
+    
+    func removeFullScreenLoadingView() {
+        DispatchQueue.main.async {
+            guard let view = self.fullScreenView else { return }
+            self.tableView.isUserInteractionEnabled = true
+            view.removeFromSuperview()
+        }
+    }
+}
 //MARK: - UITableViewDataSource
 extension ListViewController: UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {

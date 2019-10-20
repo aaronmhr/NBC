@@ -22,6 +22,6 @@ protocol ListPresenterProtocol {
     func viewWillDissapear()
 }
 
-protocol ListViewProtocol: class {
+protocol ListViewProtocol: Coverable, ErrorPresenter {
     var tableViewModel: [ListViewSection] { get set }
 }

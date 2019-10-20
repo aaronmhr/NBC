@@ -32,6 +32,8 @@
 		187391C5235C424A00FE9108 /* TodayProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187391C4235C424A00FE9108 /* TodayProviderTests.swift */; };
 		187391C8235C548000FE9108 /* HistoricalProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187391C7235C548000FE9108 /* HistoricalProvider.swift */; };
 		187391CB235C661700FE9108 /* ListInteractorComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187391CA235C661700FE9108 /* ListInteractorComposer.swift */; };
+		187391CE235C86EA00FE9108 /* Coverable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187391CD235C86EA00FE9108 /* Coverable.swift */; };
+		187391D1235C93B900FE9108 /* ErrorPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187391D0235C93B900FE9108 /* ErrorPresenter.swift */; };
 		1873DFF22358232E00A85C2A /* TodayResponseMapperProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1873DFF12358232E00A85C2A /* TodayResponseMapperProtocol.swift */; };
 		1873DFF42358236100A85C2A /* DefaultTodayResponseMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1873DFF32358236100A85C2A /* DefaultTodayResponseMapper.swift */; };
 		1873DFF6235823D700A85C2A /* DefaultHistoricalResponseMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1873DFF5235823D700A85C2A /* DefaultHistoricalResponseMapper.swift */; };
@@ -180,6 +182,8 @@
 		187391C4235C424A00FE9108 /* TodayProviderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayProviderTests.swift; sourceTree = "<group>"; };
 		187391C7235C548000FE9108 /* HistoricalProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoricalProvider.swift; sourceTree = "<group>"; };
 		187391CA235C661700FE9108 /* ListInteractorComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListInteractorComposer.swift; sourceTree = "<group>"; };
+		187391CD235C86EA00FE9108 /* Coverable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coverable.swift; sourceTree = "<group>"; };
+		187391D0235C93B900FE9108 /* ErrorPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorPresenter.swift; sourceTree = "<group>"; };
 		1873DFF12358232E00A85C2A /* TodayResponseMapperProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayResponseMapperProtocol.swift; sourceTree = "<group>"; };
 		1873DFF32358236100A85C2A /* DefaultTodayResponseMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultTodayResponseMapper.swift; sourceTree = "<group>"; };
 		1873DFF5235823D700A85C2A /* DefaultHistoricalResponseMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultHistoricalResponseMapper.swift; sourceTree = "<group>"; };
@@ -316,6 +320,7 @@
 				1841066123531A6A000AE46C /* AppDelegate.swift */,
 				1873DFF92358284D00A85C2A /* View Model */,
 				18731DA823564A7800BB577A /* Entities */,
+				187391CC235C86D200FE9108 /* Protocols */,
 				187017B523558F3A009270AA /* Reponse Model */,
 				1841068723532484000AE46C /* List */,
 				1874EB062353943100052101 /* API */,
@@ -478,6 +483,15 @@
 				187391CA235C661700FE9108 /* ListInteractorComposer.swift */,
 			);
 			path = Composers;
+			sourceTree = "<group>";
+		};
+		187391CC235C86D200FE9108 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				187391CD235C86EA00FE9108 /* Coverable.swift */,
+				187391D0235C93B900FE9108 /* ErrorPresenter.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 		1873DFF72358241900A85C2A /* Mapper */ = {
@@ -1003,6 +1017,7 @@
 				184106AA23532D37000AE46C /* ListViewController.swift in Sources */,
 				187E99912357BE4100B57FCC /* Currency.swift in Sources */,
 				18FB7DC8235B5E4900E2DA2E /* BitCoinDeskAPI.swift in Sources */,
+				187391CE235C86EA00FE9108 /* Coverable.swift in Sources */,
 				187017BB235591E6009270AA /* DefaultHistoricalDataRepository.swift in Sources */,
 				1874EAD52353386E00052101 /* ListInteractor.swift in Sources */,
 				1873DFF6235823D700A85C2A /* DefaultHistoricalResponseMapper.swift in Sources */,
@@ -1015,6 +1030,7 @@
 				1873DFFB2358287200A85C2A /* PricesViewModel.swift in Sources */,
 				1873DFF42358236100A85C2A /* DefaultTodayResponseMapper.swift in Sources */,
 				1873E001235828F100A85C2A /* TodayTableViewModel.swift in Sources */,
+				187391D1235C93B900FE9108 /* ErrorPresenter.swift in Sources */,
 				18FB7DC6235B35A600E2DA2E /* TodayDataProvider.swift in Sources */,
 				1874EAD32353345700052101 /* ListPresenter.swift in Sources */,
 				18731E692356C0B700BB577A /* DefaultTodayDataRepository.swift in Sources */,

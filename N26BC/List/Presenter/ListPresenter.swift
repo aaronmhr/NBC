@@ -37,25 +37,37 @@ final class ListPresenter {
 
 extension ListPresenter: ListPresenterProtocol {
     func viewDidLoad() {
+        view.addFullScreenLoadingView()
         interactor.retrieveHistoricalData { [weak self] result in
+            DispatchQueue.main.async {
+                self?.view.removeFullScreenLoadingView()
+            }
             switch result {
             case .success(let historicalPrices):
-                print("Downloaded Historical")
                 self?.secondSection = HistoricalTableViewModel.makeSectionViewModel(from: historicalPrices, title: Localizables.secondSection, type: .historical)
             case .failure(let error):
-                print("Error")
+                DispatchQueue.main.async {
+                    self?.view.showError(error: error, action: self?.restartLoading)
+                }
             }
         }
+    }
+    
+    private func restartLoading() {
+        stopRetreavingTodayData()
+        viewDidLoad()
+        viewWillAppear()
     }
     
     func viewWillAppear() {
         self.interactor.retrieveTodayData { [weak self] result in
             switch result {
             case .success(let todayPrices):
-                print("Downloaded Today")
                 self?.firstSection = TodayTableViewModel.makeSectionViewModel(from: [todayPrices], title: Localizables.firstSection, type: .today)
             case .failure(let error):
-                print("Error")
+                DispatchQueue.main.async {
+                    self?.view.showError(error: error, action: self?.restartLoading)
+                }
             }
         }
         
