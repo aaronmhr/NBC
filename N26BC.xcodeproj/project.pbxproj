@@ -76,6 +76,7 @@
 		18FB7DCE235B71FE00E2DA2E /* DefaultHistoricalResponseMapperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FB7DCD235B71FE00E2DA2E /* DefaultHistoricalResponseMapperTests.swift */; };
 		18FB7DD1235B730800E2DA2E /* Result+Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FB7DD0235B730800E2DA2E /* Result+Error.swift */; };
 		18FB7DD3235B733F00E2DA2E /* ResultGetErrorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FB7DD2235B733F00E2DA2E /* ResultGetErrorTests.swift */; };
+		18FB7DD8235B95F200E2DA2E /* DefaultTodayResponseMapperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FB7DD7235B95F200E2DA2E /* DefaultTodayResponseMapperTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -221,6 +222,7 @@
 		18FB7DCD235B71FE00E2DA2E /* DefaultHistoricalResponseMapperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultHistoricalResponseMapperTests.swift; sourceTree = "<group>"; };
 		18FB7DD0235B730800E2DA2E /* Result+Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Result+Error.swift"; sourceTree = "<group>"; };
 		18FB7DD2235B733F00E2DA2E /* ResultGetErrorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultGetErrorTests.swift; sourceTree = "<group>"; };
+		18FB7DD7235B95F200E2DA2E /* DefaultTodayResponseMapperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultTodayResponseMapperTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -719,6 +721,7 @@
 		18FB7DD6235B942700E2DA2E /* Mapper */ = {
 			isa = PBXGroup;
 			children = (
+				18FB7DD7235B95F200E2DA2E /* DefaultTodayResponseMapperTests.swift */,
 			);
 			path = Mapper;
 			sourceTree = "<group>";
@@ -1020,6 +1023,7 @@
 				1873E00923582EC300A85C2A /* DefaultHistoricalDataRepositoryTests.swift in Sources */,
 				18FB7DCE235B71FE00E2DA2E /* DefaultHistoricalResponseMapperTests.swift in Sources */,
 				187B320C2359D91A007E6E3D /* TestingURLSessionClient.swift in Sources */,
+				18FB7DD8235B95F200E2DA2E /* DefaultTodayResponseMapperTests.swift in Sources */,
 				1874EACF235330D200052101 /* ListRouterTests.swift in Sources */,
 				187B32092359D4E0007E6E3D /* DefaultTodayDataRepositoryTests.swift in Sources */,
 				1873E00523582B2D00A85C2A /* ListInteractorTests.swift in Sources */,

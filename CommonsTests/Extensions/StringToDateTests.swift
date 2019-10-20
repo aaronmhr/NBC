@@ -14,24 +14,37 @@ class StringToDateTests: XCTestCase {
         let date = Date(timeIntervalSince1970: 0)
         let dateFormat = "YYYY-MM-DD"
         let sut = "1970-01-01"
-        XCTAssertEqual(sut.toDateWithFormat(dateFormat), date)
+        let dateFoormatter = makeFormatter(dateFormat)
+        XCTAssertEqual(sut.toDateWithFormat(dateFoormatter), date)
     }
     
     func testStringToDate_doesNotCreateDateWithBadFormat() {
         let dateFormat = ""
         let sut = "1970-01-01"
-        XCTAssertNil(sut.toDateWithFormat(dateFormat))
+        let dateFormatter = makeFormatter(dateFormat)
+        XCTAssertNil(sut.toDateWithFormat(dateFormatter))
     }
     
     func testStringToDate_doesNotCreateDateWithBadString() {
         let dateFormat = "YYYY-MM-DD"
         let sut = ""
-        XCTAssertNil(sut.toDateWithFormat(dateFormat))
+        let dateFormatter = makeFormatter(dateFormat)
+        XCTAssertNil(sut.toDateWithFormat(dateFormatter))
     }
     
     func testOptionalNilToString_createsString() {
         let dateFormat = "YYYY-MM-DD"
         let sut: String? = nil
-        XCTAssertEqual(sut.toDateWithFormat(dateFormat), nil)
+        let dateFormatter = makeFormatter(dateFormat)
+        XCTAssertEqual(sut.toDateWithFormat(dateFormatter), nil)
+    }
+    
+    // MARK: - Helpers
+    func makeFormatter(_ format: String) -> DateFormatter {
+        let formatter = DateFormatter()
+        formatter.timeZone = TimeZone(identifier:"GMT")
+        formatter.locale = Locale(identifier: "en_US_POSIX")
+        formatter.dateFormat = format
+        return formatter
     }
 }

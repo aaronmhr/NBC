@@ -36,7 +36,7 @@ class DefaultHistoricalResponseMapperTests: XCTestCase {
     
     func testMapResponse_returnsValuationList() {
         let dateString = "2019-09-10"
-        let date = dateString.toDateWithFormat(BitcoinDeskAPI.defaultDateFormat)!
+        let date = dateString.toDateWithFormat(BitcoinDeskAPI.historicalFormatter)!
         let price = 10.0
         let currencies: [Currency] = [.euro, .dollar, .pound]
         let response = HistoricalResponseModel(bpi: [dateString: price], disclaimer: "")

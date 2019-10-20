@@ -9,19 +9,17 @@
 import Foundation
 
 public extension String {
-    func toDateWithFormat(_ format: String) -> Date? {
-        let formatter = DateFormatter()
-        formatter.timeZone = TimeZone(identifier:"GMT")
-        formatter.dateFormat = format
-        return formatter.date(from: self)
+    func toDateWithFormat(_ formatter: DateFormatter) -> Date? {
+        let date = formatter.date(from: self)
+        return date
     }
 }
 
 public extension Optional where Wrapped == String {
-  func toDateWithFormat(_ format: String) -> Date? {
+  func toDateWithFormat(_ formatter: DateFormatter) -> Date? {
     guard let string = self else {
         return nil
     }
-    return string.toDateWithFormat(format)
+    return string.toDateWithFormat(formatter)
   }
 }

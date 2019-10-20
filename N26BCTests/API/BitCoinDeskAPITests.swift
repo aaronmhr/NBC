@@ -34,13 +34,22 @@ class BitCoinDeskAPITests: XCTestCase {
         let end = "2013-09-05"
         let currency = "EUR"
         let url = URL(string: "https://api.coindesk.com/v1/bpi/historical/close.json?start=\(start)&end=\(end)&currency=\(currency)")
-        
-        let date1 = start.toDateWithFormat("yyyy-MM-dd")!
-        let date2 = end.toDateWithFormat("yyyy-MM-dd")!
+        let dateFormatter = makeFormatter("yyyy-MM-dd")
+        let date1 = start.toDateWithFormat(dateFormatter)!
+        let date2 = end.toDateWithFormat(dateFormatter)!
         
         let queries = BitcoinDeskAPI.HistoricalQuery(start: date1, end: date2, currency: .euro)
         let urlConstructor = BitcoinDeskAPI.historical(queries)
         
         XCTAssertEqual(urlConstructor.url, url)
+    }
+    
+    // MARK: - Helpers
+    func makeFormatter(_ format: String) -> DateFormatter {
+        let formatter = DateFormatter()
+        formatter.timeZone = TimeZone(identifier:"GMT")
+        formatter.locale = Locale(identifier: "en_US_POSIX")
+        formatter.dateFormat = format
+        return formatter
     }
 }

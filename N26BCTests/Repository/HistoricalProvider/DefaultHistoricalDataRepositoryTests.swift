@@ -51,7 +51,7 @@ class DefaultHistoricalDataRepositoryTests: XCTestCase {
     func testGetHistoricalData_whenMoreThanOneValue_providesEqualValuationList() {
         let testingCurrency = Currency.euro
         let historicalResponse = HistoricalResponseModel(
-            bpi: ["2019-09-10'T'00:00:00+00:00": 1.0, "2019-09-11'T'00:00:00+00:00": 1.0],
+            bpi: ["2019-09-10T00:00:00+00:00": 1.0, "2019-09-11T00:00:00+00:00": 1.0],
             disclaimer: "test1")
         
         let successInput: Result<HistoricalResponseModel, NetworkingError> = .success(historicalResponse)

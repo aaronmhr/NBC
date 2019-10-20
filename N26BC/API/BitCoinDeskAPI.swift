@@ -10,7 +10,23 @@ import Foundation
 
 public enum BitcoinDeskAPI {
     public static let defaultDateFormat = "yyyy-MM-dd"
-    public static let todayResponseDateFormat = "yyyy-MM-dd'T'HH:mm:ss+00:00"
+    public static let todayResponseDateFormat = #"yyyy-MM-dd'T'HH:mm:ss+00:00"#
+    
+    public static let historicalFormatter: DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.timeZone = TimeZone(identifier:"GMT")
+        formatter.locale = Locale(identifier: "en_US_POSIX")
+        formatter.dateFormat = defaultDateFormat
+        return formatter
+    }()
+    
+    public static let todayFormatter: DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.timeZone = TimeZone(identifier:"GMT")
+        formatter.locale = Locale(identifier: "en_US_POSIX")
+        formatter.dateFormat = todayResponseDateFormat
+        return formatter
+    }()
     
     case today(Currency)
     case historical(HistoricalQuery)

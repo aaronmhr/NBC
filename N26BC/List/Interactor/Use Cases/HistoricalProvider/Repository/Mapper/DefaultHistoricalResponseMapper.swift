@@ -14,7 +14,7 @@ final class DefaultHistoricalResponseMapper: HistoricalResponseMapperProtocol {
             return .failure(N26BCError.other)
         }
         let prices: [Valuation] = bpi.compactMap {
-            guard let date = $0.key.toDateWithFormat(BitcoinDeskAPI.defaultDateFormat) else {
+            guard let date = $0.key.toDateWithFormat(BitcoinDeskAPI.historicalFormatter) else {
                 return nil
             }
             return Valuation(date: date, price: $0.value, currency: currency)
