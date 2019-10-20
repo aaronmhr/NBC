@@ -23,6 +23,17 @@ class DefaultTodayResponseMapperTests: XCTestCase {
         static let validPoundRate = CurrencyResponseModel(code: "GBP", rateFloat: 15.0)
     }
     
+    func testMapError_whenThereIsNetworkingError_returnsN26BCError() {
+        let errorList: [NetworkingError] = [.clientError("Test1"), .couldNotBuildURL, .decodingError, .invalidResponse, .other("Test5"), .serverError("Test6")]
+        let mappedResponse = N26BCError.networking
+        
+        let sut = makeSUT()
+        
+        errorList.forEach { error in
+            XCTAssertEqual(sut.map(error: error), mappedResponse)
+        }
+    }
+    
     func testMapResponse_whenTimeIsNil_providesError() {
         let currencies: [Currency] = [.euro, .dollar, .pound, .unknown]
         let sut = makeSUT()

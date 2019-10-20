@@ -503,8 +503,8 @@
 		1873E00723582EA300A85C2A /* HistoricalProvider */ = {
 			isa = PBXGroup;
 			children = (
-				18FB7DCB235B71CF00E2DA2E /* Repository */,
 				187391C7235C548000FE9108 /* HistoricalProvider.swift */,
+				18FB7DCB235B71CF00E2DA2E /* Repository */,
 			);
 			path = HistoricalProvider;
 			sourceTree = "<group>";
