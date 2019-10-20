@@ -24,7 +24,6 @@ final class ListPresenter {
         }
     }
     
-    //    Try with mapper order at the interactor
     private func buildNewViewModel(with firstSection: ListViewSection?, and secondSection: ListViewSection?) {
         view.tableViewModel = [firstSection, secondSection].compactMap { $0 }
     }
