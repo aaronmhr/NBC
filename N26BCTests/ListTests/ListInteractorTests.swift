@@ -12,25 +12,40 @@ import Networking
 @testable import N26BC
 
 class ListInteractorTests: XCTestCase {
-    
-    override class func tearDown() {
-        super.tearDown()
+    func testRetrieveHistoricalDataIsExecutedPropperly() {
+        let expectation = XCTestExpectation(description: "ListInteractor")
+        let (sut, historicalProvider, _, sorter, _) = makeSUT()
+        
+        sut.retrieveHistoricalData { result in
+            XCTAssertTrue(historicalProvider.isHistoricalDataRetrieved)
+            XCTAssertTrue(sorter.isSorted)
+            expectation.fulfill()
+        }
+        wait(for: [expectation], timeout: 2.0)
     }
     
-    func testRetrieveTodayDataIsExecuted() {
+    func testRetrieveTodayDataIsExecutedProperly() {
         let expectation = XCTestExpectation(description: "ListInteractor")
         let (sut, _, todayProvider, _, timer) = makeSUT()
         
         sut.retrieveTodayData { result in
             XCTAssertTrue(timer.isScheduled)
             XCTAssertTrue(timer.isRepeating)
-            XCTAssertTrue(todayProvider.isTodayRetrieved)
+            XCTAssertTrue(todayProvider.isTodayDataRetrieved)
             expectation.fulfill()
         }
         
         wait(for: [expectation], timeout: 2.0)
         XCTAssertTrue(timer.isFired)
         XCTAssertFalse(timer.isInvalidated)
+    }
+    
+    func testStopRetreavingTodayData() {
+        let (sut, _, _, _, timer) = makeSUT()
+        
+        sut.stopRetreavingTodayData()
+        
+        XCTAssertTrue(timer.isInvalidated)
     }
     
     // MARK: - Helpers
@@ -48,19 +63,19 @@ class ListInteractorTests: XCTestCase {
     }
 
     final class TestingHistoricalProvider: HistoricalProviderProtocol {
-        var isHistoricalRetrieved = false
+        var isHistoricalDataRetrieved = false
         
         func retrieveHistoricalData(start: Date, end: Date, currency: Currency, completion: @escaping ResultBlock) {
-            isHistoricalRetrieved = true
+            isHistoricalDataRetrieved = true
             completion(.failure(.other))
         }
     }
     
     final class TestingTodayProvider: TodayProviderProtocol {
-        var isTodayRetrieved = false
+        var isTodayDataRetrieved = false
         
         func retrieveTodayData(currency: Currency, completion: @escaping ResultBlock) {
-            isTodayRetrieved = true
+            isTodayDataRetrieved = true
             completion(.failure(.other))
         }
     }
