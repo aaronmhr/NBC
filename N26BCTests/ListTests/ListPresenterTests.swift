@@ -120,6 +120,12 @@ class ListPresenterTestsTests: XCTestCase {
         wait(for: [expectation], timeout: 2.0)
     }
     
+    func testViewWillDissappear() {
+        let (sut, _, interactor, _) = makeSUT()
+        sut.viewWillDissapear()
+        XCTAssertTrue(interactor.isStopRetrievingTodayData)
+    }
+    
     // MARK: - Helpers
     func makeSUT() -> (ListPresenterProtocol, TestingView, TestingInteractor, TestingRouter) {
         let view = TestingView()
