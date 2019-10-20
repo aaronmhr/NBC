@@ -34,7 +34,10 @@ extension ListInteractor: ListInteractorProtocol {
     }
     
     func retrieveTodayData(completion: @escaping (Result<Valuation, N26BCError>) -> Void) {
-        todayProvider.retrieveTodayData(currency: Constants.currency, completion: completion)
+        timer.schedule(timeInterval: Constants.todayCallPeriod, repeats: true) { [weak self] in
+            self?.todayProvider.retrieveTodayData(currency: Constants.currency, completion: completion)
+        }
+        timer.fire()
     }
 }
 
@@ -42,5 +45,6 @@ extension ListInteractor  {
     private enum Constants {
         static let currency: Currency = Currency.euro
         static let daysInPeriod = -14
+        static let todayCallPeriod: TimeInterval = 10
     }
 }

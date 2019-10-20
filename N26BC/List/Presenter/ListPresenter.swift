@@ -52,18 +52,16 @@ extension ListPresenter: ListPresenterProtocol {
     }
     
     func viewWillAppear() {
-        timer.schedule(timeInterval: 10, repeats: true) { [weak self] in
-            self?.interactor.retrieveTodayData { result in
-                switch result {
-                case .success(let todayPrices):
-                    print("Downloaded Today")
-                    self?.firstSection = TodayTableViewModel.makeSectionViewModel(from: [todayPrices], title: Localizables.firstSection, type: .today)
-                case .failure(let error):
-                    print("Error")
-                }
+        self.interactor.retrieveTodayData { [weak self] result in
+            switch result {
+            case .success(let todayPrices):
+                print("Downloaded Today")
+                self?.firstSection = TodayTableViewModel.makeSectionViewModel(from: [todayPrices], title: Localizables.firstSection, type: .today)
+            case .failure(let error):
+                print("Error")
             }
         }
-        timer.fire()
+        
     }
     
     func viewWillDissapear() {
