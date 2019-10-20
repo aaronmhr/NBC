@@ -34,6 +34,7 @@
 		187391CB235C661700FE9108 /* ListInteractorComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187391CA235C661700FE9108 /* ListInteractorComposer.swift */; };
 		187391CE235C86EA00FE9108 /* Coverable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187391CD235C86EA00FE9108 /* Coverable.swift */; };
 		187391D1235C93B900FE9108 /* ErrorPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187391D0235C93B900FE9108 /* ErrorPresenter.swift */; };
+		187391D5235C9AAA00FE9108 /* ListPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187391D3235C9A8F00FE9108 /* ListPresenterTests.swift */; };
 		1873DFF22358232E00A85C2A /* TodayResponseMapperProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1873DFF12358232E00A85C2A /* TodayResponseMapperProtocol.swift */; };
 		1873DFF42358236100A85C2A /* DefaultTodayResponseMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1873DFF32358236100A85C2A /* DefaultTodayResponseMapper.swift */; };
 		1873DFF6235823D700A85C2A /* DefaultHistoricalResponseMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1873DFF5235823D700A85C2A /* DefaultHistoricalResponseMapper.swift */; };
@@ -184,6 +185,7 @@
 		187391CA235C661700FE9108 /* ListInteractorComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListInteractorComposer.swift; sourceTree = "<group>"; };
 		187391CD235C86EA00FE9108 /* Coverable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coverable.swift; sourceTree = "<group>"; };
 		187391D0235C93B900FE9108 /* ErrorPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorPresenter.swift; sourceTree = "<group>"; };
+		187391D3235C9A8F00FE9108 /* ListPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPresenterTests.swift; sourceTree = "<group>"; };
 		1873DFF12358232E00A85C2A /* TodayResponseMapperProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayResponseMapperProtocol.swift; sourceTree = "<group>"; };
 		1873DFF32358236100A85C2A /* DefaultTodayResponseMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultTodayResponseMapper.swift; sourceTree = "<group>"; };
 		1873DFF5235823D700A85C2A /* DefaultHistoricalResponseMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultHistoricalResponseMapper.swift; sourceTree = "<group>"; };
@@ -403,6 +405,7 @@
 				1874EACC235330B200052101 /* ListRouterTests.swift */,
 				1874EAD8235373EB00052101 /* ListViewControllerTests.swift */,
 				1873E00423582B2D00A85C2A /* ListInteractorTests.swift */,
+				187391D3235C9A8F00FE9108 /* ListPresenterTests.swift */,
 			);
 			path = ListTests;
 			sourceTree = "<group>";
@@ -1044,6 +1047,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				187391D5235C9AAA00FE9108 /* ListPresenterTests.swift in Sources */,
 				187391C8235C548000FE9108 /* HistoricalProvider.swift in Sources */,
 				18FB7DCA235B5F6000E2DA2E /* BitCoinDeskAPITests.swift in Sources */,
 				1874EAD9235373EB00052101 /* ListViewControllerTests.swift in Sources */,

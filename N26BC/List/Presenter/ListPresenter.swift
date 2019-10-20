@@ -70,7 +70,6 @@ extension ListPresenter: ListPresenterProtocol {
                 }
             }
         }
-        
     }
     
     func viewWillDissapear() {
