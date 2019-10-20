@@ -14,12 +14,12 @@ final class DetailPresenter {
     let interactor: DetailInteractorProtocol
     weak var view: DetailViewProtocol!
     
-    var viewModel: DetailViewModel = DetailViewModel(title: nil, euro: nil, dollar: nil, pound: nil) {
+    private var viewModel: DetailViewModel = DetailViewModel(title: nil, euro: nil, dollar: nil, pound: nil) {
         didSet {
             view.detailViewModel = viewModel
         }
     }
-
+    
     init(view: DetailViewProtocol, interactor: DetailInteractorProtocol, router: DetailRouterProtocol) {
         self.view = view
         self.interactor = interactor
@@ -36,18 +36,21 @@ extension DetailPresenter: DetailPresenterProtocol {
     private func loadData() {
         [Currency.euro, .dollar, .pound].forEach { currency in
             interactor.retrieveData(for: currency, date: interactor.valuation.date) { [weak self] result in
-                switch result {
-                case .success(let valuation):
-                    DispatchQueue.main.async {
+                DispatchQueue.main.async {
+                    switch result {
+                    case .success(let valuation):
+                        
                         self?.handleSuccess(valuation: valuation, currency: currency)
+                    case .failure(let error):
+                        self?.view.showError(error: error) {
+                            self?.backButtonDidPress()
+                        }
                     }
-                case .failure(let error):
-                    print(error)
                 }
             }
         }
     }
-
+    
     
     private func handleSuccess(valuation: Valuation, currency: Currency) {
         switch currency {

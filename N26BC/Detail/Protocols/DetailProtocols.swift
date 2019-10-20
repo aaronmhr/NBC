@@ -23,7 +23,7 @@ protocol DetailPresenterProtocol {
     func backButtonDidPress()
 }
 
-protocol DetailViewProtocol: class {
+protocol DetailViewProtocol: ErrorPresenter {
     var detailViewModel: DetailViewModel? { get set }
     func backButtonAction()
 }
