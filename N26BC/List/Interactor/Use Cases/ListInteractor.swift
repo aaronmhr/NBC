@@ -39,6 +39,10 @@ extension ListInteractor: ListInteractorProtocol {
         }
         timer.fire()
     }
+    
+    func stopRetreavingTodayData() {
+        timer.invalidate()
+    }
 }
 
 extension ListInteractor  {

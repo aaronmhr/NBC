@@ -62,7 +62,11 @@ extension ListPresenter: ListPresenterProtocol {
     }
     
     func viewWillDissapear() {
-        timer.invalidate()
+        stopRetreavingTodayData()
+    }
+    
+    private func stopRetreavingTodayData() {
+        interactor.stopRetreavingTodayData()
     }
     
     private enum Localizables {

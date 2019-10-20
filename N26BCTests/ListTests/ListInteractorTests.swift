@@ -13,6 +13,26 @@ import Networking
 
 class ListInteractorTests: XCTestCase {
     
+    override class func tearDown() {
+        super.tearDown()
+    }
+    
+    func testRetrieveTodayDataIsExecuted() {
+        let expectation = XCTestExpectation(description: "ListInteractor")
+        let (sut, _, todayProvider, _, timer) = makeSUT()
+        
+        sut.retrieveTodayData { result in
+            XCTAssertTrue(timer.isScheduled)
+            XCTAssertTrue(timer.isRepeating)
+            XCTAssertTrue(todayProvider.isTodayRetrieved)
+            expectation.fulfill()
+        }
+        
+        wait(for: [expectation], timeout: 2.0)
+        XCTAssertTrue(timer.isFired)
+        XCTAssertFalse(timer.isInvalidated)
+    }
+    
     // MARK: - Helpers
     func makeSUT() -> (ListInteractor, TestingHistoricalProvider, TestingTodayProvider, TestingValuationSorter, TestingTimer) {
         let historicalProvider = TestingHistoricalProvider()
@@ -32,6 +52,7 @@ class ListInteractorTests: XCTestCase {
         
         func retrieveHistoricalData(start: Date, end: Date, currency: Currency, completion: @escaping ResultBlock) {
             isHistoricalRetrieved = true
+            completion(.failure(.other))
         }
     }
     
@@ -40,6 +61,7 @@ class ListInteractorTests: XCTestCase {
         
         func retrieveTodayData(currency: Currency, completion: @escaping ResultBlock) {
             isTodayRetrieved = true
+            completion(.failure(.other))
         }
     }
     
@@ -56,6 +78,7 @@ class ListInteractorTests: XCTestCase {
         var isFired = false
         var isInvalidated = false
         var isScheduled = false
+        var isRepeating = false
         
         func fire() {
             isFired = true
@@ -66,7 +89,9 @@ class ListInteractorTests: XCTestCase {
         }
         
         func schedule(timeInterval: TimeInterval, repeats: Bool, completionBlock: @escaping CompletionBlock) {
+            isRepeating = repeats
             isScheduled = true
+            completionBlock()
         }
     }
 }

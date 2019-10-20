@@ -9,6 +9,7 @@
 protocol ListInteractorProtocol {
     func retrieveHistoricalData(completion: @escaping (Result<[Valuation], N26BCError>) -> Void)
     func retrieveTodayData(completion: @escaping (Result<Valuation, N26BCError>) -> Void)
+    func stopRetreavingTodayData()
 }
 
 protocol ListRouterProtocol {
