@@ -10,10 +10,15 @@ import Commons
 import Networking
 
 final class DetailInteractor {
-
-    init() { }
+    let historicalProvider: HistoricalProviderProtocol
+    let todayProvider: TodayProviderProtocol
+    
+    init(historicalProvider: HistoricalProviderProtocol, todayProvider: TodayProviderProtocol) {
+        self.historicalProvider = historicalProvider
+        self.todayProvider = todayProvider
+    }
 }
 
 extension DetailInteractor: DetailInteractorProtocol {
-
+    
 }
