@@ -490,7 +490,6 @@
 			isa = PBXGroup;
 			children = (
 				187B320A2359D8FA007E6E3D /* Mocks */,
-				187B32072359D3AE007E6E3D /* Today */,
 				18FB7DD4235B7C7A00E2DA2E /* TodayProvider */,
 				1873E00723582EA300A85C2A /* HistoricalProvider */,
 			);
@@ -501,7 +500,6 @@
 			isa = PBXGroup;
 			children = (
 				18FB7DCB235B71CF00E2DA2E /* Repository */,
-				1873E00823582EC300A85C2A /* DefaultHistoricalDataRepositoryTests.swift */,
 			);
 			path = HistoricalProvider;
 			sourceTree = "<group>";
@@ -594,14 +592,6 @@
 			path = API;
 			sourceTree = "<group>";
 		};
-		187B32072359D3AE007E6E3D /* Today */ = {
-			isa = PBXGroup;
-			children = (
-				187B32082359D4E0007E6E3D /* DefaultTodayDataRepositoryTests.swift */,
-			);
-			path = Today;
-			sourceTree = "<group>";
-		};
 		187B320A2359D8FA007E6E3D /* Mocks */ = {
 			isa = PBXGroup;
 			children = (
@@ -689,6 +679,7 @@
 		18FB7DCB235B71CF00E2DA2E /* Repository */ = {
 			isa = PBXGroup;
 			children = (
+				1873E00823582EC300A85C2A /* DefaultHistoricalDataRepositoryTests.swift */,
 				18FB7DCC235B71DB00E2DA2E /* Mapper */,
 			);
 			path = Repository;
@@ -713,6 +704,7 @@
 		18FB7DD5235B942300E2DA2E /* Repository */ = {
 			isa = PBXGroup;
 			children = (
+				187B32082359D4E0007E6E3D /* DefaultTodayDataRepositoryTests.swift */,
 				18FB7DD6235B942700E2DA2E /* Mapper */,
 			);
 			path = Repository;
