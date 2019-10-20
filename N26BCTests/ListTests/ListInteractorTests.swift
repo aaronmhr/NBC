@@ -50,7 +50,7 @@ class ListInteractorTests: XCTestCase {
     }
     
     // MARK: - Helpers
-    func makeSUT() -> (ListInteractor, TestingHistoricalProvider, TestingTodayProvider, TestingValuationSorter, TestingTimer) {
+    func makeSUT() -> (ListInteractorProtocol, TestingHistoricalProvider, TestingTodayProvider, TestingValuationSorter, TestingTimer) {
         let historicalProvider = TestingHistoricalProvider()
         let todayProvider = TestingTodayProvider()
         let valuationSorter = TestingValuationSorter()

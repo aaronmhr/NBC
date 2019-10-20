@@ -16,6 +16,11 @@ class ListViewControllerTests: XCTestCase {
         sut.loadViewIfNeeded()
         
         XCTAssertTrue(presenterSpy.isViewDidLoadCalled)
+        
+        sut.beginAppearanceTransition(true, animated: true)
+        
+        XCTAssertTrue(presenterSpy.isViewWillAppearCalled)
+        
     }
     
     func testViewDidLoad_setsUpTableViewDelegateAndDataSource() {
@@ -41,17 +46,6 @@ class ListViewControllerTests: XCTestCase {
         XCTAssertTrue(sut.tableView.visibleCells.isEmpty)
     }
     
-    func testPricesModel_whenUpdated_TriggersTableViewUpdate() {
-//        let (sut,_) = makeSUT()
-//        
-//        givenViewDidLoadOn(sut)
-//        
-//        let cellModelsToBeDisplayed = [PricesViewModel(date: "today", price: "1"), PricesViewModel(date: "yesterday", price: "2")]
-//        sut.pricesModel = cellModelsToBeDisplayed
-//        
-//        XCTAssertEqual(cellModelsToBeDisplayed.count, sut.tableView.numberOfRows(inSection: 0))
-    }
-    
     
     // MARK: - Helpers
     private func givenViewDidLoadOn(_ sut: ListViewController) {
@@ -67,19 +61,24 @@ class ListViewControllerTests: XCTestCase {
 }
 
 class ListPresenterSpy: ListPresenterProtocol {
-
-    
-    func viewWillAppear() { }
-    
-    func viewWillDissapear() { }
-    
     var isViewDidLoadCalled = false
+    var isViewWillAppearCalled = false
+    var isWillDisappearCalled = false
+    var isDidSelectRowCalled = false
     
     func viewDidLoad() {
         isViewDidLoadCalled = true
     }
     
+    func viewWillAppear() {
+        isViewWillAppearCalled = true
+    }
+    
+    func viewWillDissapear() {
+        isWillDisappearCalled = true
+    }
+    
     func didSelectRow(section: Int, row: Int) {
-        
+        isDidSelectRowCalled = true
     }
 }

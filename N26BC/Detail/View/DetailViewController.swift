@@ -11,10 +11,10 @@ import UIKit
 final class DetailViewController: UIViewController {
     var presenter: DetailPresenterProtocol!
     
-    @IBOutlet private var titleLabel: UILabel!
-    @IBOutlet private var euroLabel: UILabel!
-    @IBOutlet private var dollarLabel: UILabel!
-    @IBOutlet private var poundLabel: UILabel!
+    @IBOutlet private(set) var titleLabel: UILabel!
+    @IBOutlet private(set) var euroLabel: UILabel!
+    @IBOutlet private(set) var dollarLabel: UILabel!
+    @IBOutlet private(set) var poundLabel: UILabel!
     
     var detailViewModel: DetailViewModel? {
         didSet {
@@ -28,7 +28,7 @@ final class DetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.hidesBackButton = true
-        let backButton = UIBarButtonItem(title: "Backy", style: UIBarButtonItem.Style.plain, target: self, action: #selector(backButtonAction))
+        let backButton = UIBarButtonItem(title: "Back", style: UIBarButtonItem.Style.plain, target: self, action: #selector(backButtonAction))
         self.navigationItem.leftBarButtonItem = backButton
         presenter.viewDidLoad()
     }

@@ -7,9 +7,6 @@
 //
 
 import UIKit
-/* Alerta */
-import Commons
-
 
 final class ListViewController: UIViewController {
     var presenter: ListPresenterProtocol!

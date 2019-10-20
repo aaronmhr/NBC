@@ -10,6 +10,7 @@
 		1813686B235D081600A5FBC5 /* DetailRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1813686A235D081600A5FBC5 /* DetailRouterTests.swift */; };
 		1813686D235D08C500A5FBC5 /* DetailInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1813686C235D08C500A5FBC5 /* DetailInteractorTests.swift */; };
 		1813686F235D0EA500A5FBC5 /* DetailPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1813686E235D0EA500A5FBC5 /* DetailPresenterTests.swift */; };
+		18136871235D1E5D00A5FBC5 /* DetailViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18136870235D1E5D00A5FBC5 /* DetailViewControllerTests.swift */; };
 		1822413B235CBE6A00C13541 /* DetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18224131235CBE6A00C13541 /* DetailPresenter.swift */; };
 		1822413C235CBE6A00C13541 /* Detail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18224133235CBE6A00C13541 /* Detail.storyboard */; };
 		1822413D235CBE6A00C13541 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18224134235CBE6A00C13541 /* DetailViewController.swift */; };
@@ -192,6 +193,7 @@
 		1813686A235D081600A5FBC5 /* DetailRouterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailRouterTests.swift; sourceTree = "<group>"; };
 		1813686C235D08C500A5FBC5 /* DetailInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailInteractorTests.swift; sourceTree = "<group>"; };
 		1813686E235D0EA500A5FBC5 /* DetailPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPresenterTests.swift; sourceTree = "<group>"; };
+		18136870235D1E5D00A5FBC5 /* DetailViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewControllerTests.swift; sourceTree = "<group>"; };
 		18224131235CBE6A00C13541 /* DetailPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailPresenter.swift; sourceTree = "<group>"; };
 		18224133235CBE6A00C13541 /* Detail.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Detail.storyboard; sourceTree = "<group>"; };
 		18224134235CBE6A00C13541 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
@@ -358,6 +360,7 @@
 			isa = PBXGroup;
 			children = (
 				1813686A235D081600A5FBC5 /* DetailRouterTests.swift */,
+				18136870235D1E5D00A5FBC5 /* DetailViewControllerTests.swift */,
 				1813686C235D08C500A5FBC5 /* DetailInteractorTests.swift */,
 				1813686E235D0EA500A5FBC5 /* DetailPresenterTests.swift */,
 			);
@@ -1270,6 +1273,7 @@
 				1874EAD9235373EB00052101 /* ListViewControllerTests.swift in Sources */,
 				1813686F235D0EA500A5FBC5 /* DetailPresenterTests.swift in Sources */,
 				1874EACF235330D200052101 /* ListRouterTests.swift in Sources */,
+				18136871235D1E5D00A5FBC5 /* DetailViewControllerTests.swift in Sources */,
 				1813686B235D081600A5FBC5 /* DetailRouterTests.swift in Sources */,
 				1873E00523582B2D00A85C2A /* ListInteractorTests.swift in Sources */,
 				1841068623532075000AE46C /* TestingAppDelegate.swift in Sources */,
