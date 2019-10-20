@@ -11,61 +11,18 @@ import Networking
 @testable import N26BC
 
 class DefaultHistoricalDataRepositoryTests: XCTestCase {
-    func testGetHistoricalData_whenNoValidBPI_providesError() {
+    func testGetHistoricalData_ProvidesTodayData() {
         let historicalResponse = HistoricalResponseModel(bpi: nil, disclaimer: "test1")
-        
         let successInput: Result<HistoricalResponseModel, NetworkingError> = .success(historicalResponse)
-        
-        let (sut, networking, _) = makeSUT()
         let expectedResponse = N26BCError.other
-        networking.result = successInput
-        
-        sut.getHistoricalData(url: nil) { response in
-            switch (response)  {
-            case .failure(let error):
-                XCTAssertEqual(error, expectedResponse)
-            default: XCTFail()
-            }
-        }
-    }
-    
-    func testGetHistoricalData_whenNoValidDataFormat_providesEmptyValuationList() {
-        let testingCurrency = Currency.euro
-        let historicalResponse = HistoricalResponseModel(bpi: ["": 10.0], disclaimer: "test1")
-        
-        let successInput: Result<HistoricalResponseModel, NetworkingError> = .success(historicalResponse)
         
         let (sut, networking, mapper) = makeSUT()
-        let mappedResponse = mapper.map(response: historicalResponse, for: testingCurrency)
         networking.result = successInput
+        mapper.errorOutput = expectedResponse
         
         sut.getHistoricalData(url: nil) { response in
-            switch (response, mappedResponse)  {
-            case (.success(let successResponse), .success(let mappedResponse)):
-                XCTAssertEqual(successResponse, mappedResponse)
-            default: XCTFail()
-            }
-        }
-    }
-    
-    func testGetHistoricalData_whenMoreThanOneValue_providesEqualValuationList() {
-        let testingCurrency = Currency.euro
-        let historicalResponse = HistoricalResponseModel(
-            bpi: ["2019-09-10T00:00:00+00:00": 1.0, "2019-09-11T00:00:00+00:00": 1.0],
-            disclaimer: "test1")
-        
-        let successInput: Result<HistoricalResponseModel, NetworkingError> = .success(historicalResponse)
-        
-        let (sut, networking, mapper) = makeSUT()
-        let mappedResponse = mapper.map(response: historicalResponse, for: testingCurrency)
-        networking.result = successInput
-        
-        sut.getHistoricalData(url: nil) { response in
-            switch (response, mappedResponse)  {
-            case (.success(let successResponse), .success(let mappedResponse)):
-                XCTAssertEqual(successResponse, mappedResponse)
-            default: XCTFail()
-            }
+            XCTAssertEqual(mapper.successInput, try? networking.result?.get(), "Mapper success input is networking succes result")
+            XCTAssertEqual(response, mapper.resultOutput)
         }
     }
     
@@ -77,29 +34,42 @@ class DefaultHistoricalDataRepositoryTests: XCTestCase {
         let error5 = NetworkingError.other("Test5")
         let error6 = NetworkingError.serverError("Test6")
         
-        let showableError: N26BCError = .networking
-        
         [error1, error2, error3, error4, error5, error6].forEach { currentError in
             let successInput: Result<HistoricalResponseModel, NetworkingError> = .failure(currentError)
 
-            let (sut, networking, _) = makeSUT()
+            let (sut, networking, mapper) = makeSUT()
             networking.result = successInput
             
             sut.getHistoricalData(url: nil) { response in
-                switch response {
-                case .success: XCTFail()
-                case .failure(let error):
-                    XCTAssertEqual(error, showableError)
-                }
+                XCTAssertEqual(mapper.errorInput, currentError)
+                XCTAssertEqual(response.getError(), mapper.errorOutput)
             }
         }
     }
     
     // MARK: - Helpers
-    func makeSUT() -> (DefaultHistoricalDataRepository, TestingURLSessionClient<HistoricalResponseModel>, HistoricalResponseMapperProtocol) {
+    func makeSUT() -> (DefaultHistoricalDataRepository, TestingURLSessionClient<HistoricalResponseModel>, TestingMapper) {
         let networking = TestingURLSessionClient<HistoricalResponseModel>()
-        let mapper = DefaultHistoricalResponseMapper()
+        let mapper = TestingMapper()
         let repository = DefaultHistoricalDataRepository(networking: networking, mapper: mapper)
         return (repository, networking, mapper)
+    }
+    
+    class TestingMapper: HistoricalResponseMapperProtocol {
+        var successInput: HistoricalResponseModel?
+        var errorInput: NetworkingError?
+        
+        var resultOutput: Result<[Valuation], N26BCError> = .failure(.other)
+        var errorOutput: N26BCError = .other
+        
+        func map(response: HistoricalResponseModel, for currency: Currency) -> Result<[Valuation], N26BCError> {
+            successInput = response
+            return resultOutput
+        }
+        
+        func map(error: NetworkingError) -> N26BCError {
+            errorInput = error
+            return errorOutput
+        }
     }
 }
