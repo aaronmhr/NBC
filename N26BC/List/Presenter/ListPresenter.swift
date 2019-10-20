@@ -13,8 +13,6 @@ final class ListPresenter {
     let interactor: ListInteractorProtocol
     weak var view: ListViewProtocol!
     
-    let timer: TimerProtocol = DefaultTimer()
-    
     private var firstSection: TodayTableViewModel? {
         didSet {
             buildNewViewModel(with: firstSection, and: secondSection)
