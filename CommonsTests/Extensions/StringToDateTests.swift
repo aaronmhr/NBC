@@ -39,6 +39,13 @@ class StringToDateTests: XCTestCase {
         XCTAssertEqual(sut.toDateWithFormat(dateFormatter), nil)
     }
     
+    func testOtionalStringToDate_createsDate() {
+        let date = Date(timeIntervalSince1970: 0)
+        let dateFormat = "YYYY-MM-DD"
+        let sut: String? = "1970-01-01"
+        let dateFoormatter = makeFormatter(dateFormat)
+        XCTAssertEqual(sut.toDateWithFormat(dateFoormatter), date)
+    }
     // MARK: - Helpers
     func makeFormatter(_ format: String) -> DateFormatter {
         let formatter = DateFormatter()

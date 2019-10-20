@@ -29,6 +29,7 @@
 		18731E652356BCF700BB577A /* StringToDateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18731E642356BCF700BB577A /* StringToDateTests.swift */; };
 		18731E672356BD1500BB577A /* DateToStringTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18731E662356BD1500BB577A /* DateToStringTests.swift */; };
 		18731E692356C0B700BB577A /* DefaultTodayDataRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18731E682356C0B700BB577A /* DefaultTodayDataRepository.swift */; };
+		187391C5235C424A00FE9108 /* TodayProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187391C4235C424A00FE9108 /* TodayProviderTests.swift */; };
 		1873DFF22358232E00A85C2A /* TodayResponseMapperProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1873DFF12358232E00A85C2A /* TodayResponseMapperProtocol.swift */; };
 		1873DFF42358236100A85C2A /* DefaultTodayResponseMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1873DFF32358236100A85C2A /* DefaultTodayResponseMapper.swift */; };
 		1873DFF6235823D700A85C2A /* DefaultHistoricalResponseMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1873DFF5235823D700A85C2A /* DefaultHistoricalResponseMapper.swift */; };
@@ -174,6 +175,7 @@
 		18731E642356BCF700BB577A /* StringToDateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringToDateTests.swift; sourceTree = "<group>"; };
 		18731E662356BD1500BB577A /* DateToStringTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateToStringTests.swift; sourceTree = "<group>"; };
 		18731E682356C0B700BB577A /* DefaultTodayDataRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultTodayDataRepository.swift; sourceTree = "<group>"; };
+		187391C4235C424A00FE9108 /* TodayProviderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayProviderTests.swift; sourceTree = "<group>"; };
 		1873DFF12358232E00A85C2A /* TodayResponseMapperProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayResponseMapperProtocol.swift; sourceTree = "<group>"; };
 		1873DFF32358236100A85C2A /* DefaultTodayResponseMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultTodayResponseMapper.swift; sourceTree = "<group>"; };
 		1873DFF5235823D700A85C2A /* DefaultHistoricalResponseMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultHistoricalResponseMapper.swift; sourceTree = "<group>"; };
@@ -696,6 +698,7 @@
 		18FB7DD4235B7C7A00E2DA2E /* TodayProvider */ = {
 			isa = PBXGroup;
 			children = (
+				187391C4235C424A00FE9108 /* TodayProviderTests.swift */,
 				18FB7DD5235B942300E2DA2E /* Repository */,
 			);
 			path = TodayProvider;
@@ -1012,6 +1015,7 @@
 			files = (
 				18FB7DCA235B5F6000E2DA2E /* BitCoinDeskAPITests.swift in Sources */,
 				1874EAD9235373EB00052101 /* ListViewControllerTests.swift in Sources */,
+				187391C5235C424A00FE9108 /* TodayProviderTests.swift in Sources */,
 				1873E00923582EC300A85C2A /* DefaultHistoricalDataRepositoryTests.swift in Sources */,
 				18FB7DCE235B71FE00E2DA2E /* DefaultHistoricalResponseMapperTests.swift in Sources */,
 				187B320C2359D91A007E6E3D /* TestingURLSessionClient.swift in Sources */,
