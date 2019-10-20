@@ -60,7 +60,7 @@ class TodayProviderTests: XCTestCase {
         var url: URL?
         var result: Result<Valuation, N26BCError> = .failure(.networking)
         
-        func getTodayData(url: URL?, completion: @escaping (Result<Valuation, N26BCError>) -> Void) {
+        func getTodayData(url: URL?, currency: Currency, completion: @escaping (Result<Valuation, N26BCError>) -> Void) {
             self.url = url
             completion(result)
         }

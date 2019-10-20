@@ -15,9 +15,9 @@ final class DetailRouter: StoryboardInstantiator {
         self.view = view
     }
 
-    static func assembleModule() -> UIViewController {
+    static func assembleModule(valuation: Valuation) -> UIViewController {
         let viewController = defaultViewController(for: DetailViewController.self)
-        let interactor = DetailInteractorComposer.compose()
+        let interactor = DetailInteractorComposer.compose(valuation: valuation)
         let router = DetailRouter(viewController)
         let presenter = DetailPresenter(view: viewController, interactor: interactor, router: router)
         viewController.presenter = presenter
@@ -26,5 +26,7 @@ final class DetailRouter: StoryboardInstantiator {
 }
 
 extension DetailRouter: DetailRouterProtocol {
-
+    func goBack(animated: Bool) {
+        view.navigationController?.popViewController(animated: animated)
+    }
 }

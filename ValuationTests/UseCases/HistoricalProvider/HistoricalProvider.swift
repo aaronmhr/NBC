@@ -60,7 +60,7 @@ class HistoricalProviderTests: XCTestCase {
         var url: URL?
         var result: Result<[Valuation], N26BCError> = .failure(.networking)
         
-        func getHistoricalData(url: URL?, completion: @escaping (Result<[Valuation], N26BCError>) -> Void) {
+        func getHistoricalData(url: URL?, currency: Currency, completion: @escaping (Result<[Valuation], N26BCError>) -> Void) {
             self.url = url
             completion(result)
         }

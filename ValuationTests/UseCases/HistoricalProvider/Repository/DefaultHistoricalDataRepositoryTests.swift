@@ -15,12 +15,13 @@ class DefaultHistoricalDataRepositoryTests: XCTestCase {
         let historicalResponse = HistoricalResponseModel(bpi: nil, disclaimer: "test1")
         let successInput: Result<HistoricalResponseModel, NetworkingError> = .success(historicalResponse)
         let expectedResponse = N26BCError.other
+        let currency = Currency.euro
         
         let (sut, networking, mapper) = makeSUT()
         networking.result = successInput
         mapper.errorOutput = expectedResponse
         
-        sut.getHistoricalData(url: nil) { response in
+        sut.getHistoricalData(url: nil, currency: currency) { response in
             XCTAssertEqual(mapper.successInput, try? networking.result?.get(), "Mapper success input is networking succes result")
             XCTAssertEqual(response, mapper.resultOutput)
         }
@@ -33,6 +34,7 @@ class DefaultHistoricalDataRepositoryTests: XCTestCase {
         let error4 = NetworkingError.invalidResponse
         let error5 = NetworkingError.other("Test5")
         let error6 = NetworkingError.serverError("Test6")
+        let currency = Currency.euro
         
         [error1, error2, error3, error4, error5, error6].forEach { currentError in
             let successInput: Result<HistoricalResponseModel, NetworkingError> = .failure(currentError)
@@ -40,7 +42,7 @@ class DefaultHistoricalDataRepositoryTests: XCTestCase {
             let (sut, networking, mapper) = makeSUT()
             networking.result = successInput
             
-            sut.getHistoricalData(url: nil) { response in
+            sut.getHistoricalData(url: nil, currency: currency) { response in
                 XCTAssertEqual(mapper.errorInput, currentError)
                 XCTAssertEqual(response.getError(), mapper.errorOutput)
             }

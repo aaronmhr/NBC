@@ -13,10 +13,12 @@ import Valuation
 final class DetailInteractor {
     let historicalProvider: HistoricalProviderProtocol
     let todayProvider: TodayProviderProtocol
+    let valuation: Valuation
     
-    init(historicalProvider: HistoricalProviderProtocol, todayProvider: TodayProviderProtocol) {
+    init(historicalProvider: HistoricalProviderProtocol, todayProvider: TodayProviderProtocol, valuation: Valuation) {
         self.historicalProvider = historicalProvider
         self.todayProvider = todayProvider
+        self.valuation = valuation
     }
 }
 

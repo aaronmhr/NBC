@@ -10,7 +10,7 @@ import Valuation
 import Networking
 
 final class DetailInteractorComposer {
-    static func compose() -> DetailInteractor {
+    static func compose(valuation: Valuation) -> DetailInteractor {
         let urlSession = URLSession(configuration: .default)
         let decoder: JSONDecoder = {
             let decoder = JSONDecoder()
@@ -25,6 +25,6 @@ final class DetailInteractorComposer {
         
         let historicalProvider: HistoricalProviderProtocol = HistoricalDataProvider(repository: historicalDataRepository)
         let todayProvider: TodayProviderProtocol = TodayDataProvider(repository: todayDataRepository)
-        return DetailInteractor(historicalProvider: historicalProvider, todayProvider: todayProvider)
+        return DetailInteractor(historicalProvider: historicalProvider, todayProvider: todayProvider, valuation: valuation)
     }
 }

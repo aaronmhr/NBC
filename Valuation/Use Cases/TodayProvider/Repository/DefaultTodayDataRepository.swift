@@ -17,12 +17,13 @@ final class DefaultTodayDataRepository: TodayDataRepository {
         self.mapper = mapper
     }
     
-    func getTodayData(url: URL?, completion: @escaping TodayProviderProtocol.ResultBlock) {
+    func getTodayData(url: URL?, currency: Currency, completion: @escaping TodayProviderProtocol.ResultBlock) {
+        print(url)
         self.networking.fetchResources(url: url) { [weak self] (result: Result<TodayResponseModel, NetworkingError>) in
             guard let self = self else { return }
             switch result {
             case .success(let response):
-                completion(self.mapper.map(response:response, for: .euro))
+                completion(self.mapper.map(response:response, for: currency))
             case .failure(let error):
                 completion(.failure(self.mapper.map(error: error)))
             }

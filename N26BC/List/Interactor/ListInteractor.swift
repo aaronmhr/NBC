@@ -49,6 +49,6 @@ extension ListInteractor  {
     private enum Constants {
         static let currency: Currency = Currency.euro
         static let daysInPeriod = -14
-        static let todayCallPeriod: TimeInterval = 10
+        static let todayCallPeriod: TimeInterval = 60
     }
 }

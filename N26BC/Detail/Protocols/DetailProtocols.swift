@@ -6,14 +6,23 @@
 //  Copyright © 2019 Aaron Huánuco. All rights reserved.
 //
 
+import Networking
+
 protocol DetailInteractorProtocol {
+    var valuation: Valuation { get }
+    func retrieveData(for currency: Currency, date: Date, completion: @escaping (Result<Valuation, N26BCError>) -> Void)
 }
 
 protocol DetailRouterProtocol {
+    func goBack(animated: Bool)
 }
 
 protocol DetailPresenterProtocol {
+    func viewDidLoad()
+    func backButtonDidPress()
 }
 
 protocol DetailViewProtocol: class {
+    var detailViewModel: DetailViewModel? { get set }
+    func backButtonAction()
 }

@@ -17,12 +17,12 @@ final class DefaultHistoricalDataRepository: HistoricalDataRepository {
         self.mapper = mapper
     }
     
-    func getHistoricalData(url: URL?, completion: @escaping HistoricalProviderProtocol.ResultBlock) {
+    func getHistoricalData(url: URL?, currency: Currency, completion: @escaping HistoricalProviderProtocol.ResultBlock) {
         self.networking.fetchResources(url: url) { [weak self] (result: Result<HistoricalResponseModel, NetworkingError>) in
             guard let self = self else { return }
             switch result {
             case .success(let response):
-                completion(self.mapper.map(response: response, for: .euro))
+                completion(self.mapper.map(response: response, for: currency))
             case .failure(let error):
                 completion(.failure(self.mapper.map(error: error)))
             }

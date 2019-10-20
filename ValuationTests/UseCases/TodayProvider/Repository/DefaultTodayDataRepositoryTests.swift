@@ -16,15 +16,16 @@ class DefaultTodayDataRepositoryTests: XCTestCase {
     func testGetTodayData_providesTodayData() {
         let response1 = givenTodayResponseModel(withRate: 1000.0)
         let response2 = givenTodayResponseModel(withRate: 2000.0)
+        let currency = Currency.euro
         [response1, response2].forEach { currentResponse in
             let successInput: Result<TodayResponseModel, NetworkingError> = .success(currentResponse)
-            let successOutput: Result<Valuation, N26BCError> = .success(Valuation(date: Date(), price: 10, currency: .euro))
+            let successOutput: Result<Valuation, N26BCError> = .success(Valuation(date: Date(), price: 10, currency: currency))
 
             let (sut, networking, mapper) = makeSUT()
             networking.result = successInput
             mapper.resultOutput = successOutput
 
-            sut.getTodayData(url: nil) { response in
+            sut.getTodayData(url: nil, currency: currency) { response in
                 XCTAssertEqual(mapper.successInput, try? networking.result?.get(), "Mapper success input is networking succes result")
                 XCTAssertEqual(response, mapper.resultOutput)
             }
@@ -38,6 +39,7 @@ class DefaultTodayDataRepositoryTests: XCTestCase {
         let error4 = NetworkingError.invalidResponse
         let error5 = NetworkingError.other("Test5")
         let error6 = NetworkingError.serverError("Test6")
+        let currency = Currency.euro
 
         [error1, error2, error3, error4, error5, error6].forEach { currentError in
             let successInput: Result<TodayResponseModel, NetworkingError> = .failure(currentError)
@@ -45,7 +47,7 @@ class DefaultTodayDataRepositoryTests: XCTestCase {
             let (sut, networking, mapper) = makeSUT()
             networking.result = successInput
 
-            sut.getTodayData(url: nil) { response in
+            sut.getTodayData(url: nil, currency: currency) { response in
                 XCTAssertEqual(mapper.errorInput, currentError)
                 XCTAssertEqual(response.getError(), mapper.errorOutput)
             }

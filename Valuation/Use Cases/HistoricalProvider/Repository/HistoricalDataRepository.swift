@@ -9,5 +9,5 @@
 import Foundation
 
 protocol HistoricalDataRepository {
-    func getHistoricalData(url: URL?, completion: @escaping HistoricalProviderProtocol.ResultBlock)
+    func getHistoricalData(url: URL?, currency: Currency, completion: @escaping HistoricalProviderProtocol.ResultBlock)
 }

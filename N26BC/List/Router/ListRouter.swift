@@ -28,7 +28,7 @@ final class ListRouter: StoryboardInstantiator {
 extension ListRouter: ListRouterProtocol {
     func showDetailView(for valuation: Valuation?) {
         guard let valuation = valuation else { return }
-        let viewController = DetailRouter.assembleModule()
+        let viewController = DetailRouter.assembleModule(valuation: valuation)
         view.navigationController?.pushViewController(viewController, animated: true)
     }
 }

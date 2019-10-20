@@ -9,5 +9,5 @@
 import Foundation
 
 protocol TodayDataRepository {
-    func getTodayData(url: URL?, completion: @escaping TodayProviderProtocol.ResultBlock)
+    func getTodayData(url: URL?, currency: Currency, completion: @escaping TodayProviderProtocol.ResultBlock)
 }

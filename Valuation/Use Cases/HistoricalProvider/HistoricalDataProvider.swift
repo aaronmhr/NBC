@@ -17,7 +17,7 @@ final class HistoricalDataProvider: HistoricalProviderProtocol {
     
     func retrieveHistoricalData(start: Date, end: Date, currency: Currency, completion: @escaping ResultBlock) {
         let url = getBitcoinDeskAPIURL(start: start, end: end, currency: currency)
-        repository.getHistoricalData(url: url, completion: completion)
+        repository.getHistoricalData(url: url, currency: currency, completion: completion)
     }
     
     private func getBitcoinDeskAPIURL(start: Date, end: Date, currency: Currency) -> URL? {

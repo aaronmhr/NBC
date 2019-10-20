@@ -17,11 +17,11 @@ final class TodayDataProvider: TodayProviderProtocol {
     
     func retrieveTodayData(currency: Currency, completion: @escaping ResultBlock) {
         let url = getBitcoinDeskAPIURL(currency: currency)
-        repository.getTodayData(url: url, completion: completion)
+        repository.getTodayData(url: url, currency: currency, completion: completion)
     }
     
     private func getBitcoinDeskAPIURL(currency: Currency) -> URL? {
-        let url = BitcoinDeskAPI.today(.euro).url
+        let url = BitcoinDeskAPI.today(currency).url
         return url
     }
 }
