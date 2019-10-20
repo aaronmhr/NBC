@@ -13,5 +13,3 @@ struct Valuation: Equatable {
     let price: Double
     let currency: Currency
 }
-
-

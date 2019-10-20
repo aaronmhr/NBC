@@ -126,6 +126,35 @@ class ListPresenterTestsTests: XCTestCase {
         XCTAssertTrue(interactor.isStopRetrievingTodayData)
     }
     
+    func testShowDetailViewSecondSection() {
+        let expectation = XCTestExpectation(description: "Presenter")
+        let (sut, view, interactor, router) = makeSUT()
+        let valuation = Valuation(date: Date(), price: 10, currency: .euro)
+        interactor.resultHistorical = .success([valuation])
+        sut.viewDidLoad()
+        DispatchQueue.main.asyncAfter(deadline: .now()) {
+            XCTAssertTrue(view.isViewModelUpdated)
+            expectation.fulfill()
+            sut.didSelectRow(section: 1, row: 0)
+            XCTAssertTrue(router.shouldShowDetailView)
+        }
+        wait(for: [expectation], timeout: 2.0)
+    }
+    
+    func testShowDetailViewFirstSection() {
+        let expectation = XCTestExpectation(description: "Presenter")
+        let (sut, view, interactor, router) = makeSUT()
+        let valuation = Valuation(date: Date(), price: 10, currency: .euro)
+        interactor.resultToday = .success(valuation)
+        sut.viewWillAppear()
+        DispatchQueue.main.asyncAfter(deadline: .now()) {
+            XCTAssertTrue(view.isViewModelUpdated)
+            expectation.fulfill()
+            sut.didSelectRow(section: 0, row: 0)
+            XCTAssertTrue(router.shouldShowDetailView)
+        }
+        wait(for: [expectation], timeout: 2.0)
+    }
     // MARK: - Helpers
     func makeSUT() -> (ListPresenterProtocol, TestingView, TestingInteractor, TestingRouter) {
         let view = TestingView()
@@ -183,6 +212,10 @@ class ListPresenterTestsTests: XCTestCase {
     }
     
     final class TestingRouter: ListRouterProtocol {
+        var shouldShowDetailView = false
         
+        func showDetailView(for valuation: Valuation?) {
+            shouldShowDetailView = true
+        }
     }
 }

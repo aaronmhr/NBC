@@ -109,5 +109,7 @@ extension ListViewController: UITableViewDataSource {
 
 //MARK: - UITableViewDelegate
 extension ListViewController: UITableViewDelegate {
-
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        presenter.didSelectRow(section: indexPath.section, row: indexPath.row)
+    }
 }

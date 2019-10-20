@@ -13,13 +13,14 @@ protocol ListInteractorProtocol {
 }
 
 protocol ListRouterProtocol {
-    
+    func showDetailView(for valuation: Valuation?)
 }
 
 protocol ListPresenterProtocol {
     func viewDidLoad()
     func viewWillAppear()
     func viewWillDissapear()
+    func didSelectRow(section: Int, row: Int)
 }
 
 protocol ListViewProtocol: Coverable, ErrorPresenter {

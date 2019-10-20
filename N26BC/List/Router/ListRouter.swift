@@ -25,4 +25,8 @@ final class ListRouter: StoryboardInstantiator {
     }
 }
 
-extension ListRouter: ListRouterProtocol { }
+extension ListRouter: ListRouterProtocol {
+    func showDetailView(for valuation: Valuation?) {
+        guard let valuation = valuation else { return }
+    }
+}

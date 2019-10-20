@@ -67,6 +67,8 @@ class ListViewControllerTests: XCTestCase {
 }
 
 class ListPresenterSpy: ListPresenterProtocol {
+
+    
     func viewWillAppear() { }
     
     func viewWillDissapear() { }
@@ -75,5 +77,9 @@ class ListPresenterSpy: ListPresenterProtocol {
     
     func viewDidLoad() {
         isViewDidLoadCalled = true
+    }
+    
+    func didSelectRow(section: Int, row: Int) {
+        
     }
 }

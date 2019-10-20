@@ -433,8 +433,8 @@
 		1841068D235324F2000AE46C /* Router */ = {
 			isa = PBXGroup;
 			children = (
-				187391C9235C660500FE9108 /* Composers */,
 				1874EAD02353311700052101 /* ListRouter.swift */,
+				187391C9235C660500FE9108 /* Composers */,
 			);
 			path = Router;
 			sourceTree = "<group>";

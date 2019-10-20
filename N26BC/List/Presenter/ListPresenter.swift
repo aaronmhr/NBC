@@ -13,6 +13,9 @@ final class ListPresenter {
     let interactor: ListInteractorProtocol
     weak var view: ListViewProtocol!
     
+    private var firstSectionModels: [Valuation] = []
+    private var secondSectionModels: [Valuation] = []
+    
     private var firstSection: TodayTableViewModel? {
         didSet {
             buildNewViewModel(with: firstSection, and: secondSection)
@@ -44,6 +47,7 @@ extension ListPresenter: ListPresenterProtocol {
             }
             switch result {
             case .success(let historicalPrices):
+                self?.secondSectionModels = historicalPrices
                 self?.secondSection = HistoricalTableViewModel.makeSectionViewModel(from: historicalPrices, title: Localizables.secondSection, type: .historical)
             case .failure(let error):
                 DispatchQueue.main.async {
@@ -63,6 +67,7 @@ extension ListPresenter: ListPresenterProtocol {
         self.interactor.retrieveTodayData { [weak self] result in
             switch result {
             case .success(let todayPrices):
+                self?.firstSectionModels = [todayPrices]
                 self?.firstSection = TodayTableViewModel.makeSectionViewModel(from: [todayPrices], title: Localizables.firstSection, type: .today)
             case .failure(let error):
                 DispatchQueue.main.async {
@@ -70,6 +75,21 @@ extension ListPresenter: ListPresenterProtocol {
                 }
             }
         }
+    }
+    
+    func didSelectRow(section: Int, row: Int) {
+        let valuation: Valuation?
+        switch section {
+        case 0:
+            guard firstSectionModels.indices.contains(row) else { return }
+            valuation = firstSectionModels[row]
+        case 1:
+            guard secondSectionModels.indices.contains(row) else { return }
+            valuation = secondSectionModels[row]
+        default:
+            valuation = nil
+        }
+        router.showDetailView(for: valuation)
     }
     
     func viewWillDissapear() {
