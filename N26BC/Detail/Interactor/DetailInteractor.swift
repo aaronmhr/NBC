@@ -11,8 +11,8 @@ import Networking
 import Valuation
 
 final class DetailInteractor {
-    let historicalProvider: HistoricalProviderProtocol
-    let todayProvider: TodayProviderProtocol
+    private let historicalProvider: HistoricalProviderProtocol
+    private let todayProvider: TodayProviderProtocol
     let valuation: Valuation
     
     init(historicalProvider: HistoricalProviderProtocol, todayProvider: TodayProviderProtocol, valuation: Valuation) {

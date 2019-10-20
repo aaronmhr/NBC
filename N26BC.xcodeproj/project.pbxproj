@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1813686B235D081600A5FBC5 /* DetailRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1813686A235D081600A5FBC5 /* DetailRouterTests.swift */; };
+		1813686D235D08C500A5FBC5 /* DetailInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1813686C235D08C500A5FBC5 /* DetailInteractorTests.swift */; };
 		1822413B235CBE6A00C13541 /* DetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18224131235CBE6A00C13541 /* DetailPresenter.swift */; };
 		1822413C235CBE6A00C13541 /* Detail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18224133235CBE6A00C13541 /* Detail.storyboard */; };
 		1822413D235CBE6A00C13541 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18224134235CBE6A00C13541 /* DetailViewController.swift */; };
@@ -186,6 +188,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		1813686A235D081600A5FBC5 /* DetailRouterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailRouterTests.swift; sourceTree = "<group>"; };
+		1813686C235D08C500A5FBC5 /* DetailInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailInteractorTests.swift; sourceTree = "<group>"; };
 		18224131235CBE6A00C13541 /* DetailPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailPresenter.swift; sourceTree = "<group>"; };
 		18224133235CBE6A00C13541 /* Detail.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Detail.storyboard; sourceTree = "<group>"; };
 		18224134235CBE6A00C13541 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
@@ -348,6 +352,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		18136869235D07FC00A5FBC5 /* DetailTests */ = {
+			isa = PBXGroup;
+			children = (
+				1813686A235D081600A5FBC5 /* DetailRouterTests.swift */,
+				1813686C235D08C500A5FBC5 /* DetailInteractorTests.swift */,
+			);
+			path = DetailTests;
+			sourceTree = "<group>";
+		};
 		1822412F235CBE6A00C13541 /* Detail */ = {
 			isa = PBXGroup;
 			children = (
@@ -644,6 +657,7 @@
 			isa = PBXGroup;
 			children = (
 				1841068523532075000AE46C /* TestingAppDelegate.swift */,
+				18136869235D07FC00A5FBC5 /* DetailTests */,
 				1841069523532637000AE46C /* ListTests */,
 				1841067A23531A6C000AE46C /* Info.plist */,
 			);
@@ -1249,8 +1263,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				187391D5235C9AAA00FE9108 /* ListPresenterTests.swift in Sources */,
+				1813686D235D08C500A5FBC5 /* DetailInteractorTests.swift in Sources */,
 				1874EAD9235373EB00052101 /* ListViewControllerTests.swift in Sources */,
 				1874EACF235330D200052101 /* ListRouterTests.swift in Sources */,
+				1813686B235D081600A5FBC5 /* DetailRouterTests.swift in Sources */,
 				1873E00523582B2D00A85C2A /* ListInteractorTests.swift in Sources */,
 				1841068623532075000AE46C /* TestingAppDelegate.swift in Sources */,
 			);
