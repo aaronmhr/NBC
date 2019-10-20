@@ -29,7 +29,7 @@ class ListRouterTests: XCTestCase {
         XCTAssertNotNil(conformingProtocolView, "assembledView conforms to ListViewProtocol by design")
         
         let presenter = view?.presenter as? ListPresenter
-        let conformingProtocolPresenter = view?.presenter as? ListPresenterProtocol
+        let conformingProtocolPresenter = view?.presenter
         XCTAssertNotNil(presenter, "view contains non-nil ListPresenter")
         XCTAssertNotNil(conformingProtocolPresenter, "presenter conforms to ListPresenterProtocol by design")
         
