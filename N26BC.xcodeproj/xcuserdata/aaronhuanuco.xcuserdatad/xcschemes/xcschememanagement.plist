@@ -4,10 +4,15 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>BitCoinPrice.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>4</integer>
+		</dict>
 		<key>Commons.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>3</integer>
+			<integer>2</integer>
 		</dict>
 		<key>N26BC.xcscheme_^#shared#^_</key>
 		<dict>
@@ -17,7 +22,7 @@
 		<key>Networking.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>2</integer>
+			<integer>3</integer>
 		</dict>
 		<key>Valuation.xcscheme_^#shared#^_</key>
 		<dict>
@@ -27,6 +32,11 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>18136875235D21D700A5FBC5</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>1841065D23531A6A000AE46C</key>
 		<dict>
 			<key>primary</key>
