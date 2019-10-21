@@ -2,9 +2,7 @@
 > Fetches current and historical bitcoin - Euro/Dollar/Pound exchange data from BitcoinDesk.com
 
 [![Swift Version][swift-image]][swift-url]
-![Platform](https://img.shields.io/cocoapods/p/LFAlertController.svg?style=flat)](http://cocoapods.org/pods/LFAlertController)
 
-One to two paragraph statement about your product and what it does.
 
 
 ## Features
@@ -29,7 +27,7 @@ One to two paragraph statement about your product and what it does.
 
 Aaron Huánuco – aaronmhr@gmail.com
 
-[https://github.com/yourname/github-link](https://github.com/dbader/)
+[https://github.com/aaronmhr/N26BC](https://github.com/aaronmhr/N26BC)
 
 [swift-image]:https://img.shields.io/badge/swift-5.0-orange.svg
 [swift-url]: https://swift.org/
