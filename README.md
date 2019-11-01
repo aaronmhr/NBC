@@ -32,7 +32,7 @@ The code is divided in diferent targets
 
 ## Structure
 
-![Screenshot](Assets/N26BC.png)
+![Screenshot](Assets/NBC.png)
 
 ## Usage example
 
