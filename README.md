@@ -15,7 +15,9 @@ The code is divided in diferent targets
 | BitCoinPrice      | Today extension      |   UI-Specific |
 
 
+## Screenshots
 
+<img src="BCList.png" width="30%"> <img src="BCDetail.png" width="30%"> <img src="BCTodayExtension.png" width="30%">
 
 ## Features
 
