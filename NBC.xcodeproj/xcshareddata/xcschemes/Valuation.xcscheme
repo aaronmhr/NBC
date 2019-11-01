@@ -17,7 +17,7 @@
                BlueprintIdentifier = "187321E6235CAA2E00F22EB7"
                BuildableName = "Valuation.framework"
                BlueprintName = "Valuation"
-               ReferencedContainer = "container:N26BC.xcodeproj">
+               ReferencedContainer = "container:NBC.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -36,7 +36,7 @@
                BlueprintIdentifier = "187321EE235CAA2E00F22EB7"
                BuildableName = "ValuationTests.xctest"
                BlueprintName = "ValuationTests"
-               ReferencedContainer = "container:N26BC.xcodeproj">
+               ReferencedContainer = "container:NBC.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -64,7 +64,7 @@
             BlueprintIdentifier = "187321E6235CAA2E00F22EB7"
             BuildableName = "Valuation.framework"
             BlueprintName = "Valuation"
-            ReferencedContainer = "container:N26BC.xcodeproj">
+            ReferencedContainer = "container:NBC.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </ProfileAction>

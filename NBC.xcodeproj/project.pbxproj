@@ -304,12 +304,12 @@
 		18326281235D01B100CBB9CC /* Currency.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
 		18326282235D01B100CBB9CC /* Valuation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Valuation.swift; sourceTree = "<group>"; };
 		18326284235D01B100CBB9CC /* BitCoinDeskAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BitCoinDeskAPI.swift; sourceTree = "<group>"; };
-		1841065E23531A6A000AE46C /* N26BC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = N26BC.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1841065E23531A6A000AE46C /* NBC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NBC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1841066123531A6A000AE46C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1841066A23531A6C000AE46C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1841066D23531A6C000AE46C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1841066F23531A6C000AE46C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1841067423531A6C000AE46C /* N26BCTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = N26BCTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1841067423531A6C000AE46C /* NBCTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NBCTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1841067A23531A6C000AE46C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1841068323531E95000AE46C /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		1841068523532075000AE46C /* TestingAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestingAppDelegate.swift; sourceTree = "<group>"; };
@@ -766,8 +766,8 @@
 		1841065523531A6A000AE46C = {
 			isa = PBXGroup;
 			children = (
-				1841066023531A6A000AE46C /* N26BC */,
-				1841067723531A6C000AE46C /* N26BCTests */,
+				1841066023531A6A000AE46C /* NBC */,
+				1841067723531A6C000AE46C /* NBCTests */,
 				1874EAE523538F9E00052101 /* Networking */,
 				1874EAF223538F9F00052101 /* NetworkingTests */,
 				18731E422356BC6E00BB577A /* Commons */,
@@ -784,8 +784,8 @@
 		1841065F23531A6A000AE46C /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1841065E23531A6A000AE46C /* N26BC.app */,
-				1841067423531A6C000AE46C /* N26BCTests.xctest */,
+				1841065E23531A6A000AE46C /* NBC.app */,
+				1841067423531A6C000AE46C /* NBCTests.xctest */,
 				1874EAE423538F9E00052101 /* Networking.framework */,
 				1874EAEC23538F9F00052101 /* NetworkingTests.xctest */,
 				18731E412356BC6E00BB577A /* Commons.framework */,
@@ -797,7 +797,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		1841066023531A6A000AE46C /* N26BC */ = {
+		1841066023531A6A000AE46C /* NBC */ = {
 			isa = PBXGroup;
 			children = (
 				1874EADA235378BA00052101 /* Utils */,
@@ -811,10 +811,10 @@
 				1841066C23531A6C000AE46C /* LaunchScreen.storyboard */,
 				1841066F23531A6C000AE46C /* Info.plist */,
 			);
-			path = N26BC;
+			path = NBC;
 			sourceTree = "<group>";
 		};
-		1841067723531A6C000AE46C /* N26BCTests */ = {
+		1841067723531A6C000AE46C /* NBCTests */ = {
 			isa = PBXGroup;
 			children = (
 				1841068523532075000AE46C /* TestingAppDelegate.swift */,
@@ -822,7 +822,7 @@
 				1841069523532637000AE46C /* ListTests */,
 				1841067A23531A6C000AE46C /* Info.plist */,
 			);
-			path = N26BCTests;
+			path = NBCTests;
 			sourceTree = "<group>";
 		};
 		1841068723532484000AE46C /* List */ = {
@@ -1131,9 +1131,9 @@
 			productReference = 18136876235D21D700A5FBC5 /* BitCoinPrice.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
-		1841065D23531A6A000AE46C /* N26BC */ = {
+		1841065D23531A6A000AE46C /* NBC */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1841067D23531A6C000AE46C /* Build configuration list for PBXNativeTarget "N26BC" */;
+			buildConfigurationList = 1841067D23531A6C000AE46C /* Build configuration list for PBXNativeTarget "NBC" */;
 			buildPhases = (
 				1841065A23531A6A000AE46C /* Sources */,
 				1841065B23531A6A000AE46C /* Frameworks */,
@@ -1149,14 +1149,14 @@
 				187321FB235CAA2E00F22EB7 /* PBXTargetDependency */,
 				18136882235D21D700A5FBC5 /* PBXTargetDependency */,
 			);
-			name = N26BC;
+			name = NBC;
 			productName = N26BC;
-			productReference = 1841065E23531A6A000AE46C /* N26BC.app */;
+			productReference = 1841065E23531A6A000AE46C /* NBC.app */;
 			productType = "com.apple.product-type.application";
 		};
-		1841067323531A6C000AE46C /* N26BCTests */ = {
+		1841067323531A6C000AE46C /* NBCTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1841068023531A6C000AE46C /* Build configuration list for PBXNativeTarget "N26BCTests" */;
+			buildConfigurationList = 1841068023531A6C000AE46C /* Build configuration list for PBXNativeTarget "NBCTests" */;
 			buildPhases = (
 				1841067023531A6C000AE46C /* Sources */,
 				1841067123531A6C000AE46C /* Frameworks */,
@@ -1167,9 +1167,9 @@
 			dependencies = (
 				1841067623531A6C000AE46C /* PBXTargetDependency */,
 			);
-			name = N26BCTests;
+			name = NBCTests;
 			productName = N26BCTests;
-			productReference = 1841067423531A6C000AE46C /* N26BCTests.xctest */;
+			productReference = 1841067423531A6C000AE46C /* NBCTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		18731E402356BC6E00BB577A /* Commons */ = {
@@ -1331,7 +1331,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 1841065923531A6A000AE46C /* Build configuration list for PBXProject "N26BC" */;
+			buildConfigurationList = 1841065923531A6A000AE46C /* Build configuration list for PBXProject "NBC" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -1344,8 +1344,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				1841065D23531A6A000AE46C /* N26BC */,
-				1841067323531A6C000AE46C /* N26BCTests */,
+				1841065D23531A6A000AE46C /* NBC */,
+				1841067323531A6C000AE46C /* NBCTests */,
 				1874EAE323538F9E00052101 /* Networking */,
 				1874EAEB23538F9F00052101 /* NetworkingTests */,
 				18731E402356BC6E00BB577A /* Commons */,
@@ -1613,7 +1613,7 @@
 		};
 		1841067623531A6C000AE46C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 1841065D23531A6A000AE46C /* N26BC */;
+			target = 1841065D23531A6A000AE46C /* NBC */;
 			targetProxy = 1841067523531A6C000AE46C /* PBXContainerItemProxy */;
 		};
 		18731E4C2356BC6E00BB577A /* PBXTargetDependency */ = {
@@ -1623,7 +1623,7 @@
 		};
 		18731E4E2356BC6E00BB577A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 1841065D23531A6A000AE46C /* N26BC */;
+			target = 1841065D23531A6A000AE46C /* NBC */;
 			targetProxy = 18731E4D2356BC6E00BB577A /* PBXContainerItemProxy */;
 		};
 		18731E552356BC6E00BB577A /* PBXTargetDependency */ = {
@@ -1638,7 +1638,7 @@
 		};
 		187321F4235CAA2E00F22EB7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 1841065D23531A6A000AE46C /* N26BC */;
+			target = 1841065D23531A6A000AE46C /* NBC */;
 			targetProxy = 187321F3235CAA2E00F22EB7 /* PBXContainerItemProxy */;
 		};
 		187321FB235CAA2E00F22EB7 /* PBXTargetDependency */ = {
@@ -1653,7 +1653,7 @@
 		};
 		1874EAF123538F9F00052101 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 1841065D23531A6A000AE46C /* N26BC */;
+			target = 1841065D23531A6A000AE46C /* NBC */;
 			targetProxy = 1874EAF023538F9F00052101 /* PBXContainerItemProxy */;
 		};
 		1874EAF823538F9F00052101 /* PBXTargetDependency */ = {
@@ -1695,7 +1695,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = aaronmhr.N26BC.BitCoinPrice;
+				PRODUCT_BUNDLE_IDENTIFIER = aaronmhr.NBC.BitCoinPrice;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
@@ -1715,7 +1715,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = aaronmhr.N26BC.BitCoinPrice;
+				PRODUCT_BUNDLE_IDENTIFIER = aaronmhr.NBC.BitCoinPrice;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
@@ -1844,12 +1844,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TXH9ALPT83;
-				INFOPLIST_FILE = N26BC/Info.plist;
+				INFOPLIST_FILE = NBC/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = aaronmhr.N26BC;
+				PRODUCT_BUNDLE_IDENTIFIER = aaronmhr.NBC;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1863,12 +1863,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TXH9ALPT83;
-				INFOPLIST_FILE = N26BC/Info.plist;
+				INFOPLIST_FILE = NBC/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = aaronmhr.N26BC;
+				PRODUCT_BUNDLE_IDENTIFIER = aaronmhr.NBC;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1882,18 +1882,18 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TXH9ALPT83;
-				INFOPLIST_FILE = N26BCTests/Info.plist;
+				INFOPLIST_FILE = NBCTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = aaronmhr.N26BCTests;
+				PRODUCT_BUNDLE_IDENTIFIER = aaronmhr.NBCTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/N26BC.app/N26BC";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NBC.app/NBC";
 			};
 			name = Debug;
 		};
@@ -1904,18 +1904,18 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TXH9ALPT83;
-				INFOPLIST_FILE = N26BCTests/Info.plist;
+				INFOPLIST_FILE = NBCTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = aaronmhr.N26BCTests;
+				PRODUCT_BUNDLE_IDENTIFIER = aaronmhr.NBCTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/N26BC.app/N26BC";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NBC.app/NBC";
 			};
 			name = Release;
 		};
@@ -1997,7 +1997,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/N26BC.app/N26BC";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NBC.app/NBC";
 			};
 			name = Debug;
 		};
@@ -2018,7 +2018,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/N26BC.app/N26BC";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NBC.app/NBC";
 			};
 			name = Release;
 		};
@@ -2097,7 +2097,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/N26BC.app/N26BC";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NBC.app/NBC";
 			};
 			name = Debug;
 		};
@@ -2118,7 +2118,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/N26BC.app/N26BC";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NBC.app/NBC";
 			};
 			name = Release;
 		};
@@ -2200,7 +2200,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/N26BC.app/N26BC";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NBC.app/NBC";
 			};
 			name = Debug;
 		};
@@ -2221,7 +2221,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/N26BC.app/N26BC";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NBC.app/NBC";
 			};
 			name = Release;
 		};
@@ -2237,7 +2237,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1841065923531A6A000AE46C /* Build configuration list for PBXProject "N26BC" */ = {
+		1841065923531A6A000AE46C /* Build configuration list for PBXProject "NBC" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1841067B23531A6C000AE46C /* Debug */,
@@ -2246,7 +2246,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1841067D23531A6C000AE46C /* Build configuration list for PBXNativeTarget "N26BC" */ = {
+		1841067D23531A6C000AE46C /* Build configuration list for PBXNativeTarget "NBC" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1841067E23531A6C000AE46C /* Debug */,
@@ -2255,7 +2255,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1841068023531A6C000AE46C /* Build configuration list for PBXNativeTarget "N26BCTests" */ = {
+		1841068023531A6C000AE46C /* Build configuration list for PBXNativeTarget "NBCTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1841068123531A6C000AE46C /* Debug */,

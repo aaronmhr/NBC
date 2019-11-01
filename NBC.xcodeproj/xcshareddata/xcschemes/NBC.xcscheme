@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "1841065D23531A6A000AE46C"
-               BuildableName = "N26BC.app"
-               BlueprintName = "N26BC"
-               ReferencedContainer = "container:N26BC.xcodeproj">
+               BuildableName = "NBC.app"
+               BlueprintName = "NBC"
+               ReferencedContainer = "container:NBC.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -35,9 +35,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "1841067323531A6C000AE46C"
-               BuildableName = "N26BCTests.xctest"
-               BlueprintName = "N26BCTests"
-               ReferencedContainer = "container:N26BC.xcodeproj">
+               BuildableName = "NBCTests.xctest"
+               BlueprintName = "NBCTests"
+               ReferencedContainer = "container:NBC.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
@@ -48,7 +48,7 @@
                BlueprintIdentifier = "1874EAEB23538F9F00052101"
                BuildableName = "NetworkingTests.xctest"
                BlueprintName = "NetworkingTests"
-               ReferencedContainer = "container:N26BC.xcodeproj">
+               ReferencedContainer = "container:NBC.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
@@ -59,7 +59,7 @@
                BlueprintIdentifier = "18731E482356BC6E00BB577A"
                BuildableName = "CommonsTests.xctest"
                BlueprintName = "CommonsTests"
-               ReferencedContainer = "container:N26BC.xcodeproj">
+               ReferencedContainer = "container:NBC.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
@@ -70,7 +70,7 @@
                BlueprintIdentifier = "187321EE235CAA2E00F22EB7"
                BuildableName = "ValuationTests.xctest"
                BlueprintName = "ValuationTests"
-               ReferencedContainer = "container:N26BC.xcodeproj">
+               ReferencedContainer = "container:NBC.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -90,9 +90,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "1841065D23531A6A000AE46C"
-            BuildableName = "N26BC.app"
-            BlueprintName = "N26BC"
-            ReferencedContainer = "container:N26BC.xcodeproj">
+            BuildableName = "NBC.app"
+            BlueprintName = "NBC"
+            ReferencedContainer = "container:NBC.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -107,9 +107,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "1841065D23531A6A000AE46C"
-            BuildableName = "N26BC.app"
-            BlueprintName = "N26BC"
-            ReferencedContainer = "container:N26BC.xcodeproj">
+            BuildableName = "NBC.app"
+            BlueprintName = "NBC"
+            ReferencedContainer = "container:NBC.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
