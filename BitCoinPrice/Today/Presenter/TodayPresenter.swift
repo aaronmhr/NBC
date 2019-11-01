@@ -26,13 +26,11 @@ extension TodayPresenter: TodayPresenterProtocol {
     func viewWillAppear() {
         view.viewModel = nil
         self.interactor.retrieveTodayData { [weak self] result in
-            DispatchQueue.main.async {
-                switch result {
-                case .success(let today):
-                    self?.view.viewModel = self?.map(price: today.price, currency: today.currency)
-                case .failure:
-                    self?.view.viewModel = "Something went wrong! 😔"
-                }
+            switch result {
+            case .success(let today):
+                self?.view.viewModel = self?.map(price: today.price, currency: today.currency)
+            case .failure:
+                self?.view.viewModel = "Something went wrong! 😔"
             }
         }
     }

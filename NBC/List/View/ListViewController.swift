@@ -18,12 +18,10 @@ final class ListViewController: UIViewController {
         view.alpha = 0.3
         return view
     }()
-
+    
     var tableViewModel: [ListViewSection] = [] {
         didSet {
-            DispatchQueue.main.async {
-                self.tableView.reloadData()
-            }
+            self.tableView.reloadData()
         }
     }
     
@@ -53,19 +51,15 @@ extension ListViewController {
 
 extension ListViewController: ListViewProtocol { 
     func addFullScreenLoadingView() {
-        DispatchQueue.main.async {
-            guard let view = self.fullScreenView else { return }
-            self.tableView.isUserInteractionEnabled = false
-            self.navigationController?.navigationBar.addSubview(view)
-        }
+        guard let view = self.fullScreenView else { return }
+        self.tableView.isUserInteractionEnabled = false
+        self.navigationController?.navigationBar.addSubview(view)
     }
     
     func removeFullScreenLoadingView() {
-        DispatchQueue.main.async {
-            guard let view = self.fullScreenView else { return }
-            self.tableView.isUserInteractionEnabled = true
-            view.removeFromSuperview()
-        }
+        guard let view = self.fullScreenView else { return }
+        self.tableView.isUserInteractionEnabled = true
+        view.removeFromSuperview()
     }
 }
 //MARK: - UITableViewDataSource

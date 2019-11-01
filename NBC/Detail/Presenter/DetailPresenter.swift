@@ -37,15 +37,13 @@ extension DetailPresenter: DetailPresenterProtocol {
     private func loadData() {
         [Currency.euro, .dollar, .pound].forEach { currency in
             interactor.retrieveData(for: currency, date: interactor.valuation.date) { [weak self] result in
-                DispatchQueue.main.async {
-                    switch result {
-                    case .success(let valuation):
-                        
-                        self?.handleSuccess(valuation: valuation, currency: currency)
-                    case .failure(let error):
-                        self?.view.showError(error: error) {
-                            self?.backButtonDidPress()
-                        }
+                switch result {
+                case .success(let valuation):
+                    
+                    self?.handleSuccess(valuation: valuation, currency: currency)
+                case .failure(let error):
+                    self?.view.showError(error: error) {
+                        self?.backButtonDidPress()
                     }
                 }
             }

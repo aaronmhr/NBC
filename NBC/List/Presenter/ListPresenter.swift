@@ -44,17 +44,13 @@ extension ListPresenter: ListPresenterProtocol {
     func viewDidLoad() {
         view.addFullScreenLoadingView()
         interactor.retrieveHistoricalData { [weak self] result in
-            DispatchQueue.main.async {
-                self?.view.removeFullScreenLoadingView()
-            }
+            self?.view.removeFullScreenLoadingView()
             switch result {
             case .success(let historicalPrices):
                 self?.secondSectionModels = historicalPrices
                 self?.secondSection = HistoricalTableViewModel.makeSectionViewModel(from: historicalPrices, title: Localizables.secondSection)
             case .failure(let error):
-                DispatchQueue.main.async {
-                    self?.view.showError(error: error, action: self?.restartLoading)
-                }
+                self?.view.showError(error: error, action: self?.restartLoading)
             }
         }
     }
@@ -72,9 +68,7 @@ extension ListPresenter: ListPresenterProtocol {
                 self?.firstSectionModels = [todayPrices]
                 self?.firstSection = TodayTableViewModel.makeSectionViewModel(from: [todayPrices], title: Localizables.firstSection)
             case .failure(let error):
-                DispatchQueue.main.async {
-                    self?.view.showError(error: error, action: self?.restartLoading)
-                }
+                self?.view.showError(error: error, action: self?.restartLoading)
             }
         }
     }
