@@ -135,6 +135,27 @@
 			remoteGlobalIDString = 18731E402356BC6E00BB577A;
 			remoteInfo = Commons;
 		};
+		182EBE89236C728100B6FEAF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1841065623531A6A000AE46C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 187321E6235CAA2E00F22EB7;
+			remoteInfo = Valuation;
+		};
+		182EBE8B236C728500B6FEAF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1841065623531A6A000AE46C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 18731E402356BC6E00BB577A;
+			remoteInfo = Commons;
+		};
+		182EBE8D236C728C00B6FEAF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1841065623531A6A000AE46C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1874EAE323538F9E00052101;
+			remoteInfo = Networking;
+		};
 		1841067523531A6C000AE46C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 1841065623531A6A000AE46C /* Project object */;
@@ -1101,6 +1122,9 @@
 			buildRules = (
 			);
 			dependencies = (
+				182EBE8E236C728C00B6FEAF /* PBXTargetDependency */,
+				182EBE8C236C728500B6FEAF /* PBXTargetDependency */,
+				182EBE8A236C728100B6FEAF /* PBXTargetDependency */,
 			);
 			name = BitCoinPrice;
 			productName = BitCoinPrice;
@@ -1572,6 +1596,21 @@
 			target = 18731E402356BC6E00BB577A /* Commons */;
 			targetProxy = 182EBE87236C70A300B6FEAF /* PBXContainerItemProxy */;
 		};
+		182EBE8A236C728100B6FEAF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 187321E6235CAA2E00F22EB7 /* Valuation */;
+			targetProxy = 182EBE89236C728100B6FEAF /* PBXContainerItemProxy */;
+		};
+		182EBE8C236C728500B6FEAF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 18731E402356BC6E00BB577A /* Commons */;
+			targetProxy = 182EBE8B236C728500B6FEAF /* PBXContainerItemProxy */;
+		};
+		182EBE8E236C728C00B6FEAF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1874EAE323538F9E00052101 /* Networking */;
+			targetProxy = 182EBE8D236C728C00B6FEAF /* PBXContainerItemProxy */;
+		};
 		1841067623531A6C000AE46C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 1841065D23531A6A000AE46C /* N26BC */;
@@ -1883,6 +1922,7 @@
 		18731E582356BC6E00BB577A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -1913,6 +1953,7 @@
 		18731E592356BC6E00BB577A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -1984,6 +2025,7 @@
 		187321FE235CAA2E00F22EB7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -2012,6 +2054,7 @@
 		187321FF235CAA2E00F22EB7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -2082,6 +2125,7 @@
 		1874EAFC23538F9F00052101 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -2112,6 +2156,7 @@
 		1874EAFD23538F9F00052101 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
