@@ -26,6 +26,8 @@
 		1822413F235CBE6A00C13541 /* DetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18224138235CBE6A00C13541 /* DetailInteractor.swift */; };
 		18224140235CBE6A00C13541 /* DetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1822413A235CBE6A00C13541 /* DetailRouter.swift */; };
 		18224143235CD67200C13541 /* DetailInteractorComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18224142235CD67200C13541 /* DetailInteractorComposer.swift */; };
+		182EBE91236CC54A00B6FEAF /* HistoricalTableViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182EBE90236CC54A00B6FEAF /* HistoricalTableViewModelTests.swift */; };
+		182EBE93236CCB6400B6FEAF /* TodayTableViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182EBE92236CCB6400B6FEAF /* TodayTableViewModelTests.swift */; };
 		1832625E235D015C00CBB9CC /* BitCoinDeskAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1832624E235D015C00CBB9CC /* BitCoinDeskAPITests.swift */; };
 		1832625F235D015C00CBB9CC /* TestingURLSessionClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18326251235D015C00CBB9CC /* TestingURLSessionClient.swift */; };
 		18326260235D015C00CBB9CC /* DefaultHistoricalResponseMapperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18326255235D015C00CBB9CC /* DefaultHistoricalResponseMapperTests.swift */; };
@@ -275,6 +277,8 @@
 		18224138235CBE6A00C13541 /* DetailInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailInteractor.swift; sourceTree = "<group>"; };
 		1822413A235CBE6A00C13541 /* DetailRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailRouter.swift; sourceTree = "<group>"; };
 		18224142235CD67200C13541 /* DetailInteractorComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailInteractorComposer.swift; sourceTree = "<group>"; };
+		182EBE90236CC54A00B6FEAF /* HistoricalTableViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoricalTableViewModelTests.swift; sourceTree = "<group>"; };
+		182EBE92236CCB6400B6FEAF /* TodayTableViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayTableViewModelTests.swift; sourceTree = "<group>"; };
 		1832624E235D015C00CBB9CC /* BitCoinDeskAPITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BitCoinDeskAPITests.swift; sourceTree = "<group>"; };
 		18326251235D015C00CBB9CC /* TestingURLSessionClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestingURLSessionClient.swift; sourceTree = "<group>"; };
 		18326255235D015C00CBB9CC /* DefaultHistoricalResponseMapperTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultHistoricalResponseMapperTests.swift; sourceTree = "<group>"; };
@@ -579,6 +583,15 @@
 			path = Composers;
 			sourceTree = "<group>";
 		};
+		182EBE8F236CC53600B6FEAF /* ViewModelTests */ = {
+			isa = PBXGroup;
+			children = (
+				182EBE90236CC54A00B6FEAF /* HistoricalTableViewModelTests.swift */,
+				182EBE92236CCB6400B6FEAF /* TodayTableViewModelTests.swift */,
+			);
+			path = ViewModelTests;
+			sourceTree = "<group>";
+		};
 		1832624D235D015C00CBB9CC /* API */ = {
 			isa = PBXGroup;
 			children = (
@@ -880,6 +893,7 @@
 		1841069523532637000AE46C /* ListTests */ = {
 			isa = PBXGroup;
 			children = (
+				182EBE8F236CC53600B6FEAF /* ViewModelTests */,
 				1874EACC235330B200052101 /* ListRouterTests.swift */,
 				1874EAD8235373EB00052101 /* ListViewControllerTests.swift */,
 				1873E00423582B2D00A85C2A /* ListInteractorTests.swift */,
@@ -1474,6 +1488,8 @@
 				187391D5235C9AAA00FE9108 /* ListPresenterTests.swift in Sources */,
 				1813686D235D08C500A5FBC5 /* DetailInteractorTests.swift in Sources */,
 				1874EAD9235373EB00052101 /* ListViewControllerTests.swift in Sources */,
+				182EBE91236CC54A00B6FEAF /* HistoricalTableViewModelTests.swift in Sources */,
+				182EBE93236CCB6400B6FEAF /* TodayTableViewModelTests.swift in Sources */,
 				1813686F235D0EA500A5FBC5 /* DetailPresenterTests.swift in Sources */,
 				1874EACF235330D200052101 /* ListRouterTests.swift in Sources */,
 				18136871235D1E5D00A5FBC5 /* DetailViewControllerTests.swift in Sources */,

@@ -21,7 +21,7 @@ struct TodayTableViewModel: ListViewSection {
     static func makeSectionViewModel(from model: [Valuation], title: String) -> TodayTableViewModel {
         
         let pricesModel: [PricesViewModel] = model.map {
-            let date: String = $0.date.toStringWithFormat("MM-dd-yyyy  HH:mm")
+            let date: String = $0.date.toStringWithFormat("MM-dd-yyyy HH:mm")
             let price = "1BTC = \($0.price) \($0.currency.rawValue)"
             return PricesViewModel(date: date, price: price)
         }
