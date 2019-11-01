@@ -6,6 +6,7 @@
 //  Copyright © 2019 Aaron Huánuco. All rights reserved.
 //
 
+import Foundation
 import Valuation
 import Networking
 import Valuation

@@ -61,7 +61,6 @@
 		1841068623532075000AE46C /* TestingAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1841068523532075000AE46C /* TestingAppDelegate.swift */; };
 		184106AA23532D37000AE46C /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184106A923532D37000AE46C /* ListViewController.swift */; };
 		18731E4A2356BC6E00BB577A /* Commons.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18731E412356BC6E00BB577A /* Commons.framework */; };
-		18731E532356BC6E00BB577A /* Commons.h in Headers */ = {isa = PBXBuildFile; fileRef = 18731E432356BC6E00BB577A /* Commons.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		18731E562356BC6E00BB577A /* Commons.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18731E412356BC6E00BB577A /* Commons.framework */; };
 		18731E572356BC6E00BB577A /* Commons.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 18731E412356BC6E00BB577A /* Commons.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		18731E602356BC9900BB577A /* StringToDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18731E5F2356BC9900BB577A /* StringToDate.swift */; };
@@ -69,7 +68,6 @@
 		18731E652356BCF700BB577A /* StringToDateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18731E642356BCF700BB577A /* StringToDateTests.swift */; };
 		18731E672356BD1500BB577A /* DateToStringTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18731E662356BD1500BB577A /* DateToStringTests.swift */; };
 		187321F0235CAA2E00F22EB7 /* Valuation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 187321E7235CAA2E00F22EB7 /* Valuation.framework */; };
-		187321F9235CAA2E00F22EB7 /* Valuation.h in Headers */ = {isa = PBXBuildFile; fileRef = 187321E9235CAA2E00F22EB7 /* Valuation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		187321FC235CAA2E00F22EB7 /* Valuation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 187321E7235CAA2E00F22EB7 /* Valuation.framework */; };
 		187321FD235CAA2E00F22EB7 /* Valuation.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 187321E7235CAA2E00F22EB7 /* Valuation.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		187391CB235C661700FE9108 /* ListInteractorComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187391CA235C661700FE9108 /* ListInteractorComposer.swift */; };
@@ -94,7 +92,6 @@
 		1874EAD9235373EB00052101 /* ListViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1874EAD8235373EB00052101 /* ListViewControllerTests.swift */; };
 		1874EADE23537A6100052101 /* StoryboardInstantiator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1874EADD23537A6100052101 /* StoryboardInstantiator.swift */; };
 		1874EAED23538F9F00052101 /* Networking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1874EAE423538F9E00052101 /* Networking.framework */; };
-		1874EAF623538F9F00052101 /* Networking.h in Headers */ = {isa = PBXBuildFile; fileRef = 1874EAE623538F9E00052101 /* Networking.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1874EAF923538F9F00052101 /* Networking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1874EAE423538F9E00052101 /* Networking.framework */; };
 		1874EAFA23538F9F00052101 /* Networking.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1874EAE423538F9E00052101 /* Networking.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		1874EB03235390AE00052101 /* URLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1874EB02235390AE00052101 /* URLSession.swift */; };
@@ -116,6 +113,27 @@
 			proxyType = 1;
 			remoteGlobalIDString = 18136875235D21D700A5FBC5;
 			remoteInfo = BitCoinPrice;
+		};
+		182EBE83236C709300B6FEAF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1841065623531A6A000AE46C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 18731E402356BC6E00BB577A;
+			remoteInfo = Commons;
+		};
+		182EBE85236C709F00B6FEAF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1841065623531A6A000AE46C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1874EAE323538F9E00052101;
+			remoteInfo = Networking;
+		};
+		182EBE87236C70A300B6FEAF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1841065623531A6A000AE46C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 18731E402356BC6E00BB577A;
+			remoteInfo = Commons;
 		};
 		1841067523531A6C000AE46C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -276,7 +294,6 @@
 		1841068523532075000AE46C /* TestingAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestingAppDelegate.swift; sourceTree = "<group>"; };
 		184106A923532D37000AE46C /* ListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		18731E412356BC6E00BB577A /* Commons.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Commons.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		18731E432356BC6E00BB577A /* Commons.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Commons.h; sourceTree = "<group>"; };
 		18731E442356BC6E00BB577A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		18731E492356BC6E00BB577A /* CommonsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CommonsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		18731E522356BC6E00BB577A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -285,7 +302,6 @@
 		18731E642356BCF700BB577A /* StringToDateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringToDateTests.swift; sourceTree = "<group>"; };
 		18731E662356BD1500BB577A /* DateToStringTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateToStringTests.swift; sourceTree = "<group>"; };
 		187321E7235CAA2E00F22EB7 /* Valuation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Valuation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		187321E9235CAA2E00F22EB7 /* Valuation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Valuation.h; sourceTree = "<group>"; };
 		187321EA235CAA2E00F22EB7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		187321EF235CAA2E00F22EB7 /* ValuationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ValuationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		187321F8235CAA2E00F22EB7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -311,7 +327,6 @@
 		1874EAD8235373EB00052101 /* ListViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewControllerTests.swift; sourceTree = "<group>"; };
 		1874EADD23537A6100052101 /* StoryboardInstantiator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardInstantiator.swift; sourceTree = "<group>"; };
 		1874EAE423538F9E00052101 /* Networking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Networking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		1874EAE623538F9E00052101 /* Networking.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Networking.h; sourceTree = "<group>"; };
 		1874EAE723538F9E00052101 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1874EAEC23538F9F00052101 /* NetworkingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NetworkingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1874EAF523538F9F00052101 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -859,7 +874,6 @@
 			children = (
 				187E99882357883F00B57FCC /* Timer */,
 				18731E5E2356BC8000BB577A /* Extensions */,
-				18731E432356BC6E00BB577A /* Commons.h */,
 				18731E442356BC6E00BB577A /* Info.plist */,
 			);
 			path = Commons;
@@ -902,7 +916,6 @@
 				1832627F235D01B100CBB9CC /* Entities */,
 				18326266235D01B100CBB9CC /* Reponse Model */,
 				18326269235D01B100CBB9CC /* Use Cases */,
-				187321E9235CAA2E00F22EB7 /* Valuation.h */,
 				187321EA235CAA2E00F22EB7 /* Info.plist */,
 			);
 			path = Valuation;
@@ -994,7 +1007,6 @@
 			isa = PBXGroup;
 			children = (
 				1874EB0B235397A500052101 /* Networking */,
-				1874EAE623538F9E00052101 /* Networking.h */,
 				1874EAE723538F9E00052101 /* Info.plist */,
 			);
 			path = Networking;
@@ -1058,7 +1070,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				18731E532356BC6E00BB577A /* Commons.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1066,7 +1077,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				187321F9235CAA2E00F22EB7 /* Valuation.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1074,7 +1084,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1874EAF623538F9F00052101 /* Networking.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1188,6 +1197,8 @@
 			buildRules = (
 			);
 			dependencies = (
+				182EBE88236C70A300B6FEAF /* PBXTargetDependency */,
+				182EBE86236C709F00B6FEAF /* PBXTargetDependency */,
 			);
 			name = Valuation;
 			productName = Valuation;
@@ -1225,6 +1236,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				182EBE84236C709300B6FEAF /* PBXTargetDependency */,
 			);
 			name = Networking;
 			productName = Networking;
@@ -1544,6 +1556,21 @@
 			isa = PBXTargetDependency;
 			target = 18136875235D21D700A5FBC5 /* BitCoinPrice */;
 			targetProxy = 18136881235D21D700A5FBC5 /* PBXContainerItemProxy */;
+		};
+		182EBE84236C709300B6FEAF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 18731E402356BC6E00BB577A /* Commons */;
+			targetProxy = 182EBE83236C709300B6FEAF /* PBXContainerItemProxy */;
+		};
+		182EBE86236C709F00B6FEAF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1874EAE323538F9E00052101 /* Networking */;
+			targetProxy = 182EBE85236C709F00B6FEAF /* PBXContainerItemProxy */;
+		};
+		182EBE88236C70A300B6FEAF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 18731E402356BC6E00BB577A /* Commons */;
+			targetProxy = 182EBE87236C70A300B6FEAF /* PBXContainerItemProxy */;
 		};
 		1841067623531A6C000AE46C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;

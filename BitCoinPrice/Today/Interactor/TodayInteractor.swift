@@ -6,8 +6,9 @@
 //  Copyright © 2019 Aaron Huánuco. All rights reserved.
 //
 
-import Valuation
+import Foundation
 import Commons
+import Valuation
 
 final class TodayInteractor {
     let todayProvider: TodayProviderProtocol
