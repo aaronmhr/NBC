@@ -1,0 +1,4 @@
+os: osx
+osx_image: xcode11.2
+language: swift
+script: xcodebuild clean build test -project NBC.xcodeproj -scheme "NBC" -sdk iphonesimulator -destination "platform=iOS Simulator,OS=13.2,name=iPhone 11 Pro Max" CODE_SIGNING_REQUIRED=NO
