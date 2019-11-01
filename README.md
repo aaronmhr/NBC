@@ -1,4 +1,4 @@
-# N26BC
+# NBC
 > Fetches current and historical bitcoin - Euro/Dollar/Pound exchange data from BitcoinDesk.com
 
 [![Swift Version][swift-image]][swift-url]
@@ -27,7 +27,7 @@
 
 Aaron Huánuco – aaronmhr@gmail.com
 
-[https://github.com/aaronmhr/N26BC](https://github.com/aaronmhr/N26BC)
+[https://github.com/aaronmhr/NBC](https://github.com/aaronmhr/NBC)
 
 [swift-image]:https://img.shields.io/badge/swift-5.0-orange.svg
 [swift-url]: https://swift.org/
