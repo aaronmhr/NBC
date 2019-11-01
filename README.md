@@ -1,7 +1,7 @@
 # NBC
 > Fetches current and historical bitcoin - Euro/Dollar/Pound exchange data from BitcoinDesk.com
 
-[![Swift Version][swift-image]][swift-url]
+[![Swift Version][swift-image]][swift-url] [![Build Status](https://travis-ci.com/aaronmhr/NBC.svg?branch=master)](https://travis-ci.com/aaronmhr/NBC)
 
 This project displays exchange rate for BitCoin in an iOS app with a list/detail view and a Today extension. 
 The code is divided in diferent targets
