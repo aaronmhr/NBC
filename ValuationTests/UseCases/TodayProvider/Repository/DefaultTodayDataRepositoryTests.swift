@@ -1,6 +1,6 @@
 //
 //  DefaultTodayDataRepositoryTests.swift
-//  N26BCTests
+//  NBCTests
 //
 //  Created by Aaron Huánuco on 18/10/2019.
 //  Copyright © 2019 Aaron Huánuco. All rights reserved.

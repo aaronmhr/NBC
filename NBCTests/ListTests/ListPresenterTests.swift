@@ -1,6 +1,6 @@
 //
 //  ListPresenterTests.swift
-//  N26BC
+//  NBC
 //
 //  Created by Aaron Huánuco on 20/10/2019.
 //  Copyright © 2019 Aaron Huánuco. All rights reserved.
@@ -8,7 +8,7 @@
 
 import XCTest
 import Valuation
-@testable import N26BC
+@testable import NBC
 
 class ListPresenterTestsTests: XCTestCase {
     func testViewDidLoad_whenInteractorReturnsResultErrorNetworking() {

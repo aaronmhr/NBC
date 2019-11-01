@@ -1,13 +1,13 @@
 //
 //  DetailViewControllerTests.swift
-//  N26BCTests
+//  NBCTests
 //
 //  Created by Aaron Huánuco on 21/10/2019.
 //  Copyright © 2019 Aaron Huánuco. All rights reserved.
 //
 
 import XCTest
-@testable import N26BC
+@testable import NBC
 
 class DetailViewControllerTests: XCTestCase {
     func testViewDidLoad_callsPresenterViewDidLoad() {

@@ -1,6 +1,6 @@
 //
 //  ListInteractorTests.swift
-//  N26BCTests
+//  NBCTests
 //
 //  Created by Aaron Huánuco on 17/10/2019.
 //  Copyright © 2019 Aaron Huánuco. All rights reserved.
@@ -10,7 +10,7 @@ import XCTest
 import Commons
 import Networking
 import Valuation
-@testable import N26BC
+@testable import NBC
 
 class ListInteractorTests: XCTestCase {
     func testRetrieveHistoricalDataIsExecutedPropperly() {
