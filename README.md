@@ -17,7 +17,7 @@ The code is divided in diferent targets
 
 ## Screenshots
 
-<img src="BCList.png" width="30%"> <img src="BCDetail.png" width="30%"> <img src="BCTodayExtension.png" width="30%">
+<img src="Assets/BCList.png" width="30%"> <img src="Assets/BCDetail.png" width="30%"> <img src="Assets/BCTodayExtension.png" width="30%">
 
 ## Features
 
@@ -32,7 +32,7 @@ The code is divided in diferent targets
 
 ## Structure
 
-![Screenshot](N26BC.png)
+![Screenshot](Assets/N26BC.png)
 
 ## Usage example
 
