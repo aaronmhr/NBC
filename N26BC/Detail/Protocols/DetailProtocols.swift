@@ -12,7 +12,7 @@ import Valuation
 
 protocol DetailInteractorProtocol {
     var valuation: Valuation { get }
-    func retrieveData(for currency: Currency, date: Date, completion: @escaping (Result<Valuation, N26BCError>) -> Void)
+    func retrieveData(for currency: Currency, date: Date, completion: @escaping (Result<Valuation, BCError>) -> Void)
 }
 
 protocol DetailRouterProtocol {

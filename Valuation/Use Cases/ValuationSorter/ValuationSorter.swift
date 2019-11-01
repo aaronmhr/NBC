@@ -10,7 +10,7 @@ import Foundation
 
 public final class ValuationSorter: ValuationSorterProtocol {
     public init() { }
-    public func sort(_ result: Result<[Valuation], N26BCError>) -> Result<[Valuation], N26BCError> {
+    public func sort(_ result: Result<[Valuation], BCError>) -> Result<[Valuation], BCError> {
         return result.map { $0.sorted { $0.date > $1.date }}
     }
 }

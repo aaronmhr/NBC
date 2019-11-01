@@ -14,7 +14,7 @@ class DefaultHistoricalDataRepositoryTests: XCTestCase {
     func testGetHistoricalData_ProvidesTodayData() {
         let historicalResponse = HistoricalResponseModel(bpi: nil, disclaimer: "test1")
         let successInput: Result<HistoricalResponseModel, NetworkingError> = .success(historicalResponse)
-        let expectedResponse = N26BCError.other
+        let expectedResponse = BCError.other
         let currency = Currency.euro
         
         let (sut, networking, mapper) = makeSUT()
@@ -27,7 +27,7 @@ class DefaultHistoricalDataRepositoryTests: XCTestCase {
         }
     }
     
-    func testGetHistoricalData_providesN26BCErrorWhenDependencyReturnsNetworkingError() {
+    func testGetHistoricalData_providesBCErrorWhenDependencyReturnsNetworkingError() {
         let error1 = NetworkingError.clientError("Test1")
         let error2 = NetworkingError.couldNotBuildURL
         let error3 = NetworkingError.decodingError
@@ -61,15 +61,15 @@ class DefaultHistoricalDataRepositoryTests: XCTestCase {
         var successInput: HistoricalResponseModel?
         var errorInput: NetworkingError?
         
-        var resultOutput: Result<[Valuation], N26BCError> = .failure(.other)
-        var errorOutput: N26BCError = .other
+        var resultOutput: Result<[Valuation], BCError> = .failure(.other)
+        var errorOutput: BCError = .other
         
-        func map(response: HistoricalResponseModel, for currency: Currency) -> Result<[Valuation], N26BCError> {
+        func map(response: HistoricalResponseModel, for currency: Currency) -> Result<[Valuation], BCError> {
             successInput = response
             return resultOutput
         }
         
-        func map(error: NetworkingError) -> N26BCError {
+        func map(error: NetworkingError) -> BCError {
             errorInput = error
             return errorOutput
         }

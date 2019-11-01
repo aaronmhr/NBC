@@ -11,9 +11,9 @@ import Networking
 @testable import Valuation
 
 class DefaultHistoricalResponseMapperTests: XCTestCase {
-    func testMapError_whenThereIsNetworkingError_returnsN26BCError() {
+    func testMapError_whenThereIsNetworkingError_returnsBCError() {
         let errorList: [NetworkingError] = [.clientError("Test1"), .couldNotBuildURL, .decodingError, .invalidResponse, .other("Test5"), .serverError("Test6")]
-        let mappedResponse = N26BCError.networking
+        let mappedResponse = BCError.networking
         
         let sut = makeSUT()
         
@@ -25,7 +25,7 @@ class DefaultHistoricalResponseMapperTests: XCTestCase {
     func testMapResponse_whenThereIsNilBIP_returnsError() {
         let currencies: [Currency] = [.euro, .dollar, .pound]
         let response = HistoricalResponseModel(bpi: nil, disclaimer: nil)
-        let mappedResponse = N26BCError.other
+        let mappedResponse = BCError.other
         
         let sut = makeSUT()
         

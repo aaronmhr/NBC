@@ -13,7 +13,7 @@ class TodayProviderTests: XCTestCase {
     func testRetrieveTodayData_returnsErrorForNetworkingErrorInRepository() {
         let expectation = XCTestExpectation(description: "TodayProvider")
         let (sut, repository) = makeSUT()
-        let networkingError = N26BCError.networking
+        let networkingError = BCError.networking
         repository.result = .failure(networkingError)
         
         sut.retrieveTodayData(currency: .euro) { result in
@@ -26,7 +26,7 @@ class TodayProviderTests: XCTestCase {
     func testRetrieveTodayData_returnsErrorForOtherErrorInRepository() {
         let expectation = XCTestExpectation(description: "TodayProvider")
         let (sut, repository) = makeSUT()
-        let networkingError = N26BCError.networking
+        let networkingError = BCError.networking
         repository.result = .failure(networkingError)
         
         sut.retrieveTodayData(currency: .euro) { result in
@@ -58,9 +58,9 @@ class TodayProviderTests: XCTestCase {
     
     class TestingRepository: TodayDataRepository {
         var url: URL?
-        var result: Result<Valuation, N26BCError> = .failure(.networking)
+        var result: Result<Valuation, BCError> = .failure(.networking)
         
-        func getTodayData(url: URL?, currency: Currency, completion: @escaping (Result<Valuation, N26BCError>) -> Void) {
+        func getTodayData(url: URL?, currency: Currency, completion: @escaping (Result<Valuation, BCError>) -> Void) {
             self.url = url
             completion(result)
         }

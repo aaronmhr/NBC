@@ -11,12 +11,12 @@ import Networking
 
 public final class DefaultTodayResponseMapper: TodayResponseMapperProtocol {
     public init() { }
-    public func map(response: TodayResponseModel, for currency: Currency) -> Result<Valuation, N26BCError> {
+    public func map(response: TodayResponseModel, for currency: Currency) -> Result<Valuation, BCError> {
         guard let dateString = response.time?.updatedISO,
             let date = dateString.toDateWithFormat(BitcoinDeskAPI.todayFormatter) else {
             return .failure(.other)
         }
-        let rate: Result<Double, N26BCError>
+        let rate: Result<Double, BCError>
         switch currency {
         case .euro:
             rate = unwrap(rate: response.bpi?.eur?.rateFloat)
@@ -27,19 +27,19 @@ public final class DefaultTodayResponseMapper: TodayResponseMapperProtocol {
         default:
             return .failure(.other)
         }
-        let valuation: Result<Valuation, N26BCError> = rate.map { Valuation(date: date, price: $0, currency: currency) }
+        let valuation: Result<Valuation, BCError> = rate.map { Valuation(date: date, price: $0, currency: currency) }
         return valuation
     }
     
-    private func unwrap(rate: Double?) -> Result<Double, N26BCError> {
+    private func unwrap(rate: Double?) -> Result<Double, BCError> {
         guard let rate = rate else {
             return .failure(.other)
         }
         return .success(rate)
     }
     
-    public func map(error: NetworkingError) -> N26BCError {
-        let newError: N26BCError
+    public func map(error: NetworkingError) -> BCError {
+        let newError: BCError
         switch error {
         default:
             newError = .networking

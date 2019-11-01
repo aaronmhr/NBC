@@ -9,8 +9,8 @@
 import Networking
 
 public protocol TodayProviderProtocol {
-    typealias TodayResult = Result<Valuation, N26BCError>
-    typealias ResultBlock = (Result<Valuation, N26BCError>) -> Void
+    typealias TodayResult = Result<Valuation, BCError>
+    typealias ResultBlock = (Result<Valuation, BCError>) -> Void
     
     func retrieveTodayData(currency: Currency, completion: @escaping ResultBlock)
 }

@@ -84,7 +84,7 @@ class ListInteractorTests: XCTestCase {
     final class TestingValuationSorter: ValuationSorterProtocol {
         var isSorted = false
         
-        func sort(_ items: Result<[Valuation], N26BCError>) -> Result<[Valuation], N26BCError> {
+        func sort(_ items: Result<[Valuation], BCError>) -> Result<[Valuation], BCError> {
             isSorted = true
             return items
         }

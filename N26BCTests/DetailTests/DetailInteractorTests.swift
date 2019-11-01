@@ -56,7 +56,7 @@ class DetailInteractorTests: XCTestCase {
     func testDataIsExecuted_usesHistoricalProviderAndReturnsErrorWhenListIsEmpty() {
         let expectation = XCTestExpectation(description: "DetailInteractor")
         let (sut, historicalProvider, todayProvider) = makeSUT()
-        let error = N26BCError.other
+        let error = BCError.other
         historicalProvider.result = .success([])
         
         sut.retrieveData(for: .euro, date: Date(timeIntervalSinceNow: -100000)) { result in
@@ -81,7 +81,7 @@ class DetailInteractorTests: XCTestCase {
     }
 
     final class TestingHistoricalProvider: HistoricalProviderProtocol {
-        var result: Result<[Valuation], N26BCError> = .failure(.other)
+        var result: Result<[Valuation], BCError> = .failure(.other)
         var isHistoricalDataRetrieved = false
         
         func retrieveHistoricalData(start: Date, end: Date, currency: Currency, completion: @escaping ResultBlock) {

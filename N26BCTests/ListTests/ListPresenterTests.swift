@@ -194,15 +194,15 @@ class ListPresenterTestsTests: XCTestCase {
         var isRetrievingTodayData = false
         var isStopRetrievingTodayData = false
         
-        var resultHistorical: Result<[Valuation], N26BCError> = .failure(.networking)
-        var resultToday: Result<Valuation, N26BCError> = .failure(.networking)
+        var resultHistorical: Result<[Valuation], BCError> = .failure(.networking)
+        var resultToday: Result<Valuation, BCError> = .failure(.networking)
         
-        func retrieveHistoricalData(completion: @escaping (Result<[Valuation], N26BCError>) -> Void) {
+        func retrieveHistoricalData(completion: @escaping (Result<[Valuation], BCError>) -> Void) {
             isRetrievingHistoricalData = true
             completion(resultHistorical)
         }
         
-        func retrieveTodayData(completion: @escaping (Result<Valuation, N26BCError>) -> Void) {
+        func retrieveTodayData(completion: @escaping (Result<Valuation, BCError>) -> Void) {
             isRetrievingTodayData = true
             completion(resultToday)
         }

@@ -9,8 +9,8 @@
 import Valuation
 
 protocol ListInteractorProtocol {
-    func retrieveHistoricalData(completion: @escaping (Result<[Valuation], N26BCError>) -> Void)
-    func retrieveTodayData(completion: @escaping (Result<Valuation, N26BCError>) -> Void)
+    func retrieveHistoricalData(completion: @escaping (Result<[Valuation], BCError>) -> Void)
+    func retrieveTodayData(completion: @escaping (Result<Valuation, BCError>) -> Void)
     func stopRetreavingTodayData()
 }
 

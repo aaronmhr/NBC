@@ -24,7 +24,7 @@ final class DetailInteractor {
 }
 
 extension DetailInteractor: DetailInteractorProtocol {
-    func retrieveData(for currency: Currency, date: Date, completion: @escaping (Result<Valuation, N26BCError>) -> Void) {
+    func retrieveData(for currency: Currency, date: Date, completion: @escaping (Result<Valuation, BCError>) -> Void) {
         let isToday = Calendar.current.isDateInToday(date)
         switch isToday {
         case true:
@@ -34,17 +34,17 @@ extension DetailInteractor: DetailInteractorProtocol {
         }
     }
     
-    private func retrieveToday(for currency: Currency, date: Date, completion: @escaping (Result<Valuation, N26BCError>) -> Void) {
+    private func retrieveToday(for currency: Currency, date: Date, completion: @escaping (Result<Valuation, BCError>) -> Void) {
         todayProvider.retrieveTodayData(currency: currency) { result in
             completion(result)
         }
     }
     
-    private func retrieveHistorical(for currency: Currency, date: Date, completion: @escaping (Result<Valuation, N26BCError>) -> Void) {
+    private func retrieveHistorical(for currency: Currency, date: Date, completion: @escaping (Result<Valuation, BCError>) -> Void) {
         historicalProvider.retrieveHistoricalData(start: date, end: date, currency: currency) { resultArray in
-            let result: Result<Valuation, N26BCError> = resultArray.flatMap {
+            let result: Result<Valuation, BCError> = resultArray.flatMap {
                 guard let valuation = $0.first else {
-                    return .failure(N26BCError.other)
+                    return .failure(BCError.other)
                 }
                 return .success(valuation)
             }

@@ -20,7 +20,7 @@ final class TodayInteractor {
 }
 
 extension TodayInteractor: TodayInteractorProtocol {
-    func retrieveTodayData(completion: @escaping (Result<Valuation, N26BCError>) -> Void) {
+    func retrieveTodayData(completion: @escaping (Result<Valuation, BCError>) -> Void) {
         timer.schedule(timeInterval: Constants.todayCallPeriod, repeats: true) { [weak self] in
             self?.todayProvider.retrieveTodayData(currency: Constants.currency, completion: completion)
         }

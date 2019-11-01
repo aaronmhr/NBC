@@ -7,5 +7,5 @@
 //
 
 public protocol ValuationSorterProtocol {
-    func sort(_ items: Result<[Valuation], N26BCError>) -> Result<[Valuation], N26BCError>
+    func sort(_ items: Result<[Valuation], BCError>) -> Result<[Valuation], BCError>
 }

@@ -100,11 +100,11 @@ class DetailPresenterTestsTests: XCTestCase {
     final class TestingInteractor: DetailInteractorProtocol {
         var isRetrievingData = false
         var count = 0
-        var result: [Result<Valuation, N26BCError>] = [.failure(.networking)]
+        var result: [Result<Valuation, BCError>] = [.failure(.networking)]
         
         var valuation: Valuation = Valuation(date: Date(), price: 1.0, currency: .euro)
         
-        func retrieveData(for currency: Currency, date: Date, completion: @escaping (Result<Valuation, N26BCError>) -> Void) {
+        func retrieveData(for currency: Currency, date: Date, completion: @escaping (Result<Valuation, BCError>) -> Void) {
             isRetrievingData = true
             completion(result[count])
             count += 1

@@ -23,9 +23,9 @@ class DefaultTodayResponseMapperTests: XCTestCase {
         static let validPoundRate = CurrencyResponseModel(code: "GBP", rateFloat: 15.0)
     }
     
-    func testMapError_whenThereIsNetworkingError_returnsN26BCError() {
+    func testMapError_whenThereIsNetworkingError_returnsBCError() {
         let errorList: [NetworkingError] = [.clientError("Test1"), .couldNotBuildURL, .decodingError, .invalidResponse, .other("Test5"), .serverError("Test6")]
-        let mappedResponse = N26BCError.networking
+        let mappedResponse = BCError.networking
         
         let sut = makeSUT()
         
@@ -37,7 +37,7 @@ class DefaultTodayResponseMapperTests: XCTestCase {
     func testMapResponse_whenTimeIsNil_providesError() {
         let currencies: [Currency] = [.euro, .dollar, .pound, .unknown]
         let sut = makeSUT()
-        let expectedResponse = N26BCError.other
+        let expectedResponse = BCError.other
         
         currencies.forEach { currency in
             let bpi = BpiResponseModel(usd: Testing.validDollarRate, gbp: Testing.validPoundRate, eur: Testing.validEuroRate)
@@ -51,7 +51,7 @@ class DefaultTodayResponseMapperTests: XCTestCase {
     func testMapResponse_whenBPIForSelectedCurrencyIsNil_returnsError() {
         let currencies: [Currency] = [.euro, .dollar, .pound, .unknown]
         let sut = makeSUT()
-        let expectedResponse = N26BCError.other
+        let expectedResponse = BCError.other
         
         currencies.forEach { currency in
             let bpi = BpiResponseModel(usd: Testing.nilDollarRate, gbp: Testing.nilPoundRate, eur: Testing.nilEuroRate)
@@ -67,7 +67,7 @@ class DefaultTodayResponseMapperTests: XCTestCase {
         let sut = makeSUT()
         
         let date = Testing.dateString.toDateWithFormat(BitcoinDeskAPI.todayFormatter)!
-        let expectedResult: Result<Valuation, N26BCError> = .success(Valuation(date: date, price: 5.0, currency: selectedCurrency))
+        let expectedResult: Result<Valuation, BCError> = .success(Valuation(date: date, price: 5.0, currency: selectedCurrency))
         
         currencies.forEach { currency in
             let bpi = BpiResponseModel(usd: Testing.validDollarRate, gbp: Testing.nilPoundRate, eur: Testing.nilEuroRate)

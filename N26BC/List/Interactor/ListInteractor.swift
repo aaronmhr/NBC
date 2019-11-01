@@ -26,7 +26,7 @@ final class ListInteractor {
 }
 
 extension ListInteractor: ListInteractorProtocol {
-    func retrieveHistoricalData(completion: @escaping (Result<[Valuation], N26BCError>) -> Void) {
+    func retrieveHistoricalData(completion: @escaping (Result<[Valuation], BCError>) -> Void) {
         let end = Date()
         let start = Calendar.current.date(byAdding: .day, value: Constants.daysInPeriod, to: end) ?? end
         historicalProvider.retrieveHistoricalData(start: start, end: end, currency: Constants.currency) { [weak self] result in
@@ -35,7 +35,7 @@ extension ListInteractor: ListInteractorProtocol {
         }
     }
     
-    func retrieveTodayData(completion: @escaping (Result<Valuation, N26BCError>) -> Void) {
+    func retrieveTodayData(completion: @escaping (Result<Valuation, BCError>) -> Void) {
         timer.schedule(timeInterval: Constants.todayCallPeriod, repeats: true) { [weak self] in
             self?.todayProvider.retrieveTodayData(currency: Constants.currency, completion: completion)
         }

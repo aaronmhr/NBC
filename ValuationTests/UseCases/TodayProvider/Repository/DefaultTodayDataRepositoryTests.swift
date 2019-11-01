@@ -19,7 +19,7 @@ class DefaultTodayDataRepositoryTests: XCTestCase {
         let currency = Currency.euro
         [response1, response2].forEach { currentResponse in
             let successInput: Result<TodayResponseModel, NetworkingError> = .success(currentResponse)
-            let successOutput: Result<Valuation, N26BCError> = .success(Valuation(date: Date(), price: 10, currency: currency))
+            let successOutput: Result<Valuation, BCError> = .success(Valuation(date: Date(), price: 10, currency: currency))
 
             let (sut, networking, mapper) = makeSUT()
             networking.result = successInput
@@ -66,15 +66,15 @@ class DefaultTodayDataRepositoryTests: XCTestCase {
         var successInput: TodayResponseModel?
         var errorInput: NetworkingError?
         
-        var resultOutput: Result<Valuation, N26BCError> = .failure(.other)
-        var errorOutput: N26BCError = .other
+        var resultOutput: Result<Valuation, BCError> = .failure(.other)
+        var errorOutput: BCError = .other
         
-        func map(response: TodayResponseModel, for currency: Currency) -> Result<Valuation, N26BCError> {
+        func map(response: TodayResponseModel, for currency: Currency) -> Result<Valuation, BCError> {
             successInput = response
             return resultOutput
         }
         
-        func map(error: NetworkingError) -> N26BCError {
+        func map(error: NetworkingError) -> BCError {
             errorInput = error
             return errorOutput
         }

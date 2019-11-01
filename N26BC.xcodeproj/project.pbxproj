@@ -50,7 +50,7 @@
 		18326292235D01B100CBB9CC /* TodayDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1832627B235D01B100CBB9CC /* TodayDataProvider.swift */; };
 		18326293235D01B100CBB9CC /* ValuationSorterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1832627D235D01B100CBB9CC /* ValuationSorterProtocol.swift */; };
 		18326294235D01B100CBB9CC /* ValuationSorter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1832627E235D01B100CBB9CC /* ValuationSorter.swift */; };
-		18326295235D01B100CBB9CC /* N26BCError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18326280235D01B100CBB9CC /* N26BCError.swift */; };
+		18326295235D01B100CBB9CC /* BCError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18326280235D01B100CBB9CC /* BCError.swift */; };
 		18326296235D01B100CBB9CC /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18326281235D01B100CBB9CC /* Currency.swift */; };
 		18326297235D01B100CBB9CC /* Valuation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18326282235D01B100CBB9CC /* Valuation.swift */; };
 		18326298235D01B100CBB9CC /* BitCoinDeskAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18326284235D01B100CBB9CC /* BitCoinDeskAPI.swift */; };
@@ -300,7 +300,7 @@
 		1832627B235D01B100CBB9CC /* TodayDataProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodayDataProvider.swift; sourceTree = "<group>"; };
 		1832627D235D01B100CBB9CC /* ValuationSorterProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValuationSorterProtocol.swift; sourceTree = "<group>"; };
 		1832627E235D01B100CBB9CC /* ValuationSorter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValuationSorter.swift; sourceTree = "<group>"; };
-		18326280235D01B100CBB9CC /* N26BCError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = N26BCError.swift; sourceTree = "<group>"; };
+		18326280235D01B100CBB9CC /* BCError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BCError.swift; sourceTree = "<group>"; };
 		18326281235D01B100CBB9CC /* Currency.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
 		18326282235D01B100CBB9CC /* Valuation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Valuation.swift; sourceTree = "<group>"; };
 		18326284235D01B100CBB9CC /* BitCoinDeskAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BitCoinDeskAPI.swift; sourceTree = "<group>"; };
@@ -748,7 +748,7 @@
 		1832627F235D01B100CBB9CC /* Entities */ = {
 			isa = PBXGroup;
 			children = (
-				18326280235D01B100CBB9CC /* N26BCError.swift */,
+				18326280235D01B100CBB9CC /* BCError.swift */,
 				18326281235D01B100CBB9CC /* Currency.swift */,
 				18326282235D01B100CBB9CC /* Valuation.swift */,
 			);
@@ -1531,7 +1531,7 @@
 				18326285235D01B100CBB9CC /* HistoricalResponseModel.swift in Sources */,
 				18326297235D01B100CBB9CC /* Valuation.swift in Sources */,
 				18326298235D01B100CBB9CC /* BitCoinDeskAPI.swift in Sources */,
-				18326295235D01B100CBB9CC /* N26BCError.swift in Sources */,
+				18326295235D01B100CBB9CC /* BCError.swift in Sources */,
 				18326287235D01B100CBB9CC /* DefaultHistoricalResponseMapper.swift in Sources */,
 				1832628D235D01B100CBB9CC /* DefaultTodayDataRepository.swift in Sources */,
 			);

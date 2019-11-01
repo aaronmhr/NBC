@@ -13,7 +13,7 @@ class HistoricalProviderTests: XCTestCase {
     func testRetrieveHistoricalData_returnsErrorForNetworkingErrorInRepository() {
         let expectation = XCTestExpectation(description: "HistoricalProvider")
         let (sut, repository) = makeSUT()
-        let networkingError = N26BCError.networking
+        let networkingError = BCError.networking
         repository.result = .failure(networkingError)
         
         sut.retrieveHistoricalData(start: Date(), end: Date(), currency: .euro) { result in
@@ -26,7 +26,7 @@ class HistoricalProviderTests: XCTestCase {
     func testRetrieveHistoricalData_returnsErrorForOtherErrorInRepository() {
         let expectation = XCTestExpectation(description: "HistoricalProvider")
         let (sut, repository) = makeSUT()
-        let networkingError = N26BCError.networking
+        let networkingError = BCError.networking
         repository.result = .failure(networkingError)
         
         sut.retrieveHistoricalData(start: Date(), end: Date(), currency: .euro) { result in
@@ -58,9 +58,9 @@ class HistoricalProviderTests: XCTestCase {
     
     class TestingRepository: HistoricalDataRepository {
         var url: URL?
-        var result: Result<[Valuation], N26BCError> = .failure(.networking)
+        var result: Result<[Valuation], BCError> = .failure(.networking)
         
-        func getHistoricalData(url: URL?, currency: Currency, completion: @escaping (Result<[Valuation], N26BCError>) -> Void) {
+        func getHistoricalData(url: URL?, currency: Currency, completion: @escaping (Result<[Valuation], BCError>) -> Void) {
             self.url = url
             completion(result)
         }
