@@ -50,7 +50,7 @@ extension ListPresenter: ListPresenterProtocol {
             switch result {
             case .success(let historicalPrices):
                 self?.secondSectionModels = historicalPrices
-                self?.secondSection = HistoricalTableViewModel.makeSectionViewModel(from: historicalPrices, title: Localizables.secondSection, type: .historical)
+                self?.secondSection = HistoricalTableViewModel.makeSectionViewModel(from: historicalPrices, title: Localizables.secondSection)
             case .failure(let error):
                 DispatchQueue.main.async {
                     self?.view.showError(error: error, action: self?.restartLoading)
@@ -70,7 +70,7 @@ extension ListPresenter: ListPresenterProtocol {
             switch result {
             case .success(let todayPrices):
                 self?.firstSectionModels = [todayPrices]
-                self?.firstSection = TodayTableViewModel.makeSectionViewModel(from: [todayPrices], title: Localizables.firstSection, type: .today)
+                self?.firstSection = TodayTableViewModel.makeSectionViewModel(from: [todayPrices], title: Localizables.firstSection)
             case .failure(let error):
                 DispatchQueue.main.async {
                     self?.view.showError(error: error, action: self?.restartLoading)

@@ -77,12 +77,7 @@ extension ListViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         guard tableViewModel.indices.contains(section) else { return 0 }
         let currentSection = tableViewModel[section]
-        switch currentSection.sectionType {
-        case .historical:
-            return currentSection.rows.count
-        case .today:
-            return currentSection.rows.count
-        }
+        return currentSection.rows.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

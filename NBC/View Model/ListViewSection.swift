@@ -9,5 +9,4 @@
 protocol ListViewSection {
     var title: String { get }
     var rows: [PricesViewModel] { get }
-    var sectionType: ListSectionType { get }
 }
