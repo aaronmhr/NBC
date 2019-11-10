@@ -34,9 +34,6 @@ The code is divided in diferent targets
 
 ![Screenshot](Assets/NBC.png)
 
-## Usage example
-
-
 ## Meta
 
 Aaron Huánuco – aaronmhr@gmail.com
